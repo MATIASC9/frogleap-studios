@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* INICIO PAGINA HOME */
+body {
+    background-image: url('../img/studio.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Inicio header */
+.header {
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    border-bottom: 3px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+}
+.header__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.header__nav__inicio__logo {
+    width: 150px;
+    margin: 12px 0px 0px 12px;
+}
+.header__nav__menuPaginas {
+    list-style: none;
+    display: inline-block;
+    margin: auto;
+}
+.header__nav__menuPaginas__item {
+    display: inline-block;
+    margin: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.header__nav__menuPaginas__item__link {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.header__patreonLink__logoPatreon {
+    width: 55px;
+    margin: 15px;
+}
+
+/* Inicio footer */
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    font-size: 13px;
+}
+.footer__copyright {
+    margin-left: 15px;
+}
+.footer__list {
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+.footer__list__item {
+    margin: 15px;
+}
+
+/* Inicio seccion 1 */
+.colorFondoBienvenida {
+    background-color: #72727273;
+    padding-top: 50px;
+    height: 100vh;
+}
+.bienvenida {
+    height: 100vh;
+}
+.bienvenida__logoFrogleapStudios {
+    width: 700px;
+    display: block;
+    margin: 100px auto 0px;
+}
+.bienvenida__fotoLeo {
+    width: 750px;
+    position: absolute;
+    bottom: 0px;
+    left: -90px;
+}
+.bienvenida__video {
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+    width: 426px; 
+    height: 240px;
+}
+.bienvenida__contenedorScroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+}
+.bienvenida__scroll {
+    color: white;
+}
+.main__section__flecha {
+    width: 40px;
+}
+
+/* Inicio seccion 2 */
+.latestMusic {
+    background-color: rgba(255, 0, 0, 0.336);
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas: 
+    "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
+    "latestMusic liveInEurope volume24 volume25 exploreMore"
+    ;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+.latestMusic__titulo {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-area: latestMusic;
+}
+.latestMusic__album {
+    display: inline-block;
+}
+.ultimateBundle {
+    grid-area: ultimateBundle;
+}
+.childrensMetalSongs {
+    grid-area: childrensMetalSongs;
+}
+.karaokeBackingTracks {
+    grid-area: karaokeBackingTracks;
+}
+.liveInEurope {
+    grid-area: liveInEurope;
+}
+.volume24 {
+    grid-area: volume24;
+}
+.volume25 {
+    grid-area: volume25;
+}
+.latestMusic__album {
+    font-size: 0px;
+}
+.latestMusic__album__link {
+    font-size: 0;
+}
+.latestMusic__album__link__cover {
+    width: 250px;
+}
+.latestMusic__exploreMore {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #fff;
+    grid-area: exploreMore;
+}
+
+/* Inicio seccion 3 */
+.socialMedia {
+    background-color: rgba(187, 156, 156, 0.521);
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr;
+    grid-template-rows: 50%;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: 
+    "followMe facebook twitter guitarra"
+    "followMe youTube instagram guitarra"
+    ;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+.socialMedia__titulo {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-area: followMe;
+}
+.facebook {
+    grid-area: facebook;
+}
+.twitter {
+    grid-area: twitter;
+}
+.youTube {
+    grid-area: youTube;
+}
+.instagram {
+    grid-area: instagram;
+}
+.guitarra {
+    grid-area: guitarra;
+}
+.socialMedia__link__logo {
+    width: 150px;
+}
+.socialMedia__guitarra {
+    width: 400px;
+}
+
+/* Inicio seccion 4 */
+.buyAlbums {
+    background-image: url('../img/guitarra-concierto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.buyAlbums__colorFondo {
+    background-color: rgba(214, 122, 46, 0.301);
+    display: grid;
+    grid-template-areas:
+    "buyAlbums amazon amazon"
+    "buyAlbums iTunes wav"
+    ;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: 100px 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+.buyAlbums__titulo {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    grid-area: buyAlbums;
+    margin: auto;
+}
+.amazon {
+    grid-area: amazon;
+}
+.itunes {
+    grid-area: iTunes;
+}
+.wav {
+    grid-area: wav;
+}
+.buyAlbums__link__logo {
+    width: 250px;
+}
+/* FIN PAGINA HOME */
+
+/* INICIO PAGINA MUSIC */
+.imgFondoMusic {
+    background-image: url('../img/leo-cantando.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.colorFondoMusic {
+    background-color: rgba(180, 180, 180, 0.651);
+    padding-top: 80px;
+}
+.music__titulo {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 20px;
+    margin: 20px 0 0 0;
+}
+.music__album {
+    display: inline-block;
+    margin: 40px 100px 40px 100px;
+}
+.music__album__cover {
+    width: 400px;
+}
+.music__album__titulo {
+    font-size: 25px;
+    display: inline-block;
+    position: absolute;
+    margin: 30px 0px 0px 50px;
+}
+.music__album__nota {
+    font-size: 12px;
+    display: inline-block;
+    width: 400px;
+    margin: 0px 0px 0px 50px;
+}
+.music__album__canciones {
+    font-size: 15px;
+    display: inline-block;
+    position: absolute;
+    margin: 80px 0px 0px 50px;
+}
+.music__album__btn {
+    position: relative;
+    left: 455px;
+    bottom: -10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    padding: 8px;
+    width: 100px;
+    border: 1px solid #fff;
+}
+/* FIN PAGINA MUSIC */
+
+/* INICIO PAGINA STORE */
+.imgFondoStore {
+    background-image: url('../img/store.png');
+    background-size:  cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.colorFondoStore {
+    background-color: rgba(248, 89, 89, 0.63);
+    padding-top: 80px;
+}
+.store__titulo {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 20px;
+    margin: 20px 0 0 0;
+}
+.store__menu {
+    list-style: none;
+    display: block;
+    position: relative;
+    left: 35%;
+    margin: 30px;
+    width: 500px;
+}
+.store__menu__categoria {
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #000;
+}
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+.store__producto {
+    width: 400px;
+}
+/* FIN PAGINA STORE */
+
+/* INICIO PAGINA VIDEOS */
+.imgFondoVideos {
+    background-image: url('../img/fondo-videos.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.colorFondoVideos {
+    background-color: rgba(255, 255, 255, 0.521);
+    padding-top: 80px;
+}
+.videos__titulo {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 20px;
+    margin: 20px 0 0 0;
+}
+.videos__videoPrincipal {
+    display: block;
+    margin: 30px auto;
+    width: 860px;
+    height: 615px;
+}
+.contenedorVideosSecundarios {
+    width: 1300px;
+    margin: auto;
+}
+.videos__videoSecundario {
+    display: inline-block;
+    width: 360px;
+    height: 215px;
+    margin: 10px;
+}
+/* FIN PAGINA VIDEOS */
+
+/* INICIO PAGINA TOUR DATES */
+.imgFondoTourDates {
+    background-image: url('../img/fondo-tour-dates.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.colorFondoTourDates {
+    background-color: rgba(255, 255, 255, 0.74);
+    padding-top: 80px;
+}
+.tourDates__titulo {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 20px;
+    margin: 20px 0 0 0;
+}
+.tourDates__tarjeta {
+    background-color: rgba(77, 76, 76, 0.438);
+    color: #fff;
+    width: 500px;
+    border: 2px solid #fff;
+    padding: 15px;
+    height: 155px;
+    margin: 20px auto;
+}
+.tourDates__tarjeta__titulo {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.tourDates__tarjeta__fecha, .tourDates__tarjeta__lugar {
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}
+.tourDates__tarjeta__botones {
+    position: relative;
+    top: -76px;
+    right: -380px;
+}
+.tourDates__tarjeta__btn {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 23px;
+    border: 1px solid #fff;
+}
+/* FIN PAGINA TOUR DATES */
+
+/* INICIO RESPONSIVE MOBILE */
+@media screen and (max-width: 600px) {
+    /* INICIO PAGINA HOME */
+    /* Inicio header */
+    .header {
+        background-color: #121212;
+        position: fixed;
+        top: 0;
+        border-bottom: 2px solid red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        width: 100%;
+        height: 60px;
+    }
+    .header__nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .header__nav__inicio__logo {
+        width: 100px;
+        margin: 10px 0px 0px 10px;
+    }  
+    .header__nav__menuPaginas {
+        list-style: none;
+        display: inline-block;
+        margin: auto;
+    }
+    .header__nav__menuPaginas__item {
+        display: inline-block;
+        margin: 15px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .header__nav__menuPaginas__item__link {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    .header__patreonLink__logoPatreon {
+        width: 45px;
+        margin: 12px;
+    }
+    /* Inicio footer */
+    .footer {
+        background-color: #121212;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 8px;
+    }
+    .footer__copyright {
+        margin: 15px;
+        order: 2;
+    }
+    .footer__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    .footer__list__item {
+        padding: 0px;
+    }
+    /* Inicio seccion 1 */
+    .colorFondoBienvenida {
+        background-color: #72727273;
+        padding-top: 0px;
+        height: 100vh;
+    }
+    .bienvenida {
+        height: 100vh;
+    }
+    .bienvenida__logoFrogleapStudios {
+        display: none;
+    }
+    .bienvenida__fotoLeo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 500px;
+    }
+    .bienvenida__video {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 100px;
+        width: 426px; 
+        height: 240px;
+    }
+    .bienvenida__contenedorScroll {
+        display: none;
+    }
+    /* Inicio seccion 2 */
+    .latestMusic {
+        background-color: rgba(255, 0, 0, 0.336);
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 5px;
+        row-gap: 5px;
+        grid-template-areas: 
+        "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
+        "latestMusic liveInEurope volume24 volume25 exploreMore"
+        ;
+        justify-items: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .latestMusic__titulo {
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        grid-area: latestMusic;
+    }
+    .latestMusic__album {
+        display: inline-block;
+    }
+    .ultimateBundle {
+        grid-area: ultimateBundle;
+    }
+    .childrensMetalSongs {
+        grid-area: childrensMetalSongs;
+    }
+    .karaokeBackingTracks {
+        grid-area: karaokeBackingTracks;
+    }
+    .liveInEurope {
+        grid-area: liveInEurope;
+    }
+    .volume24 {
+        grid-area: volume24;
+    }
+    .volume25 {
+        grid-area: volume25;
+    }
+    .latestMusic__album {
+        font-size: 0px;
+    }
+    .latestMusic__album__link {
+        font-size: 0;
+    }
+    .latestMusic__album__link__cover {
+        width: 100%;
+    }
+    .latestMusic__exploreMore {
+        text-decoration: none;
+        color: #fff;
+        font-size: 10px;
+        font-weight: bold;
+        background-color: black;
+        padding: 10px;
+        margin: 5px;
+        display: inline-block;
+        border: 1px solid #fff;
+        grid-area: exploreMore;
+    }
+    /* Inicio seccion 3 */
+    .socialMedia {
+        background-color: rgba(187, 156, 156, 0.521);
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr 1fr;
+        grid-template-rows: 50%;
+        column-gap: 5px;
+        row-gap: 5px;
+        grid-template-areas: 
+        "followMe facebook twitter guitarra"
+        "followMe youTube instagram guitarra"
+        ;
+        justify-items: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .socialMedia__titulo {
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        grid-area: followMe;
+    }
+    .facebook {
+        grid-area: facebook;
+    }
+    .twitter {
+        grid-area: twitter;
+    }
+    .youTube {
+        grid-area: youTube;
+    }
+    .instagram {
+        grid-area: instagram;
+    }
+    .guitarra {
+        grid-area: guitarra;
+    }
+    .socialMedia__link{
+        font-size: 0px;
+    }
+    .socialMedia__link__logo {
+        width: 100px;
+    }
+    .socialMedia__guitarra {
+        width: 200px;
+    }
+    /* Inicio seccion 4 */
+    .buyAlbums {
+        background-image: url('../img/guitarra-concierto.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .buyAlbums__colorFondo {
+        background-color: rgba(214, 122, 46, 0.301);
+        display: grid;
+        grid-template-areas:
+        "buyAlbums amazon amazon"
+        "buyAlbums iTunes wav"
+        ;
+        column-gap: 5px;
+        row-gap: 5px;
+        grid-template-columns: 80px 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .buyAlbums__titulo {
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        grid-area: buyAlbums;
+        margin: auto;
+    }
+    .amazon {
+        grid-area: amazon;
+    }
+    .itunes {
+        grid-area: iTunes;
+    }
+    .wav {
+        grid-area: wav;
+    }
+    .buyAlbums__link__logo {
+        width: 150px;
+    }
+    /* FIN PAGINA HOME */
+
+    /* INICIO PAGINA MUSIC */
+    .music {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+    .imgFondoMusic {
+        background-image: url('../img/leo-cantando.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .colorFondoMusic {
+        background-color: rgba(180, 180, 180, 0.651);
+        padding-top: 80px;
+    }
+    .music__titulo {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: #000;
+        letter-spacing: 20px;
+        margin: 20px 0 0 0;
+    }
+    /* .music__album {
+        margin: 60px 100px 40px 100px;
+    } */
+    .music__album__cover {
+        width: 400px;
+        margin-top: 50px;
+    }
+    .music__album__titulo {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    .music__album__nota {
+        font-size: 12px;
+        width: 400px;
+        margin-top: 60px;
+        margin-left: 0px;
+    }
+    .music__album__canciones {
+        font-size: 12px;
+        left: 80px;
+        margin-bottom: 40px;
+    }    
+    .music__album__btn {
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: black;
+        padding: 8px;
+        width: 100px;
+        border: 1px solid #fff;
+        left: 0;
+    }
+    /* FIN PAGINA MUSIC */
+
+    /* INICIO PAGINA STORE */
+    /* FIN PAGINA STORE */
+
+    /* INICIO PAGINA VIDEOS */
+    .imgFondoVideos {
+        background-image: url('../img/fondo-videos.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .colorFondoVideos {
+        background-color: rgba(255, 255, 255, 0.521);
+        padding-top: 80px;
+    }
+    .videos__titulo {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: #000;
+        letter-spacing: 20px;
+        margin-top: 0px;
+    }
+    .videos__videoPrincipal {
+        margin: 30px auto;
+        width: 426px;
+        height: 240px;
+    }
+    .contenedorVideosSecundarios {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    .videos__videoSecundario {
+        width: 360px;
+        height: 215px;
+        margin: 10px;
+    }
+    /* FIN PAGINA VIDEOS */
+
+    /* INICIO PAGINA TOUR DATES */
+    .imgFondoTourDates {
+        background-image: url('../img/fondo-tour-dates.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    } 
+    .colorFondoTourDates {
+        background-color: rgba(255, 255, 255, 0.74);
+        padding-top: 80px;
+        width: 100vw;
+    }
+    .tourDates__titulo {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: #000;
+        letter-spacing: 20px;
+        margin: 20px 0 0 0;
+    }
+    .tourDates__tarjeta {
+        background-color: rgba(77, 76, 76, 0.438);
+        color: #fff;
+        width: 400px;
+        border: 2px solid #fff;
+        padding: 15px;
+        height: 155px;
+        margin: 20px auto;
+    }
+    .tourDates__tarjeta__titulo {
+        font-size: 12px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+    .tourDates__tarjeta__fecha, .tourDates__tarjeta__lugar {
+        font-size: 11px;
+        color: rgb(255, 255, 255);
+    }
+    .tourDates__tarjeta__botones {
+        top: -65px;
+        right: -275px;
+        width: 100px;
+    }
+    .tourDates__tarjeta__btn {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        width: 100px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 23px;
+        border: 1px solid #fff;
+    }
+    /* FIN PAGINA TOUR DATES */
+}
+/* FIN RESPONSIVE MOBILE */
