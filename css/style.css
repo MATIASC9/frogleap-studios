@@ -111,7 +111,7 @@ body {
 
 /* Inicio seccion 1 */
 .colorFondoBienvenida {
-    background-color: #72727273;
+    background-color: #d6631673;
     padding-top: 50px;
     height: 100vh;
 }
@@ -170,7 +170,7 @@ body {
 
 /* Inicio seccion 2 */
 .latestMusic {
-    background-color: rgba(255, 0, 0, 0.336);
+    background-color: #72727273;
     display: grid;
     grid-template-columns: 100px 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -217,10 +217,16 @@ body {
     font-size: 0px;
 }
 .latestMusic__album__link {
-    font-size: 0;
+    font-size: 0px;
 }
 .latestMusic__album__link__cover {
     width: 250px;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-property: scale(1);
+}
+.latestMusic__album__link__cover:hover {
+    transform: scale(1.06);
 }
 .latestMusic__exploreMore {
     text-decoration: none;
@@ -233,11 +239,17 @@ body {
     display: inline-block;
     border: 1px solid #fff;
     grid-area: exploreMore;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    transition-property: scale(1);
+}
+.latestMusic__exploreMore:active {
+    transform: scale(0.95);
 }
 
 /* Inicio seccion 3 */
 .socialMedia {
-    background-color: rgba(187, 156, 156, 0.521);
+    background-color: #72727273;
     display: grid;
     grid-template-columns: 100px 1fr 1fr 1fr;
     grid-template-rows: 50%;
@@ -276,6 +288,12 @@ body {
 }
 .socialMedia__link__logo {
     width: 150px;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transition-property: scale(1);
+}
+.socialMedia__link__logo:hover {
+    transform: scale(1.06);
 }
 .socialMedia__guitarra {
     width: 400px;
@@ -289,7 +307,7 @@ body {
     background-attachment: fixed;
 }
 .buyAlbums__colorFondo {
-    background-color: rgba(214, 122, 46, 0.301);
+    background-color: rgba(88, 88, 88, 0.37);
     display: grid;
     grid-template-areas:
     "buyAlbums amazon amazon"
@@ -322,6 +340,12 @@ body {
 }
 .buyAlbums__link__logo {
     width: 250px;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transition-property: scale(1);
+}
+.buyAlbums__link__logo:hover {
+    transform: scale(1.06);
 }
 
 /* Inicio seccion 5 */
@@ -392,7 +416,10 @@ body {
     position: absolute;
     margin: 80px 0px 0px 50px;
 }
-.music__album__btn {
+.music__album__link {
+    text-decoration: none;
+}
+.music__album__link__btn {
     position: relative;
     left: 455px;
     bottom: -10px;
@@ -403,6 +430,15 @@ body {
     padding: 8px;
     width: 100px;
     border: 1px solid #fff;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    transition-property: color scale(1);
+}
+.music__album__link__btn:active {
+    transform: scale(0.95);
+}
+.music__album__link__btn:hover {
+    color: red;
 }
 /* FIN PAGINA MUSIC */
 
