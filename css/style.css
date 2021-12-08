@@ -175,14 +175,14 @@ body {
     grid-template-columns: 100px 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 10px;
-    row-gap: 10px;
+    row-gap: 30px;
     grid-template-areas: 
     "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
     "latestMusic liveInEurope volume24 volume25 exploreMore"
     ;
-    justify-items: center;
-    align-items: center;
+    place-items: center;
     padding: 20px;
+    height: 100vh;
 }
 .latestMusic__titulo {
     font-size: 50px;
@@ -220,7 +220,7 @@ body {
     font-size: 0px;
 }
 .latestMusic__album__link__cover {
-    width: 250px;
+    width: 350px;
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     transition-property: scale(1);
