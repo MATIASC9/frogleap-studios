@@ -141,10 +141,9 @@ body {
 }
 .bienvenida__fotoLeo {
     width: 50rem;
-    /* position: absolute;
+    position: absolute;
     bottom: 0px;
-    left: -90px; */
-    align-self: flex-start;
+    left: -90px;
 }
 .bienvenida__video {
     position: absolute;
@@ -640,12 +639,9 @@ body {
     /* Inicio header */
     .header {
         background-color: #121212;
-        position: fixed;
+        position: sticky;
         top: 0;
         border-bottom: 2px solid red;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         z-index: 1;
         width: 100%;
         height: 60px;
@@ -653,21 +649,44 @@ body {
     .header__nav {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
+    }
+    #menuHamburguesa {
+        display: none;
+    }
+    #menuHamburguesa:checked ~ .header__nav__menuPaginas {
+        margin-left: 0;
+    }
+    .header__nav__checkbox__menu__icono {
+        width: 40px;
+        margin-left: 15px;
     }
     .header__nav__inicio__logo {
         width: 100px;
-        margin: 10px 0px 0px 10px;
+        
     }  
     .header__nav__menuPaginas {
         list-style: none;
-        display: inline-block;
-        margin: auto;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-items: center;
+        align-items: center;
+        top: 60px;
+        padding: 50px 0 0 0;
+        margin-left: -100%;
+        background-color: #121212;
+        width: 100vw;
+        height: 100vh;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        transition-property: margin-left;
     }
     .header__nav__menuPaginas__item {
         display: inline-block;
-        margin: 15px;
-        font-size: 12px;
+        margin: 20px;
+        font-size: 1.3rem;
         font-weight: bold;
     }
     .header__nav__menuPaginas__item__link {
@@ -675,9 +694,9 @@ body {
         color: #ffffff;
         text-transform: uppercase;
     }
-    .header__patreonLink__logoPatreon {
+    .header__nav__patreonLink__logoPatreon {
         width: 45px;
-        margin: 12px;
+        margin: 7px;
     }
     /* Inicio footer */
     .contenedor {
@@ -694,36 +713,34 @@ body {
         height: 500px;
     }
     .footer {
-        background-color: #121212;
         color: white;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        font-size: 8px;
+        justify-items: center;
+        height: 90px;
+        font-size: 0.7rem;
     }
     .footer__copyright {
-        margin: 15px;
         order: 2;
+        margin: 0px 0px 20px;
     }
     .footer__list {
         list-style: none;
         display: flex;
-        justify-content: space-around;
-        margin-bottom: 10px;
-        margin-top: 5px;
+        padding: 0px;
+        order: 1;
     }
     .footer__list__item {
-        padding: 0px;
+        margin: 15px;
     }
     /* Inicio seccion 1 */
     .colorFondoBienvenida {
         background-color: #72727273;
         padding-top: 0px;
-        height: 100vh;
+        height: 130vh;
     }
     .bienvenida {
-        height: 100vh;
+        height: 130vh;
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -732,18 +749,19 @@ body {
         display: none;
     }
     .bienvenida__fotoLeo {
-        /* position: absolute;
-        left: 50%;
-        transform: translate(-50%); */
-        width: 80%;
-    }
-    .bienvenida__video {
-        /* position: absolute;
+        position: absolute;
         left: 50%;
         transform: translate(-50%);
-        top: 100px; */
-        width: 50%; 
-        height: 25%;
+        width: 80%;
+        bottom: -224px;
+    }
+    .bienvenida__video {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 100px;
+        width: 90%; 
+        height: 310px;
     }
     .bienvenida__contenedorScroll {
         display: none;
@@ -752,25 +770,29 @@ body {
     .latestMusic {
         background-color: rgba(255, 0, 0, 0.336);
         display: grid;
-        grid-template-columns: 80px 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        column-gap: 5px;
-        row-gap: 5px;
-        grid-template-areas: 
-        "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
-        "latestMusic liveInEurope volume24 volume25 exploreMore"
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr 80px;
+        column-gap: 20px;
+        row-gap: 20px;
+        grid-template-areas:
+        "latestMusic__titulo latestMusic__titulo" 
+        "ultimateBundle childrensMetalSongs"
+        "karaokeAndBackingTracks liveInEurope"
+        "volume24 volume25"
+        "latestMusic__exploreMore latestMusic__exploreMore"
         ;
-        justify-items: center;
-        align-items: center;
+        place-content: center;
         padding: 10px;
     }
     .latestMusic__titulo {
-        font-size: 30px;
+        font-size: 2rem;
         font-weight: bold;
         color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
-        grid-area: latestMusic;
+        grid-area: latestMusic__titulo;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        display: block;
+        margin: 0 auto;
     }
     .latestMusic__album {
         display: inline-block;
@@ -781,8 +803,8 @@ body {
     .childrensMetalSongs {
         grid-area: childrensMetalSongs;
     }
-    .karaokeBackingTracks {
-        grid-area: karaokeBackingTracks;
+    .karaokeAndBackingTracks {
+        grid-area: karaokeAndBackingTracks;
     }
     .liveInEurope {
         grid-area: liveInEurope;
@@ -805,62 +827,70 @@ body {
     .latestMusic__exploreMore {
         text-decoration: none;
         color: #fff;
-        font-size: 10px;
+        font-size: 1rem;
         font-weight: bold;
         background-color: black;
-        padding: 10px;
-        margin: 5px;
+        margin: auto;
         display: inline-block;
         border: 1px solid #fff;
-        grid-area: exploreMore;
+        grid-area: latestMusic__exploreMore;
+        width: 150px;
+        text-align: center;
+        
     }
     /* Inicio seccion 3 */
     .socialMedia {
         background-color: rgba(187, 156, 156, 0.521);
         display: grid;
-        grid-template-columns: 80px 1fr 1fr 1fr;
-        grid-template-rows: 50%;
-        column-gap: 5px;
-        row-gap: 5px;
-        grid-template-areas: 
-        "followMe facebook twitter guitarra"
-        "followMe youTube instagram guitarra"
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px auto auto;
+        column-gap: 50px;
+        row-gap: 50px;
+        grid-template-areas:
+        "followMe followMe" 
+        "facebook twitter"
+        "youTube instagram"
         ;
         justify-items: center;
         align-items: center;
         padding: 10px;
     }
     .socialMedia__titulo {
-        font-size: 30px;
+        font-size: 2rem;
         font-weight: bold;
         color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
         grid-area: followMe;
+        margin: auto;
+        padding: 0px;
     }
     .facebook {
         grid-area: facebook;
+        justify-self: flex-end;
     }
     .twitter {
         grid-area: twitter;
+        justify-self: flex-start;
     }
     .youTube {
         grid-area: youTube;
+        justify-self: flex-end;
     }
     .instagram {
         grid-area: instagram;
+        justify-self: flex-start;
     }
     .guitarra {
         grid-area: guitarra;
     }
     .socialMedia__link{
         font-size: 0px;
-    }
-    .socialMedia__link__logo {
-        width: 100px;
+        text-decoration: none;
     }
     .socialMedia__guitarra {
         width: 200px;
+        display: none;
     }
     /* Inicio seccion 4 */
     .buyAlbums {
@@ -873,22 +903,24 @@ body {
         background-color: rgba(214, 122, 46, 0.301);
         display: grid;
         grid-template-areas:
-        "buyAlbums amazon amazon"
-        "buyAlbums iTunes wav"
+        "buyAlbums"
+        "amazon"
+        "iTunes"
+        "wav"
         ;
-        column-gap: 5px;
-        row-gap: 5px;
-        grid-template-columns: 80px 1fr 1fr;
+        row-gap: 50px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto;
         justify-items: center;
         align-items: center;
-        padding: 10px;
+        padding: 10px 10px 50px 10px;
     }
     .buyAlbums__titulo {
-        font-size: 30px;
+        font-size: 2rem;
         font-weight: bold;
         color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
         grid-area: buyAlbums;
         margin: auto;
     }
@@ -901,8 +933,29 @@ body {
     .wav {
         grid-area: wav;
     }
-    .buyAlbums__link__logo {
-        width: 150px;
+    .buyAlbums__link {
+        width: 40%;
+    }
+    /* Inicio seccion 5 */
+    .contenedorFinal {
+        height: 100vh;
+    }
+    .cierre {
+        background-image: url('../img/fondo-cierre.png');
+        background-size: 200%;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cierre__logoFrogleapStudios {
+        width: 60%;
+        padding-bottom: 120px;
+        z-index: 2;
     }
     /* FIN PAGINA HOME */
 
@@ -921,7 +974,6 @@ body {
     }
     .colorFondoMusic {
         background-color: rgba(180, 180, 180, 0.651);
-        padding-top: 80px;
     }
     .music__titulo {
         text-align: center;
