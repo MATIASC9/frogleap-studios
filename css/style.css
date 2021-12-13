@@ -1,3 +1,4 @@
+/* Importar fuente Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap');
 * {
     padding: 0;
@@ -32,6 +33,12 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
+}
+#menuHamburguesa {
+    display: none;
+}
+.header__nav__checkbox__menu {
+    display: none;
 }
 .header__nav__inicio__logo {
     width: 140px;
@@ -99,12 +106,13 @@ body {
     font-size: 13px;
 }
 .footer__copyright {
-    margin-left: 15px;
+    margin: auto 15px;
 }
 .footer__list {
     list-style: none;
     display: flex;
     margin: auto;
+    padding: 0px;
 }
 .footer__list__item {
     margin: 15px;
@@ -113,12 +121,13 @@ body {
 /* Inicio seccion 1 */
 .colorFondoBienvenida {
     background-color: #d6631673;
-    height: 100vh;
+    height: 91vh;
 }
 .bienvenida {
-    height: 100vh;
+    height: 91vh;
     display: flex;
     flex-direction: column;
+    background-color: #d6631673;
 }
 .bienvenida__logoFrogleapStudios {
     width: 45%;
@@ -140,10 +149,9 @@ body {
     }
 }
 .bienvenida__fotoLeo {
-    width: 50rem;
+    width: 30rem;
     position: absolute;
     bottom: 0px;
-    left: -90px;
 }
 .bienvenida__video {
     position: absolute;
@@ -369,7 +377,6 @@ body {
     background-position-y: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -673,6 +680,9 @@ body {
     #menuHamburguesa:checked ~ .header__nav__menuPaginas {
         margin-left: 0;
     }
+    .header__nav__checkbox__menu {
+        display: inline-block;
+    }
     .header__nav__checkbox__menu__icono {
         width: 40px;
         margin-left: 15px;
@@ -768,7 +778,7 @@ body {
         left: 50%;
         transform: translate(-50%);
         width: 80%;
-        bottom: -224px;
+        bottom: -38vh;
     }
     .bienvenida__video {
         position: absolute;
@@ -783,7 +793,7 @@ body {
     }
     /* Inicio seccion 2 */
     .latestMusic {
-        background-color: rgba(255, 0, 0, 0.336);
+        background-color: #72727273;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px 1fr 1fr 1fr 80px;
@@ -855,7 +865,7 @@ body {
     }
     /* Inicio seccion 3 */
     .socialMedia {
-        background-color: rgba(187, 156, 156, 0.521);
+        background-color: #72727273;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 100px auto auto;
@@ -915,7 +925,7 @@ body {
         background-attachment: fixed;
     }
     .buyAlbums__colorFondo {
-        background-color: rgba(214, 122, 46, 0.301);
+        background-color: rgba(88, 88, 88, 0.37);
         display: grid;
         grid-template-areas:
         "buyAlbums"
