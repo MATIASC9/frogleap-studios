@@ -19,7 +19,7 @@ body {
 /* Inicio header */
 .header {
     background-color: #121212;
-    position: sticky;
+    position: fixed;
     top: 0;
     border-bottom: 3px solid red;
     display: flex;
@@ -121,18 +121,17 @@ body {
 /* Inicio seccion 1 */
 .colorFondoBienvenida {
     background-color: #d6631673;
-    height: 91vh;
+    height: 100vh;
 }
 .bienvenida {
-    height: 91vh;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
     background-color: #d6631673;
 }
 .bienvenida__logoFrogleapStudios {
     width: 45%;
     display: block;
-    margin: 100px auto 0px;
+    margin: 0px auto;
+    padding-top: 150px;
     animation-name: FadeLogoFrogleapStudios;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
@@ -377,6 +376,7 @@ body {
     background-position-y: bottom;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -661,12 +661,12 @@ body {
     /* Inicio header */
     .header {
         background-color: #121212;
-        position: sticky;
+        position: fixed;
         top: 0;
         border-bottom: 2px solid red;
         z-index: 1;
         width: 100%;
-        height: 60px;
+        height: 10%;
     }
     .header__nav {
         display: flex;
@@ -688,8 +688,7 @@ body {
         margin-left: 15px;
     }
     .header__nav__inicio__logo {
-        width: 100px;
-        
+        width: 110px;
     }  
     .header__nav__menuPaginas {
         list-style: none;
@@ -735,7 +734,7 @@ body {
         position: absolute;
         bottom: 0;
         width: 100vw;
-        height: 500px;
+        height: 50vh;
     }
     .footer {
         color: white;
@@ -747,7 +746,7 @@ body {
     }
     .footer__copyright {
         order: 2;
-        margin: 0px 0px 20px;
+        margin: 0px 0px 20px 0px;
     }
     .footer__list {
         list-style: none;
@@ -762,7 +761,7 @@ body {
     .colorFondoBienvenida {
         background-color: #72727273;
         padding-top: 0px;
-        height: 130vh;
+        height: 100vh;
     }
     .bienvenida {
         height: 130vh;
@@ -778,13 +777,13 @@ body {
         left: 50%;
         transform: translate(-50%);
         width: 80%;
-        bottom: -38vh;
+        bottom: -30%;
     }
     .bienvenida__video {
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        top: 100px;
+        top: 150px;
         width: 90%; 
         height: 310px;
     }
@@ -923,6 +922,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-position-x: -150px;
     }
     .buyAlbums__colorFondo {
         background-color: rgba(88, 88, 88, 0.37);
@@ -967,12 +967,11 @@ body {
     }
     .cierre {
         background-image: url('../img/fondo-cierre.png');
-        background-size: 200%;
         background-position-x: center;
         background-position-y: bottom;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        height: 100vh;
+        background-size: cover;
         display: flex;
         flex-direction: column;
         align-items: center;
