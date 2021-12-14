@@ -106,12 +106,12 @@ body {
     font-size: 0.9rem;
 }
 .footer__copyright {
-    margin: auto 15px;
+    margin: 0px 15px;
 }
 .footer__list {
     list-style: none;
     display: flex;
-    margin: auto;
+    margin: 0px auto;
     padding: 0px;
 }
 .footer__list__item {
@@ -810,7 +810,6 @@ body {
         color: white;
         display: flex;
         flex-direction: column;
-        justify-items: center;
         height: 90px;
         font-size: 0.7rem;
     }
@@ -826,6 +825,7 @@ body {
     }
     .footer__list__item {
         margin: 15px;
+        text-align: center;
     }
     /* Inicio seccion 1 */
     .colorFondoBienvenida {
@@ -1032,6 +1032,7 @@ body {
         transform: rotate(0deg);
         grid-area: buyAlbums;
         margin: auto;
+        text-align: center;
     }
     .amazon {
         grid-area: amazon;
@@ -1346,7 +1347,7 @@ body {
     .tourDates__tarjeta {
         background-color: rgba(66, 66, 66, 0.486);
         color: #fff;
-        width: 500px;
+        width: 80%;
         border: 2px solid black;
         padding: 15px;
         height: 155px;
