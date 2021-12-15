@@ -1,0 +1,88 @@
+.imgFondoVideos {
+    background-image: url('../img/gente-en-concierto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.colorFondoVideos {
+    background-color: rgba(255, 255, 255, 0.521);
+    padding-bottom: 50px;
+}
+.videos__contenedorGeneralVideoPrincipal {
+    padding: 0px 200px 40px 200px;
+    animation-name: fadeInVideoPrincipal;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fadeInVideoPrincipal {
+    0% {
+        opacity: 0; translateY: (0px);
+    }
+    50% {
+        opacity: 0; translateY: (0px);
+    }
+    75% {
+        opacity: 0; translateY: (0px);
+    }
+    100% {
+        opacity: 1; translateY: (40px);
+    }
+}
+.videos__contenedorResponsivoVideoPrincipal {
+    height: 0px;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden;
+}
+.videos__titulo {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.videos__videoPrincipal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.videos__contenedorVideosSecundarios {
+    display: flex;
+    flex-wrap: wrap;
+    animation-duration: 4s;
+    animation-name: fadeInVideosSecundarios;
+    animation-timing-function: ease-in-out;
+    justify-content: center;
+}
+@keyframes fadeInVideosSecundarios {
+    0% {
+        opacity: 0; translateY: (0px);
+    }
+    50% {
+        opacity: 0; translateY: (0px);
+    }
+    75% {
+        opacity: 0; translateY: (0px);
+    }
+    100% {
+        opacity: 1; translateY: (40px);
+    }
+}
+.videos__contenedorUbicacionVideoSecundario {
+    width: 30%;
+    margin: 20px;
+}
+.videos__contenedorVideoSecundario {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.videos__videoSecundario {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

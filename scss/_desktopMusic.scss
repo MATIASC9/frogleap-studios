@@ -1,0 +1,84 @@
+.music {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 70px;
+}
+.imgFondoMusic {
+    background-image: url('../img/leo-cantando.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.colorFondoMusic {
+    background-color: rgba(221, 221, 221, 0.651);
+}
+.music__titulo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.music__album {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 60px;
+    width: 100%;
+}
+.music__album__cover {
+    width: 50%;
+    height: 50%;
+    order: 1;
+}
+.music__album__contenedorInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 2;
+}
+.music__album__titulo {
+    font-size: 1.8rem;
+    margin: 30px 0px 40px 50px;
+    order: 1;
+}
+.music__album__canciones {
+    font-size: 1.1rem;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    order: 2;
+}
+.music__album__nota {
+    font-size: 0.8rem;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    order: 3;
+}
+.music__album__link {
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    order: 4;
+}
+.music__album__link__btn {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: black;
+    padding: 8px;
+    margin-left: 50px;
+    border: 1px solid #fff;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+    transition-property: color scale(1);
+}
+.music__album__link__btn:active {
+    transform: scale(0.95);
+}
+.music__album__link__btn:hover {
+    color: red;
+}

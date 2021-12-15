@@ -1,0 +1,72 @@
+@media screen and (max-width: 600px) {
+    .header {
+        background-color: #121212;
+        position: fixed;
+        top: 0;
+        border-bottom: 2px solid red;
+        z-index: 1;
+        width: 100%;
+        height: fit-content;
+    }
+    .header__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #menuHamburguesa {
+        display: none;
+    }
+    #menuHamburguesa:checked ~ .header__nav__menuPaginas {
+        margin-left: 0;
+    }
+    .header__nav__checkbox__menu {
+        display: flex;
+}   
+    .header__nav__checkbox__menu__icono {
+        width: 40px;
+        margin-left: 15px;
+    }
+    .header__nav__inicio {
+        display: flex;
+    }
+    .header__nav__inicio__logo {
+        width: 110px;
+        margin: 8px 0px;
+    }  
+    .header__nav__menuPaginas {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        top: 60px;
+        padding: 50px 0 0 0;
+        margin-left: -100%;
+        background-color: #121212;
+        width: 100vw;
+        height: 100vh;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        transition-property: margin-left;
+        z-index: 20;
+    }
+    .header__nav__menuPaginas__item {
+        display: inline-block;
+        margin: 20px;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    .header__nav__menuPaginas__item__link {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    .header__nav__patreonLink {
+        display: flex;
+    }
+    .header__nav__patreonLink__logoPatreon {
+        width: 45px;
+        margin: 8px;
+    }
+}
