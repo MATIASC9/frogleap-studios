@@ -1,6 +1,18 @@
-@import url(_desktopHome.scss);
-@import url(_desktopMusic.scss);
-@import url(_desktopStore.scss);
-@import url(_desktopVideos.scss);
-@import url(_desktopTourDates.scss);
+@import "resetYFuente";
+// Imports desktop
+@import "desktopHeader";
+@import "desktopHome";
+@import "desktopMusic";
+@import "desktopStore";
+@import "desktopVideos";
+@import "desktopTourDates";
+@import "desktopFooter";
+// Imports mobile
+@import "mobileHeader";
+@import "mobileHome";
+@import "mobileMusic";
+@import "mobileStore";
+@import "mobileVideos";
+@import "mobileTourDates";
+@import "mobileFooter";
 
