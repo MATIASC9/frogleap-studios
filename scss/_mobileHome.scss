@@ -10,39 +10,40 @@
         display: flex;
         flex-direction: column;
         justify-items: center;
-    }
-    .bienvenida__logoFrogleapStudios {
-        display: none;
-    }
-    .bienvenida__fotoLeo {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        width: 80%;
-        bottom: -30%;
-    }
-    .bienvenida__contenedorScroll {
-        display: none;
-    }
-    .bienvenida__contenedorPosicionamientoVideo {
-        position: absolute;
-        top: 150px;
-        left: 50%;
-        transform: translate(-50%);
-        width: 80%;
-    }
-    .bienvenida__contenedorResponsiveVideo {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-    }
-    .bienvenida__video {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%; 
-        height: 100%;
+
+        &__logoFrogleapStudios {
+            display: none;
+        }
+        &__fotoLeo {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            width: 80%;
+            bottom: -30%;
+        }
+        &__contenedorScrollFlecha {
+            display: none;
+        }
+        &__contenedorPosicionamientoVideo {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 80%;
+        }
+        &__contenedorResponsiveVideo {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        &__video {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%; 
+            height: 100%;
+        }
     }
     /* Inicio seccion 2 */
     .latestMusic {
@@ -61,60 +62,60 @@
         ;
         place-content: center;
         padding: 10px;
-    }
-    .latestMusic__titulo {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #fff;
-        grid-area: latestMusic__titulo;
-        writing-mode: horizontal-tb;
-        transform: rotate(0deg);
-        display: block;
-        margin: 0 auto;
-    }
-    .latestMusic__album {
-        display: inline-block;
-    }
-    .ultimateBundle {
-        grid-area: ultimateBundle;
-    }
-    .childrensMetalSongs {
-        grid-area: childrensMetalSongs;
-    }
-    .karaokeAndBackingTracks {
-        grid-area: karaokeAndBackingTracks;
-    }
-    .liveInEurope {
-        grid-area: liveInEurope;
-    }
-    .volume24 {
-        grid-area: volume24;
-    }
-    .volume25 {
-        grid-area: volume25;
-    }
-    .latestMusic__album {
-        font-size: 0px;
-    }
-    .latestMusic__album__link {
-        font-size: 0;
-    }
-    .latestMusic__album__link__cover {
-        width: 100%;
-    }
-    .latestMusic__exploreMore {
-        text-decoration: none;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: bold;
-        background-color: black;
-        margin: auto;
-        display: inline-block;
-        border: 1px solid #fff;
-        grid-area: latestMusic__exploreMore;
-        width: 150px;
-        text-align: center;
-        
+
+        &__titulo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            grid-area: latestMusic__titulo;
+            writing-mode: horizontal-tb;
+            transform: rotate(0deg);
+            display: block;
+            margin: 0 auto;
+        }
+        &__album {
+            display: inline-block;
+
+            &--ultimateBundle {
+                grid-area: ultimateBundle;
+            }
+            &--childrensMetalSongs {
+                grid-area: childrensMetalSongs;
+            }
+            &--karaokeAndBackingTracks {
+                grid-area: karaokeAndBackingTracks;
+            }
+            &--liveInEurope {
+                grid-area: liveInEurope;
+            }
+            &--volume24 {
+                grid-area: volume24;
+            }
+            &--volume25 {
+                grid-area: volume25;
+            }
+            &__link {
+                font-size: 0;
+
+                &__cover {
+                    width: 100%;
+                }
+            }
+        }
+        &__exploreMore {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: black;
+            margin: auto;
+            display: inline-block;
+            border: 1px solid #fff;
+            grid-area: latestMusic__exploreMore;
+            width: 150px;
+            text-align: center;
+            
+        }
     }
     /* Inicio seccion 3 */
     .socialMedia {
@@ -132,46 +133,48 @@
         justify-items: center;
         align-items: center;
         padding: 10px 10px 50px 10px;
-    }
-    .socialMedia__titulo {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #fff;
-        writing-mode: horizontal-tb;
-        transform: rotate(0deg);
-        grid-area: followMe;
-        margin: auto;
-        padding: 0px;
-    }
-    .facebook {
-        grid-area: facebook;
-        justify-self: flex-end;
-    }
-    .twitter {
-        grid-area: twitter;
-        justify-self: flex-start;
-    }
-    .youTube {
-        grid-area: youTube;
-        justify-self: flex-end;
-    }
-    .instagram {
-        grid-area: instagram;
-        justify-self: flex-start;
-    }
-    .guitarra {
-        grid-area: guitarra;
-    }
-    .socialMedia__link{
-        font-size: 0px;
-        text-decoration: none;
-        width: 70%;
-    }
-    .socialMedia__link__logo {
-        width: 100%;
-    }
-    .socialMedia__guitarra {
-        display: none;
+
+        &__titulo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            writing-mode: horizontal-tb;
+            transform: rotate(0deg);
+            grid-area: followMe;
+            margin: auto;
+            padding: 0px;
+        }
+        &__link{
+            font-size: 0px;
+            text-decoration: none;
+            width: 70%;
+
+            &__logo {
+                width: 100%;
+            }
+            &--facebook {
+                grid-area: facebook;
+                justify-self: flex-end;
+            }
+            &--twitter {
+                grid-area: twitter;
+                justify-self: flex-start;
+            }
+            &--youTube {
+                grid-area: youTube;
+                justify-self: flex-end;
+            }
+            &--instagram {
+                grid-area: instagram;
+                justify-self: flex-start;
+            }
+            &--guitarra {
+                grid-area: guitarra;
+            }
+        }
+        &__guitarra {
+            display: none;
+        }
     }
     /* Inicio seccion 4 */
     .buyAlbums {
@@ -180,68 +183,74 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position-x: -150px;
-    }
-    .buyAlbums__colorFondo {
-        background-color: rgba(88, 88, 88, 0.37);
-        display: grid;
-        grid-template-areas:
-        "buyAlbums"
-        "amazon"
-        "iTunes"
-        "wav"
-        ;
-        row-gap: 50px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px auto auto;
-        place-content: center;
-        padding: 10px 10px 50px 10px;
-    }
-    .buyAlbums__titulo {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #fff;
-        writing-mode: horizontal-tb;
-        transform: rotate(0deg);
-        grid-area: buyAlbums;
-        margin: auto;
-        text-align: center;
-    }
-    .amazon {
-        grid-area: amazon;
-    }
-    .itunes {
-        grid-area: iTunes;
-    }
-    .wav {
-        grid-area: wav;
-    }
-    .buyAlbums__link {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .buyAlbums__link__logo {
-        width: 50%;
+
+        &__colorFondo {
+            background-color: rgba(88, 88, 88, 0.37);
+            display: grid;
+            grid-template-areas:
+            "buyAlbums"
+            "amazon"
+            "iTunes"
+            "wav"
+            ;
+            row-gap: 50px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px auto auto;
+            place-content: center;
+            padding: 10px 10px 50px 10px;
+        }
+        &__titulo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            writing-mode: horizontal-tb;
+            transform: rotate(0deg);
+            grid-area: buyAlbums;
+            margin: auto;
+            text-align: center;
+        }
+        &__link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+
+            &__logo {
+                width: 100%;
+            }
+            &--amazon {
+                grid-area: amazon;
+            }
+            &--itunes {
+                grid-area: iTunes;
+            }
+            &--wav {
+                grid-area: wav;
+            }
+        }
     }
     /* Inicio seccion 5 */
     .contenedorFinal {
         height: 100vh;
-    }
-    .cierre {
-        background-image: url('../img/fondo-cierre.png');
-        background-position-x: center;
-        background-position-y: bottom;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .cierre__logoFrogleapStudios {
-        width: 60%;
-        padding-bottom: 120px;
-        z-index: 1;
+
+        .cierre {
+            background-image: url('../img/fondo-cierre.png');
+            background-position-x: center;
+            background-position-y: bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            &__logoFrogleapStudios {
+                width: 60%;
+                padding-bottom: 120px;
+                z-index: 1;
+            }
+        }
+        
     }
 }
