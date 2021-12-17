@@ -36,12 +36,11 @@
 }
 .videos__titulo {
     text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
-    color: #000;
-    letter-spacing: 20px;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    font-size: $fontSize-titulo-pagina;
+    font-weight: $fontWeight-titulo-pagina;
+    color: $color-titulo-pagina;
+    letter-spacing: $letterSpacing-titulo-pagina;
+    padding: $padding-titulo-pagina;
 }
 .videos__videoPrincipal {
     position: absolute;

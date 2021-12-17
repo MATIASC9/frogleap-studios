@@ -19,21 +19,17 @@
   width: 100%;
   height: 85px;
 }
-
 .header__nav {
   display: flex;
   align-items: center;
   width: 100%;
 }
-
-#menuHamburguesa {
+.header__nav #menuHamburguesa {
   display: none;
 }
-
 .header__nav__checkbox__menu {
   display: none;
 }
-
 .header__nav__inicio__logo {
   width: 140px;
   margin: 8px 0px 0px 8px;
@@ -41,24 +37,20 @@
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
-
 .header__nav__inicio__logo:hover {
   transform: scale(1.06);
 }
-
 .header__nav__menuPaginas {
   list-style: none;
   display: inline-block;
   margin: auto;
 }
-
 .header__nav__menuPaginas__item {
   display: inline-block;
   margin: 30px;
   font-size: 20px;
   font-weight: bold;
 }
-
 .header__nav__menuPaginas__item__link {
   text-decoration: none;
   color: #ffffff;
@@ -67,11 +59,9 @@
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
 }
-
 .header__nav__menuPaginas__item__link:hover {
   color: red;
 }
-
 .header__patreonLink__logoPatreon {
   width: 55px;
   margin: 15px;
@@ -79,7 +69,6 @@
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
-
 .header__patreonLink__logoPatreon:hover {
   transform: scale(1.07);
 }
@@ -93,16 +82,10 @@ body {
 }
 
 /* Inicio seccion 1 */
-.colorFondoBienvenida {
-  background-color: #d6631673;
-  height: 100vh;
-}
-
 .bienvenida {
   height: 100vh;
   background-color: #d6631673;
 }
-
 .bienvenida__logoFrogleapStudios {
   width: 45%;
   display: block;
@@ -112,7 +95,6 @@ body {
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
 }
-
 @keyframes FadeLogoFrogleapStudios {
   0% {
     opacity: 0;
@@ -129,21 +111,18 @@ body {
   position: absolute;
   bottom: 0px;
 }
-
 .bienvenida__contenedorPosicionamientoVideo {
   position: absolute;
   width: 30%;
   bottom: 70px;
   right: 70px;
 }
-
 .bienvenida__contenedorResponsiveVideo {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
-
 .bienvenida__video {
   position: absolute;
   top: 0;
@@ -151,8 +130,7 @@ body {
   width: 100%;
   height: 100%;
 }
-
-.bienvenida__contenedorScroll {
+.bienvenida__contenedorScrollFlecha {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,13 +141,11 @@ body {
   bottom: 0px;
   left: 50%;
 }
-
-.bienvenida__scroll {
+.bienvenida__contenedorScrollFlecha__scroll {
   color: white;
   font-size: 1.3rem;
 }
-
-.main__section__flecha {
+.bienvenida__contenedorScrollFlecha__flecha {
   width: 40px;
 }
 
@@ -185,7 +161,6 @@ body {
   padding: 80px 20px;
   place-items: center;
 }
-
 .latestMusic__titulo {
   font-size: 3.5rem;
   font-weight: bold;
@@ -196,55 +171,44 @@ body {
   justify-self: flex-start;
   padding: 0px;
 }
-
 .latestMusic__album {
   font-size: 0px;
   width: 100%;
   height: 100%;
 }
-
 .latestMusic__album__link {
   font-size: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.ultimateBundle {
-  grid-area: ultimateBundle;
-}
-
-.childrensMetalSongs {
-  grid-area: childrensMetalSongs;
-}
-
-.karaokeBackingTracks {
-  grid-area: karaokeBackingTracks;
-}
-
-.liveInEurope {
-  grid-area: liveInEurope;
-}
-
-.volume24 {
-  grid-area: volume24;
-}
-
-.volume25 {
-  grid-area: volume25;
-}
-
 .latestMusic__album__link__cover {
   width: 100%;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
   transition-property: scale(1);
 }
-
 .latestMusic__album__link__cover:hover {
   transform: scale(1.06);
 }
-
+.latestMusic__album--ultimateBundle {
+  grid-area: ultimateBundle;
+}
+.latestMusic__album--childrensMetalSongs {
+  grid-area: childrensMetalSongs;
+}
+.latestMusic__album--karaokeBackingTracks {
+  grid-area: karaokeBackingTracks;
+}
+.latestMusic__album--liveInEurope {
+  grid-area: liveInEurope;
+}
+.latestMusic__album--volume24 {
+  grid-area: volume24;
+}
+.latestMusic__album--volume25 {
+  grid-area: volume25;
+}
 .latestMusic__exploreMore {
   text-decoration: none;
   color: #fff;
@@ -261,7 +225,6 @@ body {
   transition-property: scale(1);
   justify-self: flex-start;
 }
-
 .latestMusic__exploreMore:active {
   transform: scale(0.95);
 }
@@ -279,7 +242,6 @@ body {
   align-items: center;
   padding: 80px 20px;
 }
-
 .socialMedia__titulo {
   font-size: 3.5rem;
   font-weight: bold;
@@ -290,44 +252,35 @@ body {
   justify-self: flex-start;
   margin: 0px;
 }
-
-.facebook {
-  grid-area: facebook;
-}
-
-.twitter {
-  grid-area: twitter;
-}
-
-.youTube {
-  grid-area: youTube;
-}
-
-.instagram {
-  grid-area: instagram;
-}
-
-.guitarra {
-  grid-area: guitarra;
-}
-
 .socialMedia__link {
   width: 40%;
 }
-
 .socialMedia__link__logo {
   width: 100%;
-  transition-duration: 200ms;
+  transition-duration: 300ms;
   transition-timing-function: ease-in-out;
   transition-property: scale(1);
 }
-
 .socialMedia__link__logo:hover {
   transform: scale(1.06);
 }
-
+.socialMedia__link--facebook {
+  grid-area: facebook;
+}
+.socialMedia__link--twitter {
+  grid-area: twitter;
+}
+.socialMedia__link--youTube {
+  grid-area: youTube;
+}
+.socialMedia__link--instagram {
+  grid-area: instagram;
+}
+.socialMedia__link--guitarra {
+  grid-area: guitarra;
+}
 .socialMedia__guitarra {
-  width: 100%;
+  width: 90%;
 }
 
 /* Inicio seccion 4 */
@@ -337,7 +290,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 .buyAlbums__colorFondo {
   background-color: rgba(88, 88, 88, 0.37);
   display: grid;
@@ -349,7 +301,6 @@ body {
   align-items: center;
   padding: 80px 20px;
 }
-
 .buyAlbums__titulo {
   font-size: 3.5rem;
   font-weight: bold;
@@ -360,26 +311,24 @@ body {
   margin: 0px;
   justify-self: flex-start;
 }
-
-.amazon {
+.buyAlbums__link {
+  width: 50%;
+}
+.buyAlbums__link--amazon {
   grid-area: amazon;
 }
-
-.itunes {
+.buyAlbums__link--itunes {
   grid-area: iTunes;
 }
-
-.wav {
+.buyAlbums__link--wav {
   grid-area: wav;
 }
-
 .buyAlbums__link__logo {
-  width: 20rem;
-  transition-duration: 200ms;
+  width: 100%;
+  transition-duration: 300ms;
   transition-timing-function: ease-in-out;
   transition-property: scale(1);
 }
-
 .buyAlbums__link__logo:hover {
   transform: scale(1.06);
 }
@@ -402,7 +351,6 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-
 .cierre__logoFrogleapStudios {
   width: 35%;
   padding-bottom: 140px;
@@ -434,8 +382,7 @@ body {
   font-weight: bold;
   color: #000;
   letter-spacing: 20px;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 100px 0px 50px 0px;
 }
 
 .music__album {
@@ -498,11 +445,9 @@ body {
   transition-timing-function: ease-in-out;
   transition-property: color scale(1);
 }
-
 .music__album__link__btn:active {
   transform: scale(0.95);
 }
-
 .music__album__link__btn:hover {
   color: red;
 }
@@ -524,8 +469,7 @@ body {
   font-weight: bold;
   color: #000;
   letter-spacing: 20px;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 100px 0px 50px 0px;
 }
 
 .store__menu {
@@ -550,7 +494,6 @@ body {
   transition-timing-function: ease-in-out;
   transition-property: color scale(1);
 }
-
 .store__menu__categoria:active {
   transform: scale(0.95);
 }
@@ -569,7 +512,6 @@ body {
   transition-timing-function: ease-in-out;
   transition-property: scale(1);
 }
-
 .store__producto:hover {
   transform: scale(1.06);
 }
@@ -624,8 +566,7 @@ body {
   font-weight: bold;
   color: #000;
   letter-spacing: 20px;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 100px 0px 50px 0px;
 }
 
 .videos__videoPrincipal {
@@ -701,8 +642,7 @@ body {
   font-weight: bold;
   color: #000;
   letter-spacing: 20px;
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 100px 0px 50px 0px;
 }
 
 .tourDates__tarjeta {
@@ -757,7 +697,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .tourDates__tarjeta__btn:active {
   transform: scale(0.95);
 }
@@ -765,7 +704,6 @@ body {
 .contenedor {
   position: relative;
 }
-
 .contenedor__gradiente {
   background: linear-gradient(to top, #000000, #12121279, #00000000);
   display: flex;
@@ -785,18 +723,15 @@ body {
   height: 90px;
   font-size: 0.9rem;
 }
-
 .footer__copyright {
   margin: 0px 15px;
 }
-
 .footer__list {
   list-style: none;
   display: flex;
   margin: 0px auto;
   padding: 0px;
 }
-
 .footer__list__item {
   margin: 15px;
 }

@@ -9,12 +9,11 @@
 }
 .store__titulo {
     text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
-    color: #000;
-    letter-spacing: 20px;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    font-size: $fontSize-titulo-pagina;
+    font-weight: $fontWeight-titulo-pagina;
+    color: $color-titulo-pagina;
+    letter-spacing: $letterSpacing-titulo-pagina;
+    padding: $padding-titulo-pagina;
 }
 .store__menu {
     list-style: none;
@@ -36,9 +35,10 @@
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
     transition-property: color scale(1);
-}
-.store__menu__categoria:active {
-    transform: scale(0.95);
+
+    &:active {
+        transform: scale(0.95);
+    }
 }
 .productos {
     display: grid;
@@ -52,7 +52,8 @@
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
     transition-property: scale(1);
+    &:hover {
+        transform: scale(1.06);
+    }
 }
-.store__producto:hover {
-    transform: scale(1.06);
-}
+
