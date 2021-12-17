@@ -1,0 +1,25 @@
+// Variables globales desktop
+$fontSize-titulo-pagina: 4rem;
+$padding-titulo-pagina: 100px 0px 50px 0px;
+$letterSpacing-titulo-pagina: 20px;
+$fontWeight-titulo-pagina: bold;
+$color-titulo-pagina: #000;
+// Variables globales mobile
+@import "resetYFuente";
+// Imports desktop
+@import "desktopHeader";
+@import "desktopHome";
+@import "desktopMusic";
+@import "desktopStore";
+@import "desktopVideos";
+@import "desktopTourDates";
+@import "desktopFooter";
+// Imports mobile
+@import "mobileHeader";
+@import "mobileHome";
+@import "mobileMusic";
+@import "mobileStore";
+@import "mobileVideos";
+@import "mobileTourDates";
+@import "mobileFooter";
+

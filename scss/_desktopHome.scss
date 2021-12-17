@@ -1,0 +1,308 @@
+// Variables
+$fontSize-titulo-seccion: 3.5rem;
+$fontWeight-titulo-seccion: bold;
+// Transiciones
+$transitionDuration: 300ms;
+$transitionTimingFunction: ease-in-out;
+$transform-scale: scale(1.06);
+
+body {
+    background-image: url('../img/studio.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* Inicio seccion 1 */
+.bienvenida {
+    height: 100vh;
+    background-color: #d6631673;
+
+    &__logoFrogleapStudios {
+        width: 45%;
+        display: block;
+        margin: 0px auto;
+        padding-top: 150px;
+        animation-name: FadeLogoFrogleapStudios;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes FadeLogoFrogleapStudios {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    &__fotoLeo {
+        width: 35rem;
+        position: absolute;
+        bottom: 0px;
+    }
+    &__contenedorPosicionamientoVideo {
+        position: absolute;
+        width: 30%;
+        bottom: 70px;
+        right: 70px;
+    }
+    &__contenedorResponsiveVideo {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
+    }
+    &__contenedorScrollFlecha {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 0px;
+        height: 60px;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+
+        &__scroll {
+            color: white;
+            font-size: 1.3rem;
+        }
+        &__flecha {
+            width: 40px;
+        }
+    }
+}
+/* Inicio seccion 2 */
+.latestMusic {
+    background-color: #72727273;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-areas: 
+    "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
+    "latestMusic liveInEurope volume24 volume25 exploreMore"
+    ;
+    padding: 80px 20px;
+    place-items: center;
+
+    &__titulo {
+        font-size: $fontSize-titulo-seccion;
+        font-weight: $fontWeight-titulo-seccion;
+        color: #fff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        grid-area: latestMusic;
+        justify-self: flex-start;
+        padding: 0px;
+    }
+    &__album {
+        font-size: 0px;
+        width: 100%;
+        height: 100%;
+
+        &__link {
+            font-size: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__cover {
+                width: 100%;
+                transition-duration: $transitionDuration;
+                transition-timing-function: $transitionTimingFunction;
+                transition-property: scale(1);
+            
+                &:hover {
+                    transform: $transform-scale;
+                }
+            }
+        }
+        &--ultimateBundle {
+            grid-area: ultimateBundle;
+        }
+        &--childrensMetalSongs {
+            grid-area: childrensMetalSongs;
+        }
+        &--karaokeBackingTracks {
+            grid-area: karaokeBackingTracks;
+        }
+        &--liveInEurope {
+            grid-area: liveInEurope;
+        }
+        &--volume24 {
+            grid-area: volume24;
+        }
+        &--volume25 {
+            grid-area: volume25;
+        }
+    }
+    &__exploreMore {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-color: black;
+        padding: 10px;
+        margin-left: 30px;
+        display: inline-block;
+        border: 1px solid #fff;
+        grid-area: exploreMore;
+        transition-duration: 100ms;
+        transition-timing-function: $transitionTimingFunction;
+        transition-property: scale(1);
+        justify-self: flex-start;
+    
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+/* Inicio seccion 3 */
+.socialMedia {
+    background-color: #72727273;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr 500px;
+    grid-template-rows: 50%;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas: 
+    "followMe facebook twitter guitarra"
+    "followMe youTube instagram guitarra"
+    ;
+    justify-items: center;
+    align-items: center;
+    padding: 80px 20px;
+
+    &__titulo {
+        font-size: $fontSize-titulo-seccion;
+        font-weight: $fontWeight-titulo-seccion;
+        color: #fff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        grid-area: followMe;
+        justify-self: flex-start;
+        margin: 0px;
+    }
+    &__link {
+        width: 40%;
+
+        &__logo {
+            width: 100%;
+            transition-duration: $transitionDuration;
+            transition-timing-function: $transitionTimingFunction;
+            transition-property: scale(1);
+        
+            &:hover {
+                transform: $transform-scale;
+            }
+        }
+        &--facebook {
+            grid-area: facebook;
+        }
+        &--twitter {
+            grid-area: twitter;
+        }
+        &--youTube {
+            grid-area: youTube;
+        }
+        &--instagram {
+            grid-area: instagram;
+        }
+        &--guitarra {
+            grid-area: guitarra;
+        }
+    }
+    &__guitarra {
+        width: 90%;
+    }
+}
+/* Inicio seccion 4 */
+.buyAlbums {
+    background-image: url('../img/guitarra-concierto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    &__colorFondo {
+        background-color: rgba(88, 88, 88, 0.37);
+        display: grid;
+        grid-template-areas:
+        "buyAlbums amazon amazon"
+        "buyAlbums iTunes wav"
+        ;
+        column-gap: 20px;
+        row-gap: 20px;
+        grid-template-columns: 150px 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 80px 20px;
+    }
+    &__titulo {
+        font-size: $fontSize-titulo-seccion;
+        font-weight: $fontWeight-titulo-seccion;
+        color: #fff;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        grid-area: buyAlbums;
+        margin: 0px;
+        justify-self: flex-start;
+    }
+    &__link {
+        width: 50%;
+
+        &--amazon {
+            grid-area: amazon;
+        }
+        &--itunes {
+            grid-area: iTunes;
+        }
+        &--wav {
+            grid-area: wav;
+        }
+        &__logo {
+            width: 100%;
+            transition-duration: $transitionDuration;
+            transition-timing-function: $transitionTimingFunction;
+            transition-property: scale(1);
+        
+            &:hover {
+                transform: $transform-scale;
+            }
+        }
+    }
+}
+/* Inicio seccion 5 */
+.contenedorFinal {
+    height: 100vh;
+}
+.cierre {
+    background-image: url('../img/fondo-cierre.png');
+    background-size: 110%;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__logoFrogleapStudios {
+        width: 35%;
+        padding-bottom: 140px;
+        z-index: 2;
+    }
+}
