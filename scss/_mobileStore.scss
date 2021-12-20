@@ -12,12 +12,11 @@
 
         &__titulo {
             text-align: center;
-            font-size: 4rem;
-            font-weight: bold;
-            color: #000;
-            letter-spacing: 20px;
-            padding-top: 100px;
-            padding-bottom: 50px;
+            font-size: $fontSizeMobile-titulo-pagina;
+            font-weight: $fontWeight-titulo-pagina;
+            color: $color-titulo-pagina;
+            letter-spacing: $letterSpacing-titulo-pagina;
+            padding: $padding-titulo-pagina;
         }
         &__menu {
             list-style: none;
@@ -29,17 +28,18 @@
             place-content: center;
 
             &__categoria {
-                display: inline-block;
+                display: flex;
                 width: auto;
-                padding: 8px;
                 margin: 5px;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 color: #fff;
                 background-color: #000;
                 border: 1px solid #fff;
                 transition-duration: 100ms;
                 transition-timing-function: ease-in-out;
                 transition-property: color scale(1);
+                text-align: center;
+                align-items: center;
 
                 &:active {
                     transform: scale(0.95);
@@ -47,14 +47,14 @@
             }
         }
         &__contenedorProductos {
-            display: grid;
-            grid-template-columns: 1fr;
-            column-gap: 20px;
-            row-gap: 20px;
-            padding: 50px;
-
+            display: flex;
+            flex-direction: column;
+            row-gap: 0px;
+            padding: 40px;
+            
             &__producto {
                 width: 100%;
+                margin: 20px 0px;
                 transition-duration: 200ms;
                 transition-timing-function: ease-in-out;
                 transition-property: scale(1);

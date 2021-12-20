@@ -162,7 +162,7 @@ body {
   place-items: center;
 }
 .latestMusic__titulo {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #fff;
   writing-mode: vertical-lr;
@@ -243,7 +243,7 @@ body {
   padding: 80px 20px;
 }
 .socialMedia__titulo {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #fff;
   writing-mode: vertical-lr;
@@ -302,7 +302,7 @@ body {
   padding: 80px 20px;
 }
 .buyAlbums__titulo {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #fff;
   writing-mode: vertical-lr;
@@ -380,7 +380,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   color: #000;
-  letter-spacing: 20px;
+  letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
 }
 .music__album {
@@ -459,7 +459,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   color: #000;
-  letter-spacing: 20px;
+  letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
 }
 .store__menu {
@@ -550,7 +550,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   color: #000;
-  letter-spacing: 20px;
+  letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
 }
 .videos__videoPrincipal {
@@ -620,7 +620,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   color: #000;
-  letter-spacing: 20px;
+  letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
 }
 .tourDates__tarjeta {
@@ -956,12 +956,9 @@ body {
   }
   .buyAlbums__colorFondo {
     background-color: rgba(88, 88, 88, 0.37);
-    display: grid;
-    grid-template-areas: "buyAlbums" "amazon" "iTunes" "wav";
-    row-gap: 50px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px auto auto;
-    place-content: center;
+    display: flex;
+    row-gap: 0px;
+    flex-direction: column;
     padding: 10px 10px 50px 10px;
   }
   .buyAlbums__titulo {
@@ -970,28 +967,15 @@ body {
     color: #fff;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
-    grid-area: buyAlbums;
     margin: auto;
     text-align: center;
   }
   .buyAlbums__link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 60%;
+    margin: 30px 0px;
   }
   .buyAlbums__link__logo {
     width: 100%;
-  }
-  .buyAlbums__link--amazon {
-    grid-area: amazon;
-  }
-  .buyAlbums__link--itunes {
-    grid-area: iTunes;
-  }
-  .buyAlbums__link--wav {
-    grid-area: wav;
   }
 
   /* Inicio seccion 5 */
@@ -1036,12 +1020,11 @@ body {
     padding-bottom: 70px;
   }
   .music__titulo {
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-weight: bold;
     color: #000;
-    letter-spacing: 20px;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    letter-spacing: 15px;
+    padding: 100px 0px 50px 0px;
   }
   .music__album {
     display: flex;
@@ -1116,12 +1099,11 @@ body {
 
   .store__titulo {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-weight: bold;
     color: #000;
-    letter-spacing: 20px;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    letter-spacing: 15px;
+    padding: 100px 0px 50px 0px;
   }
   .store__menu {
     list-style: none;
@@ -1133,30 +1115,31 @@ body {
     place-content: center;
   }
   .store__menu__categoria {
-    display: inline-block;
+    display: flex;
     width: auto;
-    padding: 8px;
     margin: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #fff;
     background-color: #000;
     border: 1px solid #fff;
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
     transition-property: color scale(1);
+    text-align: center;
+    align-items: center;
   }
   .store__menu__categoria:active {
     transform: scale(0.95);
   }
   .store__contenedorProductos {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    padding: 40px;
   }
   .store__contenedorProductos__producto {
     width: 100%;
+    margin: 20px 0px;
     transition-duration: 200ms;
     transition-timing-function: ease-in-out;
     transition-property: scale(1);
@@ -1181,9 +1164,6 @@ body {
     padding-bottom: 30px;
   }
 
-  .videos {
-    padding: 0px 20px;
-  }
   .videos__contenedorGeneralVideoPrincipal {
     width: 100%;
     padding: 0px;
@@ -1217,12 +1197,11 @@ body {
   }
   .videos__titulo {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-weight: bold;
     color: #000;
-    letter-spacing: 20px;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    letter-spacing: 15px;
+    padding: 100px 0px 50px 0px;
   }
   .videos__videoPrincipal {
     position: absolute;
@@ -1231,7 +1210,7 @@ body {
     height: 100%;
   }
   .videos__contenedorVideosSecundarios {
-    padding: 0px 60px;
+    padding: 0px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1292,19 +1271,19 @@ body {
   }
   .tourDates__titulo {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.3rem;
     font-weight: bold;
     color: #000;
-    letter-spacing: 20px;
-    padding-top: 100px;
+    letter-spacing: 15px;
+    padding: 100px 0px 50px 0px;
   }
   .tourDates__tarjeta {
     background-color: rgba(66, 66, 66, 0.486);
     color: #fff;
     width: 80%;
     border: 2px solid black;
-    padding: 15px;
-    height: 155px;
+    padding: 10px;
+    height: auto;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
@@ -1336,7 +1315,7 @@ body {
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
-    padding: 15px;
+    padding: 9px;
     border: 1px solid #fff;
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
@@ -1360,7 +1339,7 @@ body {
     justify-content: flex-end;
     position: absolute;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     z-index: 0;
   }
@@ -1383,7 +1362,7 @@ body {
     order: 1;
   }
   .footer__list__item {
-    margin: 15px;
+    margin: 0px 5px;
     text-align: center;
   }
 }

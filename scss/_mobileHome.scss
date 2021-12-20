@@ -186,17 +186,9 @@
 
         &__colorFondo {
             background-color: rgba(88, 88, 88, 0.37);
-            display: grid;
-            grid-template-areas:
-            "buyAlbums"
-            "amazon"
-            "iTunes"
-            "wav"
-            ;
-            row-gap: 50px;
-            grid-template-columns: 1fr;
-            grid-template-rows: 100px auto auto;
-            place-content: center;
+            display: flex;
+            row-gap: 0px;
+            flex-direction: column;
             padding: 10px 10px 50px 10px;
         }
         &__titulo {
@@ -205,28 +197,15 @@
             color: #fff;
             writing-mode: horizontal-tb;
             transform: rotate(0deg);
-            grid-area: buyAlbums;
             margin: auto;
             text-align: center;
         }
         &__link {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             width: 60%;
+            margin: 30px 0px;
 
             &__logo {
                 width: 100%;
-            }
-            &--amazon {
-                grid-area: amazon;
-            }
-            &--itunes {
-                grid-area: iTunes;
-            }
-            &--wav {
-                grid-area: wav;
             }
         }
     }

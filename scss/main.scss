@@ -1,10 +1,14 @@
-// Variables globales desktop
-$fontSize-titulo-pagina: 4rem;
+// Variables
+$fontSizeDesktop-titulo-pagina: 4rem;
+$fontSizeDesktop-titulo-seccion: 3rem;
+$fontSizeMobile-titulo-pagina: 3.3rem;
+$fontWeight-titulo-seccion: bold;
 $padding-titulo-pagina: 100px 0px 50px 0px;
 $letterSpacing-titulo-pagina: 20px;
 $fontWeight-titulo-pagina: bold;
 $color-titulo-pagina: #000;
-// Variables globales mobile
+$letterSpacing-titulo-pagina: 15px;
+
 @import "resetYFuente";
 // Imports desktop
 @import "desktopHeader";
