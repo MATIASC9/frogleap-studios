@@ -98,7 +98,7 @@ body {
     place-items: center;
 
     &__titulo {
-        font-size: $fontSize-titulo-seccion;
+        font-size: $fontSizeDesktop-titulo-seccion;
         font-weight: $fontWeight-titulo-seccion;
         color: #fff;
         writing-mode: vertical-lr;
@@ -186,7 +186,7 @@ body {
     padding: 80px 20px;
 
     &__titulo {
-        font-size: $fontSize-titulo-seccion;
+        font-size: $fontSizeDesktop-titulo-seccion;
         font-weight: $fontWeight-titulo-seccion;
         color: #fff;
         writing-mode: vertical-lr;
@@ -250,7 +250,7 @@ body {
         padding: 80px 20px;
     }
     &__titulo {
-        font-size: $fontSize-titulo-seccion;
+        font-size: $fontSizeDesktop-titulo-seccion;
         font-weight: $fontWeight-titulo-seccion;
         color: #fff;
         writing-mode: vertical-lr;
