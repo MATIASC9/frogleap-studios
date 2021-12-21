@@ -157,7 +157,7 @@ body {
 }
 
 /* Inicio seccion 2 */
-.latestMusic {
+.latestMusic, .socialMedia {
   background-color: #72727273;
   display: grid;
   grid-template-columns: 150px 1fr 1fr 1fr 1fr;
@@ -216,7 +216,7 @@ body {
 .latestMusic__album--volume25 {
   grid-area: volume25;
 }
-.latestMusic__exploreMore {
+.latestMusic__exploreMore, .tourDates__tarjeta__btn, .music__album__link__btn {
   text-decoration: none;
   color: #fff;
   font-size: 1.3rem;
@@ -232,22 +232,17 @@ body {
   transition-property: scale(1);
   justify-self: flex-start;
 }
-.latestMusic__exploreMore:active {
+.latestMusic__exploreMore:active, .tourDates__tarjeta__btn:active, .music__album__link__btn:active {
   transform: scale(0.95);
 }
 
 /* Inicio seccion 3 */
 .socialMedia {
-  background-color: #72727273;
-  display: grid;
   grid-template-columns: 150px 1fr 1fr 500px;
   grid-template-rows: 50%;
   column-gap: 20px;
   row-gap: 20px;
   grid-template-areas: "followMe facebook twitter guitarra" "followMe youTube instagram guitarra";
-  justify-items: center;
-  align-items: center;
-  padding: 80px 20px;
 }
 .socialMedia__titulo {
   grid-area: followMe;
@@ -418,16 +413,8 @@ body {
   order: 4;
 }
 .music__album__link__btn {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: black;
-  padding: 8px;
   margin-left: 50px;
-  border: 1px solid #fff;
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
-  transition-property: color scale(1);
+  justify-self: auto;
 }
 .music__album__link__btn:active {
   transform: scale(0.95);
@@ -438,9 +425,6 @@ body {
 
 .imgFondoStore {
   background-image: url("../img/store.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .colorFondoStore {
@@ -474,7 +458,7 @@ body {
   border: 1px solid #fff;
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
-  transition-property: color scale(1);
+  transition-property: scale(1);
 }
 .store__menu__categoria:active {
   transform: scale(0.95);
@@ -490,11 +474,8 @@ body {
   transform: scale(1.06);
 }
 
-.imgFondoVideos {
+.imgFondoVideos, .imgFondoStore {
   background-image: url("../img/gente-en-concierto.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .colorFondoVideos {
@@ -583,7 +564,7 @@ body {
   padding-bottom: 56.25%;
   position: relative;
 }
-.imgFondoTourDates {
+.imgFondoTourDates, .imgFondoVideos, .imgFondoStore {
   background-image: url("../img/fondo-tour-dates.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -637,19 +618,10 @@ body {
   flex-flow: column;
 }
 .tourDates__tarjeta__btn {
-  background-color: black;
-  color: #fff;
   height: 100%;
-  text-align: center;
   font-size: 1rem;
-  font-weight: bold;
-  padding: 15px;
-  border: 1px solid #fff;
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
-  transition-property: color scale(1);
   display: flex;
-  align-items: center;
+  margin: 0px;
   justify-content: center;
 }
 .tourDates__tarjeta__btn:active {
@@ -812,7 +784,7 @@ body {
   }
 
   /* Inicio seccion 2 */
-  .latestMusic {
+  .latestMusic, .socialMedia {
     background-color: #72727273;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -860,7 +832,7 @@ body {
   .latestMusic__album__link__cover, .store__contenedorProductos__producto {
     width: 100%;
   }
-  .latestMusic__exploreMore {
+  .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
@@ -1111,7 +1083,7 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  .imgFondoVideos {
+  .imgFondoVideos, .imgFondoStore {
     background-image: url("../img/gente-en-concierto.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -1210,7 +1182,7 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  .imgFondoTourDates {
+  .imgFondoTourDates, .imgFondoVideos, .imgFondoStore {
     background-image: url("../img/fondo-tour-dates.jpg");
     background-size: cover;
     background-repeat: no-repeat;

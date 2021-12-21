@@ -168,8 +168,7 @@ body {
 }
 /* Inicio seccion 3 */
 .socialMedia {
-    background-color: #72727273;
-    display: grid;
+    @extend .latestMusic;
     grid-template-columns: 150px 1fr 1fr 500px;
     grid-template-rows: 50%;
     column-gap: 20px;
@@ -178,9 +177,6 @@ body {
     "followMe facebook twitter guitarra"
     "followMe youTube instagram guitarra"
     ;
-    justify-items: center;
-    align-items: center;
-    padding: 80px 20px;
 
     &__titulo {
         @extend .latestMusic__titulo;

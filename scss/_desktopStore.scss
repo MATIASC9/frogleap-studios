@@ -1,8 +1,6 @@
 .imgFondoStore {
+    @extend .imgFondoVideos;
     background-image: url('../img/store.png');
-    background-size:  cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 .colorFondoStore {
     background-color: #72727273;
@@ -31,7 +29,7 @@
             border: 1px solid #fff;
             transition-duration: 100ms;
             transition-timing-function: ease-in-out;
-            transition-property: color scale(1);
+            transition-property: scale(1);
         
             &:active {
                 transform: scale(0.95);

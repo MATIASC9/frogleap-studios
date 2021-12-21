@@ -60,16 +60,9 @@
             order: 4;
 
             &__btn {
-                color: #fff;
-                font-size: 1rem;
-                font-weight: bold;
-                background-color: black;
-                padding: 8px;
+                @extend .latestMusic__exploreMore;
                 margin-left: 50px;
-                border: 1px solid #fff;
-                transition-duration: 100ms;
-                transition-timing-function: ease-in-out;
-                transition-property: color scale(1);
+                justify-self: auto;
             
                 &:active {
                     transform: scale(0.95);
