@@ -8,15 +8,15 @@
     background-color: rgba(221, 221, 221, 0.651);
 }
 .music {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    padding-bottom: 70px;
+    display: map-get($map: $config-clase-music, $key: flex-direction);
+    align-items: map-get($map: $config-clase-music, $key: align-items);
+    width: map-get($map: $config-clase-music, $key: width);
+    margin: map-get($map: $config-clase-music, $key: margin);
+    padding-bottom: map-get($map: $config-clase-music, $key: padding-bottom);
 
     &__titulo {
         @include desktop-titulo-pagina;
+        text-align: center;
     }
     &__album {
         display: flex;

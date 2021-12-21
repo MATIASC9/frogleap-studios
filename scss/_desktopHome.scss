@@ -98,8 +98,8 @@ body {
         font-size: $fontSizeDesktop-titulo-seccion;
         font-weight: $fontWeight-titulo-seccion;
         color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        writing-mode: map-get($map: $texto-vertical, $key: writing-mode);
+        transform: map-get($map: $texto-vertical, $key: transform);
         grid-area: latestMusic;
         justify-self: flex-start;
         padding: 0px;

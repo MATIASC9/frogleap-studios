@@ -15,15 +15,15 @@
         text-align: center;
     }
     &__tarjeta {
-        background-color: rgba(66, 66, 66, 0.486);
-        color: #fff;
-        width: 45%;
-        border: 2px solid black;
-        padding: 15px;
-        height: 155px;
-        margin: 30px auto;
+        background-color: map-get($map: $tarjeta-tour-dates, $key: background-color);
+        color: map-get($map: $tarjeta-tour-dates, $key: color);
+        width: map-get($map: $tarjeta-tour-dates, $key: width);
+        border: map-get($map: $tarjeta-tour-dates, $key: border);
+        padding: map-get($map: $tarjeta-tour-dates, $key: padding);
+        height: map-get($map: $tarjeta-tour-dates, $key: height);
+        margin: map-get($map: $tarjeta-tour-dates, $key: margin);
         display: flex;
-        justify-content: space-between;
+        justify-content: map-get($map: $tarjeta-tour-dates, $key: justify-content);
 
         &__contenedorInfo {
             display: flex;

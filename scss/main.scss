@@ -29,6 +29,51 @@ $letterSpacing-titulo-pagina: 15px;
     padding: $padding-titulo-pagina;
 }
 
+// Mapas Desktop
+$transiciones: (
+    transform: scale(1),
+    transition-duration: 200ms,
+    transition-timing-function: ease-in-out,
+);
+$texto-vertical: (
+    writing-mode: vertical-lr,
+    transform: rotate(180deg),
+);
+$config-clase-music: (
+    display: flex,
+    flex-direction: column,
+    align-items: center,
+    width: 80%,
+    margin: auto,
+    padding-bottom: 70px,
+);
+$menu-pagina-store: (
+    list-style: none,
+    display: flex,
+    position: relative,
+    margin: 0px,
+    padding: 0px,
+    width: 100%,
+    place-content: center,
+);
+$contenedor-general-video-principal: (
+    padding: 0px 200px 40px 200px,
+    animation-name: fadeInVideoPrincipal,
+    animation-duration: 4s,
+    animation-timing-function: ease-in-out,
+);
+$tarjeta-tour-dates: (
+    background-color: rgba(66, 66, 66, 0.486),
+    color: #fff,
+    width: 45%,
+    border: 2px solid black,
+    padding: 15px,
+    height: 155px,
+    margin: 30px auto,
+    display: flex,
+    justify-content: space-between,
+);
+
 @import "resetYFuente";
 // Imports desktop
 @import "desktopHeader";
