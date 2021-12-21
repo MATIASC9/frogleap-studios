@@ -16,11 +16,7 @@
     padding-bottom: 70px;
 
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-pagina;
-        font-weight: $fontWeight-titulo-pagina;
-        color: $color-titulo-pagina;
-        letter-spacing: $letterSpacing-titulo-pagina;
-        padding: $padding-titulo-pagina;
+        @include desktop-titulo-pagina;
     }
     &__album {
         display: flex;

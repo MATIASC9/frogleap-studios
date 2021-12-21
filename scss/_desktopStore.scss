@@ -9,12 +9,8 @@
 }
 .store {
     &__titulo {
+        @include desktop-titulo-pagina;
         text-align: center;
-        font-size: $fontSizeDesktop-titulo-pagina;
-        font-weight: $fontWeight-titulo-pagina;
-        color: $color-titulo-pagina;
-        letter-spacing: $letterSpacing-titulo-pagina;
-        padding: $padding-titulo-pagina;
     }
     &__menu {
         list-style: none;
@@ -50,10 +46,7 @@
         padding: 20px;
 
         &__producto {
-            width: 100%;
-            transition-duration: 200ms;
-            transition-timing-function: ease-in-out;
-            transition-property: scale(1);
+            @extend .latestMusic__album__link__cover;
             &:hover {
                 transform: scale(1.06);
             }

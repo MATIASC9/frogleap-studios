@@ -11,12 +11,8 @@
     padding-bottom: 50px;
 
     &__titulo {
+        @include desktop-titulo-pagina;
         text-align: center;
-        font-size: $fontSizeDesktop-titulo-pagina;
-        font-weight: $fontWeight-titulo-pagina;
-        color: $color-titulo-pagina;
-        letter-spacing: $letterSpacing-titulo-pagina;
-        padding: $padding-titulo-pagina;
     }
     &__tarjeta {
         background-color: rgba(66, 66, 66, 0.486);

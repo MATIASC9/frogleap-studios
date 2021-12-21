@@ -64,9 +64,9 @@
         padding: 10px;
 
         &__titulo {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
+            font-size: $fontSizeMobile-titulo-seccion;
+            font-weight: $fontWeight-titulo-seccion;
+            color: $color-titulo-seccion;
             grid-area: latestMusic__titulo;
             writing-mode: horizontal-tb;
             transform: rotate(0deg);
@@ -135,14 +135,8 @@
         padding: 10px 10px 50px 10px;
 
         &__titulo {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
-            writing-mode: horizontal-tb;
-            transform: rotate(0deg);
+            @extend .latestMusic__titulo;
             grid-area: followMe;
-            margin: auto;
-            padding: 0px;
         }
         &__link{
             font-size: 0px;
@@ -192,13 +186,7 @@
             padding: 10px 10px 50px 10px;
         }
         &__titulo {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
-            writing-mode: horizontal-tb;
-            transform: rotate(0deg);
-            margin: auto;
-            text-align: center;
+            @extend .latestMusic__titulo;
         }
         &__link {
             width: 60%;

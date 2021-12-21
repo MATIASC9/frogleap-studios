@@ -36,16 +36,13 @@
         overflow: hidden;
     }
     &__titulo {
+        @include desktop-titulo-pagina;
         text-align: center;
-        font-size: $fontSizeDesktop-titulo-pagina;
-        font-weight: $fontWeight-titulo-pagina;
-        color: $color-titulo-pagina;
-        letter-spacing: $letterSpacing-titulo-pagina;
-        padding: $padding-titulo-pagina;
     }
     &__videoPrincipal {
         position: absolute;
         top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
     }
@@ -82,8 +79,6 @@
         position: relative;
     }
     &__videoSecundario {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .videos__videoPrincipal;
     }
 }

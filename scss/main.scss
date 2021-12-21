@@ -1,13 +1,33 @@
 // Variables
 $fontSizeDesktop-titulo-pagina: 4rem;
-$fontSizeDesktop-titulo-seccion: 3rem;
 $fontSizeMobile-titulo-pagina: 3.3rem;
+$fontSizeDesktop-titulo-seccion: 3rem;
+$fontSizeMobile-titulo-seccion: 2.7rem;
 $fontWeight-titulo-seccion: bold;
 $padding-titulo-pagina: 100px 0px 50px 0px;
 $letterSpacing-titulo-pagina: 20px;
 $fontWeight-titulo-pagina: bold;
 $color-titulo-pagina: #000;
+$color-titulo-seccion: #fff;
 $letterSpacing-titulo-pagina: 15px;
+
+// Mixins Desktop
+@mixin desktop-titulo-pagina {
+    font-size: $fontSizeDesktop-titulo-pagina;
+    font-weight: $fontWeight-titulo-pagina;
+    color: $color-titulo-pagina;
+    letter-spacing: $letterSpacing-titulo-pagina;
+    padding: $padding-titulo-pagina;
+}
+
+// Mixins Mobile
+@mixin mobile-titulo-pagina {
+    font-size: $fontSizeMobile-titulo-pagina;
+    font-weight: $fontWeight-titulo-pagina;
+    color: $color-titulo-pagina;
+    letter-spacing: $letterSpacing-titulo-pagina;
+    padding: $padding-titulo-pagina;
+}
 
 @import "resetYFuente";
 // Imports desktop

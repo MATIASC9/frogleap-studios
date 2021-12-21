@@ -1,7 +1,4 @@
-// Variables
-$fontSize-titulo-seccion: 3.5rem;
-$fontWeight-titulo-seccion: bold;
-// Transiciones
+// Variables transiciones
 $transitionDuration: 300ms;
 $transitionTimingFunction: ease-in-out;
 $transform-scale: scale(1.06);
@@ -186,14 +183,8 @@ body {
     padding: 80px 20px;
 
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-seccion;
-        font-weight: $fontWeight-titulo-seccion;
-        color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        @extend .latestMusic__titulo;
         grid-area: followMe;
-        justify-self: flex-start;
-        margin: 0px;
     }
     &__link {
         width: 40%;
@@ -250,14 +241,8 @@ body {
         padding: 80px 20px;
     }
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-seccion;
-        font-weight: $fontWeight-titulo-seccion;
-        color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        @extend .latestMusic__titulo;
         grid-area: buyAlbums;
-        margin: 0px;
-        justify-self: flex-start;
     }
     &__link {
         width: 50%;

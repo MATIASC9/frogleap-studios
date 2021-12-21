@@ -43,12 +43,8 @@
             }
         }
         &__titulo {
+            @include mobile-titulo-pagina;
             text-align: center;
-            font-size: $fontSizeMobile-titulo-pagina;
-            font-weight: $fontWeight-titulo-pagina;
-            color: $color-titulo-pagina;
-            letter-spacing: $letterSpacing-titulo-pagina;
-            padding: $padding-titulo-pagina;
         }
         &__videoPrincipal {
             position: absolute;
@@ -92,11 +88,7 @@
             }
         }
         &__videoSecundario {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 0px;
+            @extend .videos__videoPrincipal;
         }
     }
 }
