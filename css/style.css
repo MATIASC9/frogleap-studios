@@ -611,7 +611,7 @@ body {
   width: 45%;
   border: 2px solid black;
   padding: 15px;
-  height: 155px;
+  height: auto;
   margin: 30px auto;
   display: flex;
   justify-content: space-between;

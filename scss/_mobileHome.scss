@@ -172,11 +172,11 @@
     }
     /* Inicio seccion 4 */
     .buyAlbums {
-        background-image: url('../img/guitarra-concierto.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position-x: -150px;
+        background-image: map-get($map: $clase-buyAlbums, $key: background-image);
+        background-size: map-get($map: $clase-buyAlbums, $key: background-size);
+        background-repeat: map-get($map: $clase-buyAlbums, $key: background-repeat);
+        background-attachment: map-get($map: $clase-buyAlbums, $key: background-attachment);
+        background-position-x: map-get($map: $clase-buyAlbums, $key: background-position-x);
 
         &__colorFondo {
             background-color: rgba(88, 88, 88, 0.37);

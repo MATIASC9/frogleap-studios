@@ -17,9 +17,9 @@
         &__contenedorGeneralVideoPrincipal {
             width: 100%;
             padding: 0px;
-            animation-name: fadeInVideoPrincipal;
-            animation-duration: 4s;
-            animation-timing-function: ease-in-out;
+            animation-name: map-get($map: $contenedor-general-video-principal, $key: animation-name);
+            animation-duration: map-get($map: $contenedor-general-video-principal, $key: animation-duration);
+            animation-timing-function: map-get($map: $contenedor-general-video-principal, $key: animation-timing-function);
 
             .videos__contenedorResponsivoVideoPrincipal {
                 height: 0px;

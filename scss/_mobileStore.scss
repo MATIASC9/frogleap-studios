@@ -15,13 +15,13 @@
             text-align: center;
         }
         &__menu {
-            list-style: none;
-            display: flex;
-            position: relative;
-            margin: 0px;
-            padding: 0px;
+            list-style: map-get($map: $menu-pagina-store, $key: list-style);
+            display: map-get($map: $menu-pagina-store, $key: display);
+            position: map-get($map: $menu-pagina-store, $key: position);
+            margin: map-get($map: $menu-pagina-store, $key: margin);
+            padding: map-get($map: $menu-pagina-store, $key: padding);
             width: 100%;
-            place-content: center;
+            place-content: map-get($map: $menu-pagina-store, $key: place-content);
 
             &__categoria {
                 display: flex;

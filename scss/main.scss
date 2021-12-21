@@ -68,11 +68,21 @@ $tarjeta-tour-dates: (
     width: 45%,
     border: 2px solid black,
     padding: 15px,
-    height: 155px,
+    height: auto,
     margin: 30px auto,
     display: flex,
     justify-content: space-between,
 );
+
+// Mapas Mobile
+$clase-buyAlbums: (
+    background-image: url('../img/guitarra-concierto.jpg'),
+    background-size: cover,
+    background-repeat: no-repeat,
+    background-attachment: fixed,
+    background-position-x: -150px,
+);
+
 
 @import "resetYFuente";
 // Imports desktop
