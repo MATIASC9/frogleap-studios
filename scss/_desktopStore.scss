@@ -1,9 +1,9 @@
 .imgFondoStore {
-    @extend .imgFondoVideos;
-    background-image: url('../img/store.png');
+    @extend .imgFondoMusic;
+    background-image: url('../img/store.webp');
 }
 .colorFondoStore {
-    background-color: #72727273;
+    background-color: #72727270;
 }
 .store {
     &__titulo {

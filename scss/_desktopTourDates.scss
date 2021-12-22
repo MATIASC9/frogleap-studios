@@ -1,8 +1,6 @@
 .imgFondoTourDates {
-    background-image: url('../img/fondo-tour-dates.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    @extend .imgFondoMusic;
+    background-image: url('../img/fondo-tour-dates.webp');
 }
 .colorFondoTourDates {
     background-color: rgba(196, 196, 196, 0.74);

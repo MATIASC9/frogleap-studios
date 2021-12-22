@@ -1,6 +1,6 @@
 @media screen and (max-width: 600px) {
     .imgFondoMusic {
-        background-image: url('../img/leo-cantando.jpg');
+        background-image: url('../img/leo-cantando.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -49,14 +49,11 @@
             }
             &__nota {
                 font-size: 0.8rem;
-                height: fit-content;
                 margin: 0px 0px 20px 0px;
                 order: 3;
             }
             &__link {
                 text-decoration: none;
-                width: fit-content;
-                height: fit-content;
                 order: 4;
 
                 &__btn {

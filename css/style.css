@@ -81,7 +81,7 @@
 }
 
 body {
-  background-image: url("../img/studio.png");
+  background-image: url("../img/studio.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -280,7 +280,7 @@ body {
 
 /* Inicio seccion 4 */
 .buyAlbums {
-  background-image: url("../img/guitarra-concierto.jpg");
+  background-image: url("../img/guitarra-concierto.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -327,7 +327,7 @@ body {
 }
 
 .cierre {
-  background-image: url("../img/fondo-cierre.png");
+  background-image: url("../img/fondo-cierre.webp");
   background-size: 110%;
   background-position-x: center;
   background-position-y: bottom;
@@ -345,8 +345,8 @@ body {
   z-index: 2;
 }
 
-.imgFondoMusic {
-  background-image: url("../img/leo-cantando.jpg");
+.imgFondoMusic, .imgFondoTourDates, .imgFondoVideos, .imgFondoStore {
+  background-image: url("../img/leo-cantando.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -424,11 +424,11 @@ body {
 }
 
 .imgFondoStore {
-  background-image: url("../img/store.png");
+  background-image: url("../img/store.webp");
 }
 
 .colorFondoStore {
-  background-color: #72727273;
+  background-color: #72727270;
 }
 
 .store__titulo {
@@ -474,8 +474,8 @@ body {
   transform: scale(1.06);
 }
 
-.imgFondoVideos, .imgFondoStore {
-  background-image: url("../img/gente-en-concierto.jpg");
+.imgFondoVideos {
+  background-image: url("../img/gente-en-concierto.webp");
 }
 
 .colorFondoVideos {
@@ -564,11 +564,8 @@ body {
   padding-bottom: 56.25%;
   position: relative;
 }
-.imgFondoTourDates, .imgFondoVideos, .imgFondoStore {
-  background-image: url("../img/fondo-tour-dates.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.imgFondoTourDates {
+  background-image: url("../img/fondo-tour-dates.webp");
 }
 
 .colorFondoTourDates {
@@ -728,11 +725,19 @@ body {
     text-transform: uppercase;
   }
   .header__nav__patreonLink {
-    display: flex;
+    width: 45px;
+    height: 45px;
+    margin: 0px;
   }
   .header__nav__patreonLink__logoPatreon {
-    width: 45px;
-    margin: 8px;
+    width: 100%;
+    margin: 0px;
+    transition: scale(1);
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+  .header__nav__patreonLink__logoPatreon:hover {
+    transform: scale(1.07);
   }
 }
 @media screen and (max-width: 600px) {
@@ -895,7 +900,7 @@ body {
 
   /* Inicio seccion 4 */
   .buyAlbums {
-    background-image: url("../img/guitarra-concierto.jpg");
+    background-image: url("../img/guitarra-concierto.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -921,7 +926,7 @@ body {
     height: 100vh;
   }
   .contenedorFinal .cierre {
-    background-image: url("../img/fondo-cierre.png");
+    background-image: url("../img/fondo-cierre.webp");
     background-position-x: center;
     background-position-y: bottom;
     background-repeat: no-repeat;
@@ -938,8 +943,8 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  .imgFondoMusic {
-    background-image: url("../img/leo-cantando.jpg");
+  .imgFondoMusic, .imgFondoStore, .imgFondoVideos, .imgFondoTourDates {
+    background-image: url("../img/leo-cantando.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -994,14 +999,11 @@ body {
   }
   .music__album__nota {
     font-size: 0.8rem;
-    height: fit-content;
     margin: 0px 0px 20px 0px;
     order: 3;
   }
   .music__album__link {
     text-decoration: none;
-    width: fit-content;
-    height: fit-content;
     order: 4;
   }
   .music__album__link__btn {
@@ -1025,7 +1027,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   .imgFondoStore {
-    background-image: url("../img/store.png");
+    background-image: url("../img/store.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1083,8 +1085,8 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  .imgFondoVideos, .imgFondoStore {
-    background-image: url("../img/gente-en-concierto.jpg");
+  .imgFondoVideos {
+    background-image: url("../img/gente-en-concierto.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1182,8 +1184,8 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  .imgFondoTourDates, .imgFondoVideos, .imgFondoStore {
-    background-image: url("../img/fondo-tour-dates.jpg");
+  .imgFondoTourDates {
+    background-image: url("../img/fondo-tour-dates.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1238,7 +1240,7 @@ body {
   .tourDates__tarjeta__botones .tourDates__tarjeta__btn {
     background-color: black;
     color: #fff;
-    height: 100%;
+    width: 100%;
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
