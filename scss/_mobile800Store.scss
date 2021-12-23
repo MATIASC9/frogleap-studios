@@ -49,7 +49,10 @@
             padding: 40px;
             
             &__producto {
-                @extend .latestMusic__album__link__cover;
+                width: 100%;
+                transition-duration: $transitionDuration;
+                transition-timing-function: $transitionTimingFunction;
+                transition-property: scale(1);
                 margin: 20px 0px;
 
                 &:hover {

@@ -42,7 +42,8 @@
                 color: rgb(255, 255, 255);
             }
             &__lugar {
-                @extend .tourDates__tarjeta__fecha
+                font-size: 0.9rem;
+                color: rgb(255, 255, 255);
             }
             &__botones {
                 display: flex;

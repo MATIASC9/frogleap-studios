@@ -90,14 +90,18 @@ body {
 
 /* Inicio seccion 1 */
 .bienvenida {
-  height: 100vh;
   background-color: #d6631673;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .bienvenida__logoFrogleapStudios {
   width: 45%;
-  display: block;
+  max-width: 650px;
   margin: 0px auto;
-  padding-top: 150px;
+  padding-top: 120px;
+  padding-bottom: 30px;
   animation-name: FadeLogoFrogleapStudios;
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
@@ -113,16 +117,20 @@ body {
     opacity: 1;
   }
 }
+.bienvenida__contenedorFotoVideoScroll {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
 .bienvenida__fotoLeo {
-  width: 35rem;
-  position: absolute;
-  bottom: 0px;
+  width: 32%;
+  align-self: flex-end;
 }
 .bienvenida__contenedorPosicionamientoVideo {
-  position: absolute;
-  width: 30%;
-  bottom: 70px;
-  right: 70px;
+  width: 25%;
+  margin: 0px 20px 50px 0px;
 }
 .bienvenida__contenedorResponsiveVideo {
   position: relative;
@@ -142,11 +150,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 0px;
-  height: 60px;
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
+  margin-bottom: 20px;
 }
 .bienvenida__contenedorScrollFlecha__scroll {
   color: white;
@@ -660,7 +664,7 @@ body {
   margin: 15px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .header {
     background-color: #121212;
     position: fixed;
@@ -692,11 +696,11 @@ body {
   .header__nav__inicio {
     display: flex;
     width: 110px;
-    margin: 5px 0px;
+    margin: 8px 0px;
   }
   .header__nav__inicio__logo {
     width: 100%;
-    margin: 30px;
+    margin: 0;
   }
   .header__nav__menuPaginas {
     list-style: none;
@@ -742,39 +746,39 @@ body {
     transform: scale(1.07);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   /* Inicio seccion 1 */
   .colorFondoBienvenida {
-    background-color: #72727273;
-    padding-top: 0px;
-    height: 100vh;
+    background-color: #d6631673;
   }
 
   .bienvenida {
-    height: 130vh;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+    min-height: 600px;
   }
   .bienvenida__logoFrogleapStudios {
-    display: none;
+    padding-top: 100px;
+    display: block;
+    width: 50%;
+  }
+  .bienvenida__contenedorFotoVideoScroll {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
   .bienvenida__fotoLeo {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    width: 80%;
-    bottom: -30%;
+    width: 55%;
+    max-width: 500px;
   }
   .bienvenida__contenedorScrollFlecha {
     display: none;
   }
   .bienvenida__contenedorPosicionamientoVideo {
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 80%;
+    width: 43%;
+    max-width: 350px;
+    padding-bottom: 30px;
   }
   .bienvenida__contenedorResponsiveVideo {
     position: relative;
@@ -799,7 +803,6 @@ body {
     column-gap: 20px;
     row-gap: 20px;
     grid-template-areas: "latestMusic__titulo latestMusic__titulo" "ultimateBundle childrensMetalSongs" "karaokeAndBackingTracks liveInEurope" "volume24 volume25" "latestMusic__exploreMore latestMusic__exploreMore";
-    place-content: center;
     padding: 10px;
   }
   .latestMusic__titulo, .socialMedia__titulo, .buyAlbums__titulo {
@@ -813,31 +816,32 @@ body {
     margin: 0 auto;
   }
   .latestMusic__album {
-    display: inline-block;
+    width: 80%;
+    max-width: 320px;
   }
   .latestMusic__album--ultimateBundle {
     grid-area: ultimateBundle;
+    justify-self: flex-end;
   }
   .latestMusic__album--childrensMetalSongs {
     grid-area: childrensMetalSongs;
+    justify-self: flex-start;
   }
   .latestMusic__album--karaokeAndBackingTracks {
     grid-area: karaokeAndBackingTracks;
+    justify-self: flex-end;
   }
   .latestMusic__album--liveInEurope {
     grid-area: liveInEurope;
+    justify-self: flex-start;
   }
   .latestMusic__album--volume24 {
     grid-area: volume24;
+    justify-self: flex-end;
   }
   .latestMusic__album--volume25 {
     grid-area: volume25;
-  }
-  .latestMusic__album__link {
-    font-size: 0;
-  }
-  .latestMusic__album__link__cover, .store__contenedorProductos__producto {
-    width: 100%;
+    justify-self: flex-start;
   }
   .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
     text-decoration: none;
@@ -867,12 +871,19 @@ body {
     padding: 10px 10px 50px 10px;
   }
   .socialMedia__titulo {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #fff;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    display: block;
+    margin: 0 auto;
     grid-area: followMe;
   }
   .socialMedia__link {
+    width: 55%;
+    max-width: 170px;
     font-size: 0px;
-    text-decoration: none;
-    width: 70%;
   }
   .socialMedia__link__logo {
     width: 100%;
@@ -915,12 +926,19 @@ body {
     flex-direction: column;
     padding: 10px 10px 50px 10px;
   }
-  .buyAlbums__link {
-    width: 60%;
-    margin: 30px 0px;
+  .buyAlbums__titulo {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #fff;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    display: block;
+    margin: 0 auto;
   }
-  .buyAlbums__link__logo {
-    width: 100%;
+  .buyAlbums__link {
+    width: 50%;
+    max-width: 350px;
+    margin: 30px 0px;
   }
 
   /* Inicio seccion 5 */
@@ -940,6 +958,7 @@ body {
   }
   .contenedorFinal .cierre__logoFrogleapStudios {
     width: 60%;
+    max-width: 330px;
     padding-bottom: 120px;
     z-index: 1;
   }
@@ -1080,6 +1099,10 @@ body {
     padding: 40px;
   }
   .store__contenedorProductos__producto {
+    width: 100%;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    transition-property: scale(1);
     margin: 20px 0px;
   }
   .store__contenedorProductos__producto:hover {
@@ -1144,6 +1167,7 @@ body {
   .videos__videoPrincipal, .videos__videoSecundario {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -1183,6 +1207,13 @@ body {
       opacity: 1;
       translateY: 40px;
     }
+  }
+  .videos__videoSecundario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1231,6 +1262,10 @@ body {
     padding-bottom: 15px;
   }
   .tourDates__tarjeta__fecha, .tourDates__tarjeta__lugar {
+    font-size: 0.9rem;
+    color: white;
+  }
+  .tourDates__tarjeta__lugar {
     font-size: 0.9rem;
     color: white;
   }
@@ -1297,7 +1332,7 @@ body {
     text-align: center;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .header {
     background-color: #121212;
     position: fixed;
@@ -1329,10 +1364,10 @@ body {
   .header__nav__inicio {
     display: flex;
     width: 110px;
+    margin: 8px 0px;
   }
   .header__nav__inicio__logo {
     width: 100%;
-    margin: 8px 0px;
   }
   .header__nav__menuPaginas {
     list-style: none;
@@ -1382,35 +1417,35 @@ body {
   /* Inicio seccion 1 */
   .colorFondoBienvenida {
     background-color: #72727273;
-    padding-top: 0px;
-    height: 100vh;
   }
 
   .bienvenida {
-    height: 130vh;
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-items: flex-end;
+    height: auto;
   }
   .bienvenida__logoFrogleapStudios {
     display: none;
   }
+  .bienvenida__contenedorFotoVideoScroll {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .bienvenida__fotoLeo {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
     width: 80%;
-    bottom: -30%;
+    order: 2;
+    align-self: center;
   }
   .bienvenida__contenedorScrollFlecha {
     display: none;
   }
   .bienvenida__contenedorPosicionamientoVideo {
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translate(-50%);
     width: 80%;
+    order: 1;
+    margin: 120px 0px 70px 0px;
   }
   .bienvenida__contenedorResponsiveVideo {
     position: relative;
@@ -1435,7 +1470,6 @@ body {
     column-gap: 20px;
     row-gap: 20px;
     grid-template-areas: "latestMusic__titulo latestMusic__titulo" "ultimateBundle childrensMetalSongs" "karaokeAndBackingTracks liveInEurope" "volume24 volume25" "latestMusic__exploreMore latestMusic__exploreMore";
-    place-content: center;
     padding: 10px;
   }
   .latestMusic__titulo, .socialMedia__titulo, .buyAlbums__titulo {
@@ -1449,7 +1483,7 @@ body {
     margin: 0 auto;
   }
   .latestMusic__album {
-    display: inline-block;
+    width: 100%;
   }
   .latestMusic__album--ultimateBundle {
     grid-area: ultimateBundle;
@@ -1468,12 +1502,6 @@ body {
   }
   .latestMusic__album--volume25 {
     grid-area: volume25;
-  }
-  .latestMusic__album__link {
-    font-size: 0;
-  }
-  .latestMusic__album__link__cover, .store__contenedorProductos__producto {
-    width: 100%;
   }
   .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
     text-decoration: none;
@@ -1503,6 +1531,13 @@ body {
     padding: 10px 10px 50px 10px;
   }
   .socialMedia__titulo {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #fff;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    display: block;
+    margin: 0 auto;
     grid-area: followMe;
   }
   .socialMedia__link {
@@ -1550,6 +1585,15 @@ body {
     row-gap: 0px;
     flex-direction: column;
     padding: 10px 10px 50px 10px;
+  }
+  .buyAlbums__titulo {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #fff;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    display: block;
+    margin: 0 auto;
   }
   .buyAlbums__link {
     width: 60%;
@@ -1780,6 +1824,7 @@ body {
   .videos__videoPrincipal, .videos__videoSecundario {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -1819,6 +1864,13 @@ body {
       opacity: 1;
       translateY: 40px;
     }
+  }
+  .videos__videoSecundario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1867,6 +1919,10 @@ body {
     padding-bottom: 15px;
   }
   .tourDates__tarjeta__fecha, .tourDates__tarjeta__lugar {
+    font-size: 0.9rem;
+    color: white;
+  }
+  .tourDates__tarjeta__lugar {
     font-size: 0.9rem;
     color: white;
   }

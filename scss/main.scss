@@ -10,6 +10,11 @@ $fontWeight-titulo-pagina: bold;
 $color-titulo-pagina: #000;
 $color-titulo-seccion: #fff;
 $letterSpacing-titulo-pagina: 15px;
+// Variables transiciones
+$transitionDuration: 300ms;
+$transitionTimingFunction: ease-in-out;
+$transform-scale: scale(1.06);
+
 
 // Mixins Desktop
 @mixin desktop-titulo-pagina {
@@ -93,14 +98,6 @@ $clase-buyAlbums: (
 @import "desktopVideos";
 @import "desktopTourDates";
 @import "desktopFooter";
-// Imports mobile 600px
-@import "mobile600Header";
-@import "mobile600Home";
-@import "mobile600Music";
-@import "mobile600Store";
-@import "mobile600Videos";
-@import "mobile600TourDates";
-@import "mobile600Footer";
 // Imports mobile 800px
 @import "mobile800Header";
 @import "mobile800Home";
@@ -109,4 +106,12 @@ $clase-buyAlbums: (
 @import "mobile800Videos";
 @import "mobile800TourDates";
 @import "mobile800Footer";
+// Imports mobile 600px
+@import "mobile600Header";
+@import "mobile600Home";
+@import "mobile600Music";
+@import "mobile600Store";
+@import "mobile600Videos";
+@import "mobile600TourDates";
+@import "mobile600Footer";
 // Imports mobile 1000px

@@ -1,35 +1,35 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     /* Inicio seccion 1 */
     .colorFondoBienvenida {
-        background-color: #72727273;
-        padding-top: 0px;
-        height: 100vh;
+        background-color: #d6631673;
     }
     .bienvenida {
-        height: 130vh;
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
+        min-height: 600px;
 
         &__logoFrogleapStudios {
-            display: none;
+            padding-top: 100px;
+            display: block;
+            width: 50%;
+        }
+        &__contenedorFotoVideoScroll {
+            width: 100%;
+            height: auto;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
         &__fotoLeo {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-            width: 80%;
-            bottom: -30%;
+            width: 55%;
+            max-width: 500px;
         }
         &__contenedorScrollFlecha {
             display: none;
         }
         &__contenedorPosicionamientoVideo {
-            position: absolute;
-            top: 150px;
-            left: 50%;
-            transform: translate(-50%);
-            width: 80%;
+            width: 43%;
+            max-width: 350px;
+            padding-bottom: 30px;
         }
         &__contenedorResponsiveVideo {
             position: relative;
@@ -60,7 +60,6 @@
         "volume24 volume25"
         "latestMusic__exploreMore latestMusic__exploreMore"
         ;
-        place-content: center;
         padding: 10px;
 
         &__titulo {
@@ -74,32 +73,33 @@
             margin: 0 auto;
         }
         &__album {
-            display: inline-block;
+            width: 80%;
+            max-width: 320px;
 
             &--ultimateBundle {
                 grid-area: ultimateBundle;
+                justify-self: flex-end;
+
             }
             &--childrensMetalSongs {
                 grid-area: childrensMetalSongs;
+                justify-self: flex-start;
             }
             &--karaokeAndBackingTracks {
                 grid-area: karaokeAndBackingTracks;
+                justify-self: flex-end;
             }
             &--liveInEurope {
                 grid-area: liveInEurope;
+                justify-self: flex-start;
             }
             &--volume24 {
                 grid-area: volume24;
+                justify-self: flex-end;
             }
             &--volume25 {
                 grid-area: volume25;
-            }
-            &__link {
-                font-size: 0;
-
-                &__cover {
-                    width: 100%;
-                }
+                justify-self: flex-start;
             }
         }
         &__exploreMore {
@@ -134,13 +134,19 @@
         padding: 10px 10px 50px 10px;
 
         &__titulo {
-            @extend .latestMusic__titulo;
+            font-size: $fontSizeMobile-titulo-seccion;
+            font-weight: $fontWeight-titulo-seccion;
+            color: $color-titulo-seccion;
+            writing-mode: horizontal-tb;
+            transform: rotate(0deg);
+            display: block;
+            margin: 0 auto;
             grid-area: followMe;
         }
         &__link{
+            width: 55%;
+            max-width: 170px;
             font-size: 0px;
-            text-decoration: none;
-            width: 70%;
 
             &__logo {
                 width: 100%;
@@ -185,15 +191,18 @@
             padding: 10px 10px 50px 10px;
         }
         &__titulo {
-            @extend .latestMusic__titulo;
+            font-size: $fontSizeMobile-titulo-seccion;
+            font-weight: $fontWeight-titulo-seccion;
+            color: $color-titulo-seccion;
+            writing-mode: horizontal-tb;
+            transform: rotate(0deg);
+            display: block;
+            margin: 0 auto;
         }
         &__link {
-            width: 60%;
+            width: 50%;
+            max-width: 350px;
             margin: 30px 0px;
-
-            &__logo {
-                width: 100%;
-            }
         }
     }
     /* Inicio seccion 5 */
@@ -213,6 +222,7 @@
             
             &__logoFrogleapStudios {
                 width: 60%;
+                max-width: 330px;
                 padding-bottom: 120px;
                 z-index: 1;
             }

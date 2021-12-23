@@ -49,7 +49,6 @@
             padding: 40px;
             
             &__producto {
-                @extend .latestMusic__album__link__cover;
                 margin: 20px 0px;
 
                 &:hover {
