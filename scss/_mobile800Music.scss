@@ -1,0 +1,81 @@
+@media screen and (max-width: 600px) {
+    .imgFondoMusic {
+        background-image: url('../img/leo-cantando.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .colorFondoMusic {
+        background-color: rgba(221, 221, 221, 0.651);
+    }
+    .music {
+        display: map-get($map: $config-clase-music, $key: display);
+        flex-direction: map-get($map: $config-clase-music, $key: flex-direction);
+        align-items: map-get($map: $config-clase-music, $key: align-items);
+        width: map-get($map: $config-clase-music, $key: width);
+        margin: map-get($map: $config-clase-music, $key: margin);
+        padding-bottom: map-get($map: $config-clase-music, $key: padding-bottom);
+
+        &__titulo {
+            @include mobile-titulo-pagina;
+        }
+        &__album {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 60px;
+
+            &__cover {
+                width: 100%;
+                height: 100%;
+                order: 1;
+            }
+            &__contenedorInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                order: 2;
+            }
+            &__titulo {
+                font-size: 1.8rem;
+                margin: 40px 0px 20px 0px;
+                order: 1;
+            }
+            &__canciones {
+                font-size: 0.9rem;
+                margin: 0px 0px 40px 0px;
+                padding-left: 17px;
+                order: 2;
+            }
+            &__nota {
+                font-size: 0.8rem;
+                margin: 0px 0px 20px 0px;
+                order: 3;
+            }
+            &__link {
+                text-decoration: none;
+                order: 4;
+
+                &__btn {
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    background-color: black;
+                    padding: 8px;
+                    margin: 0px;
+                    border: 1px solid #fff;
+                    transition-duration: 100ms;
+                    transition-timing-function: ease-in-out;
+                    transition-property: color scale(1);
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }   
+}

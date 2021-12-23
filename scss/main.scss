@@ -93,11 +93,20 @@ $clase-buyAlbums: (
 @import "desktopVideos";
 @import "desktopTourDates";
 @import "desktopFooter";
-// Imports mobile
-@import "mobileHeader";
-@import "mobileHome";
-@import "mobileMusic";
-@import "mobileStore";
-@import "mobileVideos";
-@import "mobileTourDates";
-@import "mobileFooter";
+// Imports mobile 600px
+@import "mobile600Header";
+@import "mobile600Home";
+@import "mobile600Music";
+@import "mobile600Store";
+@import "mobile600Videos";
+@import "mobile600TourDates";
+@import "mobile600Footer";
+// Imports mobile 800px
+@import "mobile800Header";
+@import "mobile800Home";
+@import "mobile800Music";
+@import "mobile800Store";
+@import "mobile800Videos";
+@import "mobile800TourDates";
+@import "mobile800Footer";
+// Imports mobile 1000px

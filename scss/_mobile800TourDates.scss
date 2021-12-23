@@ -1,0 +1,75 @@
+@media screen and (max-width: 600px) {
+    .imgFondoTourDates {
+        background-image: url('../img/fondo-tour-dates.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .colorFondoTourDates {
+        background-color: rgba(196, 196, 196, 0.74);
+    }
+    .tourDates{
+        padding-bottom: 50px;
+
+        &__titulo {
+            @include mobile-titulo-pagina;
+            text-align: center;
+        }
+        &__tarjeta {
+            background-color: map-get($map: $tarjeta-tour-dates, $key: background-color);
+            color: map-get($map: $tarjeta-tour-dates, $key: color);
+            width: 80%;
+            border: map-get($map: $tarjeta-tour-dates, $key: border);
+            padding: 10px;
+            height: map-get($map: $tarjeta-tour-dates, $key: height);
+            margin: 20px auto;
+            display: map-get($map: $tarjeta-tour-dates, $key: display);
+            justify-content: map-get($map: $tarjeta-tour-dates, $key: justify-content);
+
+            &__contenedorInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &__titulo {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+                padding-bottom: 15px;
+            }
+            &__fecha {
+                font-size: 0.9rem;
+                color: rgb(255, 255, 255);
+            }
+            &__lugar {
+                @extend .tourDates__tarjeta__fecha
+            }
+            &__botones {
+                display: flex;
+                align-content: flex-end;
+                flex-flow: column;
+
+                .tourDates__tarjeta__btn {
+                    background-color: rgb(0, 0, 0);
+                    color: #fff;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    padding: 9px;
+                    border: 1px solid #fff;
+                    transition-duration: 100ms;
+                    transition-timing-function: ease-in-out;
+                    transition-property: color scale(1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+                }
+            }
+        }
+    }
+}

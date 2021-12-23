@@ -1,0 +1,61 @@
+@media screen and (max-width: 600px) {
+    .imgFondoStore {
+        background-image: url('../img/store.webp');
+        background-size:  cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .colorFondoStore {
+        background-color: #72727273;
+    }
+    .store {
+
+        &__titulo {
+            @include mobile-titulo-pagina;
+            text-align: center;
+        }
+        &__menu {
+            list-style: map-get($map: $menu-pagina-store, $key: list-style);
+            display: map-get($map: $menu-pagina-store, $key: display);
+            position: map-get($map: $menu-pagina-store, $key: position);
+            margin: map-get($map: $menu-pagina-store, $key: margin);
+            padding: map-get($map: $menu-pagina-store, $key: padding);
+            width: 100%;
+            place-content: map-get($map: $menu-pagina-store, $key: place-content);
+
+            &__categoria {
+                display: flex;
+                width: auto;
+                margin: 5px;
+                font-size: 0.9rem;
+                color: #fff;
+                background-color: #000;
+                border: 1px solid #fff;
+                transition-duration: 100ms;
+                transition-timing-function: ease-in-out;
+                transition-property: color scale(1);
+                text-align: center;
+                align-items: center;
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+        &__contenedorProductos {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0px;
+            padding: 40px;
+            
+            &__producto {
+                @extend .latestMusic__album__link__cover;
+                margin: 20px 0px;
+
+                &:hover {
+                    transform: scale(1.06);
+                }
+            }
+        }
+    } 
+}
