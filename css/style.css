@@ -17,7 +17,6 @@
   align-items: center;
   z-index: 1;
   width: 100%;
-  height: 85px;
 }
 .header__nav {
   display: flex;
@@ -30,9 +29,12 @@
 .header__nav__checkbox__menu {
   display: none;
 }
-.header__nav__inicio__logo {
+.header__nav__inicio {
   width: 140px;
   margin: 8px 0px 0px 8px;
+}
+.header__nav__inicio__logo {
+  width: 100%;
   transition: scale(1);
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
@@ -47,7 +49,7 @@
 }
 .header__nav__menuPaginas__item {
   display: inline-block;
-  margin: 30px;
+  margin: 0px 30px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -62,9 +64,14 @@
 .header__nav__menuPaginas__item__link:hover {
   color: red;
 }
-.header__nav__patreonLink__logoPatreon {
+.header__nav__patreonLink {
   width: 55px;
-  margin: 15px;
+  height: 55px;
+  margin: 0px;
+}
+.header__nav__patreonLink__logoPatreon {
+  width: 100%;
+  margin: 0px;
   transition: scale(1);
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
@@ -74,7 +81,7 @@
 }
 
 body {
-  background-image: url("../img/studio.png");
+  background-image: url("../img/studio.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -150,7 +157,7 @@ body {
 }
 
 /* Inicio seccion 2 */
-.latestMusic {
+.latestMusic, .socialMedia {
   background-color: #72727273;
   display: grid;
   grid-template-columns: 150px 1fr 1fr 1fr 1fr;
@@ -161,7 +168,7 @@ body {
   padding: 80px 20px;
   place-items: center;
 }
-.latestMusic__titulo {
+.latestMusic__titulo, .buyAlbums__titulo, .socialMedia__titulo {
   font-size: 3rem;
   font-weight: bold;
   color: #fff;
@@ -182,13 +189,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.latestMusic__album__link__cover {
+.latestMusic__album__link__cover, .store__contenedorProductos__producto {
   width: 100%;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
   transition-property: scale(1);
 }
-.latestMusic__album__link__cover:hover {
+.latestMusic__album__link__cover:hover, .store__contenedorProductos__producto:hover {
   transform: scale(1.06);
 }
 .latestMusic__album--ultimateBundle {
@@ -209,7 +216,7 @@ body {
 .latestMusic__album--volume25 {
   grid-area: volume25;
 }
-.latestMusic__exploreMore {
+.latestMusic__exploreMore, .tourDates__tarjeta__btn, .music__album__link__btn {
   text-decoration: none;
   color: #fff;
   font-size: 1.3rem;
@@ -225,32 +232,20 @@ body {
   transition-property: scale(1);
   justify-self: flex-start;
 }
-.latestMusic__exploreMore:active {
+.latestMusic__exploreMore:active, .tourDates__tarjeta__btn:active, .music__album__link__btn:active {
   transform: scale(0.95);
 }
 
 /* Inicio seccion 3 */
 .socialMedia {
-  background-color: #72727273;
-  display: grid;
   grid-template-columns: 150px 1fr 1fr 500px;
   grid-template-rows: 50%;
   column-gap: 20px;
   row-gap: 20px;
   grid-template-areas: "followMe facebook twitter guitarra" "followMe youTube instagram guitarra";
-  justify-items: center;
-  align-items: center;
-  padding: 80px 20px;
 }
 .socialMedia__titulo {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
   grid-area: followMe;
-  justify-self: flex-start;
-  margin: 0px;
 }
 .socialMedia__link {
   width: 40%;
@@ -285,7 +280,7 @@ body {
 
 /* Inicio seccion 4 */
 .buyAlbums {
-  background-image: url("../img/guitarra-concierto.jpg");
+  background-image: url("../img/guitarra-concierto.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -302,14 +297,7 @@ body {
   padding: 80px 20px;
 }
 .buyAlbums__titulo {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #fff;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
   grid-area: buyAlbums;
-  margin: 0px;
-  justify-self: flex-start;
 }
 .buyAlbums__link {
   width: 50%;
@@ -339,7 +327,7 @@ body {
 }
 
 .cierre {
-  background-image: url("../img/fondo-cierre.png");
+  background-image: url("../img/fondo-cierre.webp");
   background-size: 110%;
   background-position-x: center;
   background-position-y: bottom;
@@ -357,8 +345,8 @@ body {
   z-index: 2;
 }
 
-.imgFondoMusic {
-  background-image: url("../img/leo-cantando.jpg");
+.imgFondoMusic, .imgFondoTourDates, .imgFondoVideos, .imgFondoStore {
+  background-image: url("../img/leo-cantando.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -369,8 +357,7 @@ body {
 }
 
 .music {
-  display: flex;
-  flex-direction: column;
+  display: column;
   align-items: center;
   width: 80%;
   margin: auto;
@@ -382,6 +369,7 @@ body {
   color: #000;
   letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
+  text-align: center;
 }
 .music__album {
   display: flex;
@@ -425,16 +413,8 @@ body {
   order: 4;
 }
 .music__album__link__btn {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: black;
-  padding: 8px;
   margin-left: 50px;
-  border: 1px solid #fff;
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
-  transition-property: color scale(1);
+  justify-self: auto;
 }
 .music__album__link__btn:active {
   transform: scale(0.95);
@@ -444,23 +424,20 @@ body {
 }
 
 .imgFondoStore {
-  background-image: url("../img/store.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url("../img/store.webp");
 }
 
 .colorFondoStore {
-  background-color: #72727273;
+  background-color: #72727270;
 }
 
 .store__titulo {
-  text-align: center;
   font-size: 4rem;
   font-weight: bold;
   color: #000;
   letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
+  text-align: center;
 }
 .store__menu {
   list-style: none;
@@ -481,7 +458,7 @@ body {
   border: 1px solid #fff;
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
-  transition-property: color scale(1);
+  transition-property: scale(1);
 }
 .store__menu__categoria:active {
   transform: scale(0.95);
@@ -493,21 +470,12 @@ body {
   row-gap: 20px;
   padding: 20px;
 }
-.store__contenedorProductos__producto {
-  width: 100%;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-  transition-property: scale(1);
-}
 .store__contenedorProductos__producto:hover {
   transform: scale(1.06);
 }
 
 .imgFondoVideos {
-  background-image: url("../img/gente-en-concierto.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url("../img/gente-en-concierto.webp");
 }
 
 .colorFondoVideos {
@@ -546,16 +514,17 @@ body {
   overflow: hidden;
 }
 .videos__titulo {
-  text-align: center;
   font-size: 4rem;
   font-weight: bold;
   color: #000;
   letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
+  text-align: center;
 }
-.videos__videoPrincipal {
+.videos__videoPrincipal, .videos__videoSecundario {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -595,17 +564,8 @@ body {
   padding-bottom: 56.25%;
   position: relative;
 }
-.videos__videoSecundario {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 .imgFondoTourDates {
-  background-image: url("../img/fondo-tour-dates.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url("../img/fondo-tour-dates.webp");
 }
 
 .colorFondoTourDates {
@@ -616,12 +576,12 @@ body {
   padding-bottom: 50px;
 }
 .tourDates__titulo {
-  text-align: center;
   font-size: 4rem;
   font-weight: bold;
   color: #000;
   letter-spacing: 15px;
   padding: 100px 0px 50px 0px;
+  text-align: center;
 }
 .tourDates__tarjeta {
   background-color: rgba(66, 66, 66, 0.486);
@@ -629,7 +589,7 @@ body {
   width: 45%;
   border: 2px solid black;
   padding: 15px;
-  height: 155px;
+  height: auto;
   margin: 30px auto;
   display: flex;
   justify-content: space-between;
@@ -655,19 +615,10 @@ body {
   flex-flow: column;
 }
 .tourDates__tarjeta__btn {
-  background-color: black;
-  color: #fff;
   height: 100%;
-  text-align: center;
   font-size: 1rem;
-  font-weight: bold;
-  padding: 15px;
-  border: 1px solid #fff;
-  transition-duration: 100ms;
-  transition-timing-function: ease-in-out;
-  transition-property: color scale(1);
   display: flex;
-  align-items: center;
+  margin: 0px;
   justify-content: center;
 }
 .tourDates__tarjeta__btn:active {
@@ -774,11 +725,19 @@ body {
     text-transform: uppercase;
   }
   .header__nav__patreonLink {
-    display: flex;
+    width: 45px;
+    height: 45px;
+    margin: 0px;
   }
   .header__nav__patreonLink__logoPatreon {
-    width: 45px;
-    margin: 8px;
+    width: 100%;
+    margin: 0px;
+    transition: scale(1);
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+  }
+  .header__nav__patreonLink__logoPatreon:hover {
+    transform: scale(1.07);
   }
 }
 @media screen and (max-width: 600px) {
@@ -830,7 +789,7 @@ body {
   }
 
   /* Inicio seccion 2 */
-  .latestMusic {
+  .latestMusic, .socialMedia {
     background-color: #72727273;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -841,8 +800,8 @@ body {
     place-content: center;
     padding: 10px;
   }
-  .latestMusic__titulo {
-    font-size: 3rem;
+  .latestMusic__titulo, .socialMedia__titulo, .buyAlbums__titulo {
+    font-size: 2.7rem;
     font-weight: bold;
     color: #fff;
     grid-area: latestMusic__titulo;
@@ -875,10 +834,10 @@ body {
   .latestMusic__album__link {
     font-size: 0;
   }
-  .latestMusic__album__link__cover {
+  .latestMusic__album__link__cover, .store__contenedorProductos__producto {
     width: 100%;
   }
-  .latestMusic__exploreMore {
+  .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
     text-decoration: none;
     color: #fff;
     font-size: 1rem;
@@ -906,14 +865,7 @@ body {
     padding: 10px 10px 50px 10px;
   }
   .socialMedia__titulo {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
     grid-area: followMe;
-    margin: auto;
-    padding: 0px;
   }
   .socialMedia__link {
     font-size: 0px;
@@ -948,7 +900,7 @@ body {
 
   /* Inicio seccion 4 */
   .buyAlbums {
-    background-image: url("../img/guitarra-concierto.jpg");
+    background-image: url("../img/guitarra-concierto.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -960,15 +912,6 @@ body {
     row-gap: 0px;
     flex-direction: column;
     padding: 10px 10px 50px 10px;
-  }
-  .buyAlbums__titulo {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-    margin: auto;
-    text-align: center;
   }
   .buyAlbums__link {
     width: 60%;
@@ -983,7 +926,7 @@ body {
     height: 100vh;
   }
   .contenedorFinal .cierre {
-    background-image: url("../img/fondo-cierre.png");
+    background-image: url("../img/fondo-cierre.webp");
     background-position-x: center;
     background-position-y: bottom;
     background-repeat: no-repeat;
@@ -1000,8 +943,8 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  .imgFondoMusic {
-    background-image: url("../img/leo-cantando.jpg");
+  .imgFondoMusic, .imgFondoStore, .imgFondoVideos, .imgFondoTourDates {
+    background-image: url("../img/leo-cantando.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1056,14 +999,11 @@ body {
   }
   .music__album__nota {
     font-size: 0.8rem;
-    height: fit-content;
     margin: 0px 0px 20px 0px;
     order: 3;
   }
   .music__album__link {
     text-decoration: none;
-    width: fit-content;
-    height: fit-content;
     order: 4;
   }
   .music__album__link__btn {
@@ -1087,7 +1027,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   .imgFondoStore {
-    background-image: url("../img/store.png");
+    background-image: url("../img/store.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1098,12 +1038,12 @@ body {
   }
 
   .store__titulo {
-    text-align: center;
     font-size: 3.3rem;
     font-weight: bold;
     color: #000;
     letter-spacing: 15px;
     padding: 100px 0px 50px 0px;
+    text-align: center;
   }
   .store__menu {
     list-style: none;
@@ -1138,11 +1078,7 @@ body {
     padding: 40px;
   }
   .store__contenedorProductos__producto {
-    width: 100%;
     margin: 20px 0px;
-    transition-duration: 200ms;
-    transition-timing-function: ease-in-out;
-    transition-property: scale(1);
   }
   .store__contenedorProductos__producto:hover {
     transform: scale(1.06);
@@ -1150,7 +1086,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   .imgFondoVideos {
-    background-image: url("../img/gente-en-concierto.jpg");
+    background-image: url("../img/gente-en-concierto.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1196,14 +1132,14 @@ body {
     }
   }
   .videos__titulo {
-    text-align: center;
     font-size: 3.3rem;
     font-weight: bold;
     color: #000;
     letter-spacing: 15px;
     padding: 100px 0px 50px 0px;
+    text-align: center;
   }
-  .videos__videoPrincipal {
+  .videos__videoPrincipal, .videos__videoSecundario {
     position: absolute;
     top: 0;
     width: 100%;
@@ -1246,17 +1182,10 @@ body {
       translateY: 40px;
     }
   }
-  .videos__videoSecundario {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-  }
 }
 @media screen and (max-width: 600px) {
   .imgFondoTourDates {
-    background-image: url("../img/fondo-tour-dates.jpg");
+    background-image: url("../img/fondo-tour-dates.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1270,12 +1199,12 @@ body {
     padding-bottom: 50px;
   }
   .tourDates__titulo {
-    text-align: center;
     font-size: 3.3rem;
     font-weight: bold;
     color: #000;
     letter-spacing: 15px;
     padding: 100px 0px 50px 0px;
+    text-align: center;
   }
   .tourDates__tarjeta {
     background-color: rgba(66, 66, 66, 0.486);
@@ -1311,7 +1240,7 @@ body {
   .tourDates__tarjeta__botones .tourDates__tarjeta__btn {
     background-color: black;
     color: #fff;
-    height: 100%;
+    width: 100%;
     text-align: center;
     font-size: 1rem;
     font-weight: bold;

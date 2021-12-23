@@ -1,5 +1,5 @@
 .imgFondoMusic {
-    background-image: url('../img/leo-cantando.jpg');
+    background-image: url('../img/leo-cantando.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,19 +8,15 @@
     background-color: rgba(221, 221, 221, 0.651);
 }
 .music {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    padding-bottom: 70px;
+    display: map-get($map: $config-clase-music, $key: flex-direction);
+    align-items: map-get($map: $config-clase-music, $key: align-items);
+    width: map-get($map: $config-clase-music, $key: width);
+    margin: map-get($map: $config-clase-music, $key: margin);
+    padding-bottom: map-get($map: $config-clase-music, $key: padding-bottom);
 
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-pagina;
-        font-weight: $fontWeight-titulo-pagina;
-        color: $color-titulo-pagina;
-        letter-spacing: $letterSpacing-titulo-pagina;
-        padding: $padding-titulo-pagina;
+        @include desktop-titulo-pagina;
+        text-align: center;
     }
     &__album {
         display: flex;
@@ -64,16 +60,9 @@
             order: 4;
 
             &__btn {
-                color: #fff;
-                font-size: 1rem;
-                font-weight: bold;
-                background-color: black;
-                padding: 8px;
+                @extend .latestMusic__exploreMore;
                 margin-left: 50px;
-                border: 1px solid #fff;
-                transition-duration: 100ms;
-                transition-timing-function: ease-in-out;
-                transition-property: color scale(1);
+                justify-self: auto;
             
                 &:active {
                     transform: scale(0.95);

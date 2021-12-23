@@ -1,6 +1,6 @@
 @media screen and (max-width: 600px) {
     .imgFondoVideos {
-        background-image: url('../img/gente-en-concierto.jpg');
+        background-image: url('../img/gente-en-concierto.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -17,9 +17,9 @@
         &__contenedorGeneralVideoPrincipal {
             width: 100%;
             padding: 0px;
-            animation-name: fadeInVideoPrincipal;
-            animation-duration: 4s;
-            animation-timing-function: ease-in-out;
+            animation-name: map-get($map: $contenedor-general-video-principal, $key: animation-name);
+            animation-duration: map-get($map: $contenedor-general-video-principal, $key: animation-duration);
+            animation-timing-function: map-get($map: $contenedor-general-video-principal, $key: animation-timing-function);
 
             .videos__contenedorResponsivoVideoPrincipal {
                 height: 0px;
@@ -43,12 +43,8 @@
             }
         }
         &__titulo {
+            @include mobile-titulo-pagina;
             text-align: center;
-            font-size: $fontSizeMobile-titulo-pagina;
-            font-weight: $fontWeight-titulo-pagina;
-            color: $color-titulo-pagina;
-            letter-spacing: $letterSpacing-titulo-pagina;
-            padding: $padding-titulo-pagina;
         }
         &__videoPrincipal {
             position: absolute;
@@ -92,11 +88,7 @@
             }
         }
         &__videoSecundario {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 0px;
+            @extend .videos__videoPrincipal;
         }
     }
 }

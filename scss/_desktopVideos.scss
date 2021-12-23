@@ -1,8 +1,6 @@
 .imgFondoVideos {
-    background-image: url('../img/gente-en-concierto.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    @extend .imgFondoMusic;
+    background-image: url('../img/gente-en-concierto.webp');
 }
 .colorFondoVideos {
     background-color: rgba(255, 255, 255, 0.521);
@@ -10,10 +8,10 @@
 }
 .videos {
     &__contenedorGeneralVideoPrincipal {
-        padding: 0px 200px 40px 200px;
-        animation-name: fadeInVideoPrincipal;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
+        padding: map-get($map: $contenedor-general-video-principal, $key: padding);
+        animation-name: map-get($map: $contenedor-general-video-principal, $key: animation-name);
+        animation-duration: map-get($map: $contenedor-general-video-principal, $key: animation-duration);
+        animation-timing-function: map-get($map: $contenedor-general-video-principal, $key: animation-timing-function);
     }
     @keyframes fadeInVideoPrincipal {
         0% {
@@ -36,16 +34,13 @@
         overflow: hidden;
     }
     &__titulo {
+        @include desktop-titulo-pagina;
         text-align: center;
-        font-size: $fontSizeDesktop-titulo-pagina;
-        font-weight: $fontWeight-titulo-pagina;
-        color: $color-titulo-pagina;
-        letter-spacing: $letterSpacing-titulo-pagina;
-        padding: $padding-titulo-pagina;
     }
     &__videoPrincipal {
         position: absolute;
         top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
     }
@@ -82,8 +77,6 @@
         position: relative;
     }
     &__videoSecundario {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        @extend .videos__videoPrincipal;
     }
 }

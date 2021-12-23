@@ -1,13 +1,10 @@
-// Variables
-$fontSize-titulo-seccion: 3.5rem;
-$fontWeight-titulo-seccion: bold;
-// Transiciones
+// Variables transiciones
 $transitionDuration: 300ms;
 $transitionTimingFunction: ease-in-out;
 $transform-scale: scale(1.06);
 
 body {
-    background-image: url('../img/studio.png');
+    background-image: url('../img/studio.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -101,8 +98,8 @@ body {
         font-size: $fontSizeDesktop-titulo-seccion;
         font-weight: $fontWeight-titulo-seccion;
         color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        writing-mode: map-get($map: $texto-vertical, $key: writing-mode);
+        transform: map-get($map: $texto-vertical, $key: transform);
         grid-area: latestMusic;
         justify-self: flex-start;
         padding: 0px;
@@ -171,8 +168,7 @@ body {
 }
 /* Inicio seccion 3 */
 .socialMedia {
-    background-color: #72727273;
-    display: grid;
+    @extend .latestMusic;
     grid-template-columns: 150px 1fr 1fr 500px;
     grid-template-rows: 50%;
     column-gap: 20px;
@@ -181,19 +177,10 @@ body {
     "followMe facebook twitter guitarra"
     "followMe youTube instagram guitarra"
     ;
-    justify-items: center;
-    align-items: center;
-    padding: 80px 20px;
 
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-seccion;
-        font-weight: $fontWeight-titulo-seccion;
-        color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        @extend .latestMusic__titulo;
         grid-area: followMe;
-        justify-self: flex-start;
-        margin: 0px;
     }
     &__link {
         width: 40%;
@@ -230,7 +217,7 @@ body {
 }
 /* Inicio seccion 4 */
 .buyAlbums {
-    background-image: url('../img/guitarra-concierto.jpg');
+    background-image: url('../img/guitarra-concierto.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -250,14 +237,8 @@ body {
         padding: 80px 20px;
     }
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-seccion;
-        font-weight: $fontWeight-titulo-seccion;
-        color: #fff;
-        writing-mode: vertical-lr;
-        transform: rotate(180deg);
+        @extend .latestMusic__titulo;
         grid-area: buyAlbums;
-        margin: 0px;
-        justify-self: flex-start;
     }
     &__link {
         width: 50%;
@@ -288,7 +269,7 @@ body {
     height: 100vh;
 }
 .cierre {
-    background-image: url('../img/fondo-cierre.png');
+    background-image: url('../img/fondo-cierre.webp');
     background-size: 110%;
     background-position-x: center;
     background-position-y: bottom;

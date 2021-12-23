@@ -1,6 +1,6 @@
 @media screen and (max-width: 600px) {
     .imgFondoStore {
-        background-image: url('../img/store.png');
+        background-image: url('../img/store.webp');
         background-size:  cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -11,21 +11,17 @@
     .store {
 
         &__titulo {
+            @include mobile-titulo-pagina;
             text-align: center;
-            font-size: $fontSizeMobile-titulo-pagina;
-            font-weight: $fontWeight-titulo-pagina;
-            color: $color-titulo-pagina;
-            letter-spacing: $letterSpacing-titulo-pagina;
-            padding: $padding-titulo-pagina;
         }
         &__menu {
-            list-style: none;
-            display: flex;
-            position: relative;
-            margin: 0px;
-            padding: 0px;
+            list-style: map-get($map: $menu-pagina-store, $key: list-style);
+            display: map-get($map: $menu-pagina-store, $key: display);
+            position: map-get($map: $menu-pagina-store, $key: position);
+            margin: map-get($map: $menu-pagina-store, $key: margin);
+            padding: map-get($map: $menu-pagina-store, $key: padding);
             width: 100%;
-            place-content: center;
+            place-content: map-get($map: $menu-pagina-store, $key: place-content);
 
             &__categoria {
                 display: flex;
@@ -53,11 +49,8 @@
             padding: 40px;
             
             &__producto {
-                width: 100%;
+                @extend .latestMusic__album__link__cover;
                 margin: 20px 0px;
-                transition-duration: 200ms;
-                transition-timing-function: ease-in-out;
-                transition-property: scale(1);
 
                 &:hover {
                     transform: scale(1.06);

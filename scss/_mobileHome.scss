@@ -64,9 +64,9 @@
         padding: 10px;
 
         &__titulo {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
+            font-size: $fontSizeMobile-titulo-seccion;
+            font-weight: $fontWeight-titulo-seccion;
+            color: $color-titulo-seccion;
             grid-area: latestMusic__titulo;
             writing-mode: horizontal-tb;
             transform: rotate(0deg);
@@ -113,8 +113,7 @@
             border: 1px solid #fff;
             grid-area: latestMusic__exploreMore;
             width: 150px;
-            text-align: center;
-            
+            text-align: center; 
         }
     }
     /* Inicio seccion 3 */
@@ -135,14 +134,8 @@
         padding: 10px 10px 50px 10px;
 
         &__titulo {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
-            writing-mode: horizontal-tb;
-            transform: rotate(0deg);
+            @extend .latestMusic__titulo;
             grid-area: followMe;
-            margin: auto;
-            padding: 0px;
         }
         &__link{
             font-size: 0px;
@@ -178,11 +171,11 @@
     }
     /* Inicio seccion 4 */
     .buyAlbums {
-        background-image: url('../img/guitarra-concierto.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position-x: -150px;
+        background-image: map-get($map: $clase-buyAlbums, $key: background-image);
+        background-size: map-get($map: $clase-buyAlbums, $key: background-size);
+        background-repeat: map-get($map: $clase-buyAlbums, $key: background-repeat);
+        background-attachment: map-get($map: $clase-buyAlbums, $key: background-attachment);
+        background-position-x: map-get($map: $clase-buyAlbums, $key: background-position-x);
 
         &__colorFondo {
             background-color: rgba(88, 88, 88, 0.37);
@@ -192,13 +185,7 @@
             padding: 10px 10px 50px 10px;
         }
         &__titulo {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
-            writing-mode: horizontal-tb;
-            transform: rotate(0deg);
-            margin: auto;
-            text-align: center;
+            @extend .latestMusic__titulo;
         }
         &__link {
             width: 60%;
@@ -214,7 +201,7 @@
         height: 100vh;
 
         .cierre {
-            background-image: url('../img/fondo-cierre.png');
+            background-image: url('../img/fondo-cierre.webp');
             background-position-x: center;
             background-position-y: bottom;
             background-repeat: no-repeat;

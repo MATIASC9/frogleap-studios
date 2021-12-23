@@ -1,29 +1,23 @@
 .imgFondoStore {
-    background-image: url('../img/store.png');
-    background-size:  cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    @extend .imgFondoMusic;
+    background-image: url('../img/store.webp');
 }
 .colorFondoStore {
-    background-color: #72727273;
+    background-color: #72727270;
 }
 .store {
     &__titulo {
+        @include desktop-titulo-pagina;
         text-align: center;
-        font-size: $fontSizeDesktop-titulo-pagina;
-        font-weight: $fontWeight-titulo-pagina;
-        color: $color-titulo-pagina;
-        letter-spacing: $letterSpacing-titulo-pagina;
-        padding: $padding-titulo-pagina;
     }
     &__menu {
-        list-style: none;
-        display: flex;
-        position: relative;
-        margin: 0px;
-        padding: 0px;
-        width: 100%;
-        place-content: center;
+        list-style: map-get($map: $menu-pagina-store, $key: list-style);
+        display: map-get($map: $menu-pagina-store, $key: display);
+        position: map-get($map: $menu-pagina-store, $key: position);
+        margin: map-get($map: $menu-pagina-store, $key: margin);
+        padding: map-get($map: $menu-pagina-store, $key: padding);
+        width: map-get($map: $menu-pagina-store, $key: width);
+        place-content: map-get($map: $menu-pagina-store, $key: place-content);
 
         &__categoria {
             display: inline-block;
@@ -35,7 +29,7 @@
             border: 1px solid #fff;
             transition-duration: 100ms;
             transition-timing-function: ease-in-out;
-            transition-property: color scale(1);
+            transition-property: scale(1);
         
             &:active {
                 transform: scale(0.95);
@@ -50,10 +44,7 @@
         padding: 20px;
 
         &__producto {
-            width: 100%;
-            transition-duration: 200ms;
-            transition-timing-function: ease-in-out;
-            transition-property: scale(1);
+            @extend .latestMusic__album__link__cover;
             &:hover {
                 transform: scale(1.06);
             }
