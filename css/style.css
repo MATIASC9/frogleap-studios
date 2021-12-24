@@ -963,7 +963,7 @@ body {
     z-index: 1;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .imgFondoMusic, .imgFondoStore, .imgFondoVideos, .imgFondoTourDates {
     background-image: url("../img/leo-cantando.webp");
     background-size: cover;
@@ -993,15 +993,17 @@ body {
   .music__album {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 60px;
   }
   .music__album__cover {
     width: 100%;
-    height: 100%;
+    max-width: 500px;
     order: 1;
   }
   .music__album__contenedorInfo {
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
