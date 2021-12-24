@@ -90,22 +90,30 @@ $clase-buyAlbums: (
 
 
 @import "resetYFuente";
-// Imports desktop
-@import "desktopHeader";
-@import "desktopHome";
-@import "desktopMusic";
-@import "desktopStore";
-@import "desktopVideos";
-@import "desktopTourDates";
-@import "desktopFooter";
-// Imports mobile 800px
-@import "mobile800Header";
-@import "mobile800Home";
-@import "mobile800Music";
-@import "mobile800Store";
-@import "mobile800Videos";
-@import "mobile800TourDates";
-@import "mobile800Footer";
+// Imports desktop 1920
+@import "desktop1920Header";
+@import "desktop1920Home";
+@import "desktop1920Music";
+@import "desktop1920Store";
+@import "desktop1920Videos";
+@import "desktop1920TourDates";
+@import "desktop1920Footer";
+//  Imports desktop 1280
+@import "desktop1280Header";
+@import "desktop1280Home";
+@import "desktop1280Music";
+@import "desktop1280Store";
+@import "desktop1280Videos";
+@import "desktop1280TourDates";
+@import "desktop1280Footer";
+// Imports mobile 1000px
+@import "mobile1000Header";
+@import "mobile1000Home";
+@import "mobile1000Music";
+@import "mobile1000Store";
+@import "mobile1000Videos";
+@import "mobile1000TourDates";
+@import "mobile1000Footer";
 // Imports mobile 600px
 @import "mobile600Header";
 @import "mobile600Home";
@@ -114,4 +122,3 @@ $clase-buyAlbums: (
 @import "mobile600Videos";
 @import "mobile600TourDates";
 @import "mobile600Footer";
-// Imports mobile 1000px

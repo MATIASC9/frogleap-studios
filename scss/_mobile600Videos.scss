@@ -54,16 +54,17 @@
             height: 100%;
         }
         &__contenedorVideosSecundarios {
-            padding: 0px 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             animation-duration: 4s;
             animation-name: fadeInVideosSecundarios;
             animation-timing-function: ease-in-out;
+            width: 100%;
 
             .videos__contenedorUbicacionVideoSecundario {
-                width: 100%;
+                width: 80%;
+                min-width: 250px;
                 margin: 20px 0px;
 
                 .videos__contenedorVideoSecundario {

@@ -1,0 +1,62 @@
+.imgFondoTourDates {
+    @extend .imgFondoMusic;
+    background-image: url('../img/fondo-tour-dates.webp');
+}
+.colorFondoTourDates {
+    background-color: rgba(196, 196, 196, 0.74);
+}
+.tourDates{
+    padding-bottom: 50px;
+
+    &__titulo {
+        @include desktop-titulo-pagina;
+        text-align: center;
+    }
+    &__tarjeta {
+        background-color: map-get($map: $tarjeta-tour-dates, $key: background-color);
+        color: map-get($map: $tarjeta-tour-dates, $key: color);
+        width: map-get($map: $tarjeta-tour-dates, $key: width);
+        border: map-get($map: $tarjeta-tour-dates, $key: border);
+        padding: map-get($map: $tarjeta-tour-dates, $key: padding);
+        height: map-get($map: $tarjeta-tour-dates, $key: height);
+        margin: map-get($map: $tarjeta-tour-dates, $key: margin);
+        display: flex;
+        justify-content: map-get($map: $tarjeta-tour-dates, $key: justify-content);
+
+        &__contenedorInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__titulo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            padding-bottom: 15px;
+        }
+        &__fecha {
+            font-size: 0.9rem;
+            color: rgb(255, 255, 255);
+        }
+        &__lugar {
+            @extend .tourDates__tarjeta__fecha;
+        }
+        &__botones {
+            display: flex;
+            align-content: flex-end;
+            flex-flow: column;
+        }
+        &__btn {
+            @extend .latestMusic__exploreMore;
+            height: 100%;
+            font-size: 1rem;
+            display: flex;
+            margin: 0px;
+            justify-content: center;
+        
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+}
