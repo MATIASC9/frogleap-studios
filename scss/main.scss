@@ -90,22 +90,20 @@ $clase-buyAlbums: (
 
 
 @import "resetYFuente";
-// Imports desktop 1920
-@import "desktop1920Header";
-@import "desktop1920Home";
-@import "desktop1920Music";
-@import "desktop1920Store";
-@import "desktop1920Videos";
-@import "desktop1920TourDates";
-@import "desktop1920Footer";
+// Imports desktop
+@import "desktopHeader";
+@import "desktopHome";
+@import "desktopMusic";
+@import "desktopStore";
+@import "desktopVideos";
+@import "desktopTourDates";
+@import "desktopFooter";
 //  Imports desktop 1280
-@import "desktop1280Header";
 @import "desktop1280Home";
-@import "desktop1280Music";
-@import "desktop1280Store";
-@import "desktop1280Videos";
-@import "desktop1280TourDates";
-@import "desktop1280Footer";
+// @import "desktop1280Music";
+// @import "desktop1280Store";
+// @import "desktop1280Videos";
+// @import "desktop1280TourDates";
 // Imports mobile 1000px
 @import "mobile1000Header";
 @import "mobile1000Home";

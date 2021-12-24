@@ -80,9 +80,10 @@ body {
 }
 /* Inicio seccion 2 */
 .latestMusic {
+    height: auto;
     background-color: #72727273;
     display: grid;
-    grid-template-columns: 150px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 30px;
     row-gap: 30px;
@@ -90,7 +91,7 @@ body {
     "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
     "latestMusic liveInEurope volume24 volume25 exploreMore"
     ;
-    padding: 80px 20px;
+    padding: 100px 20px 40px 20px;
     place-items: center;
 
     &__titulo {
@@ -105,15 +106,11 @@ body {
     }
     &__album {
         font-size: 0px;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        min-width: 200px;
 
         &__link {
-            font-size: 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
+            width: 100%;
             &__cover {
                 width: 100%;
                 transition-duration: $transitionDuration;
@@ -159,6 +156,7 @@ body {
         transition-timing-function: $transitionTimingFunction;
         transition-property: scale(1);
         justify-self: flex-start;
+        text-align: center;
     
         &:active {
             transform: scale(0.95);
@@ -168,7 +166,7 @@ body {
 /* Inicio seccion 3 */
 .socialMedia {
     @extend .latestMusic;
-    grid-template-columns: 150px 1fr 1fr 500px;
+    grid-template-columns: 150px 1fr 1fr 45%;
     grid-template-rows: 50%;
     column-gap: 20px;
     row-gap: 20px;
@@ -183,6 +181,7 @@ body {
     }
     &__link {
         width: 40%;
+        min-width: 140px;
 
         &__logo {
             width: 100%;
@@ -241,6 +240,7 @@ body {
     }
     &__link {
         width: 50%;
+        min-width: 260px;
 
         &--amazon {
             grid-area: amazon;
