@@ -1048,7 +1048,7 @@ body {
     color: red;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .imgFondoStore {
     background-image: url("../img/store.webp");
     background-size: cover;
@@ -1099,6 +1099,8 @@ body {
     flex-direction: column;
     row-gap: 0px;
     padding: 40px;
+    justify-items: center;
+    align-items: center;
   }
   .store__contenedorProductos__producto {
     width: 100%;
@@ -1106,6 +1108,7 @@ body {
     transition-timing-function: ease-in-out;
     transition-property: scale(1);
     margin: 20px 0px;
+    max-width: 600px;
   }
   .store__contenedorProductos__producto:hover {
     transform: scale(1.06);
@@ -1760,6 +1763,8 @@ body {
     flex-direction: column;
     row-gap: 0px;
     padding: 40px;
+    justify-items: center;
+    align-items: center;
   }
   .store__contenedorProductos__producto {
     margin: 20px 0px;
