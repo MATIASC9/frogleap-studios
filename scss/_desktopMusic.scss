@@ -9,7 +9,6 @@
 }
 .music {
     display: map-get($map: $config-clase-music, $key: flex-direction);
-    align-items: map-get($map: $config-clase-music, $key: align-items);
     width: map-get($map: $config-clase-music, $key: width);
     margin: map-get($map: $config-clase-music, $key: margin);
     padding-bottom: map-get($map: $config-clase-music, $key: padding-bottom);
@@ -41,7 +40,7 @@
             order: 1;
         }
         &__canciones {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-left: 50px;
             margin-bottom: 30px;
             padding-left: 15px;

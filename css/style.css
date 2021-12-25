@@ -363,7 +363,6 @@ body {
 
 .music {
   display: column;
-  align-items: center;
   width: 80%;
   margin: auto;
   padding-bottom: 70px;
@@ -399,7 +398,7 @@ body {
   order: 1;
 }
 .music__album__canciones {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-left: 50px;
   margin-bottom: 30px;
   padding-left: 15px;
@@ -489,10 +488,11 @@ body {
 }
 
 .videos__contenedorGeneralVideoPrincipal {
-  padding: 0px 200px 40px 200px;
   animation-name: fadeInVideoPrincipal;
   animation-duration: 4s;
   animation-timing-function: ease-in-out;
+  width: 70%;
+  margin: auto;
 }
 @keyframes fadeInVideoPrincipal {
   0% {
@@ -704,6 +704,23 @@ body {
   }
   .buyAlbums__link--amazon {
     width: 45%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .music {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .videos__contenedorGeneralVideoPrincipal {
+    width: 90%;
+  }
+  .videos__contenedorVideosSecundarios {
+    width: 100%;
+    margin: auto;
+  }
+  .videos__contenedorUbicacionVideoSecundario {
+    width: 40%;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1020,7 +1037,6 @@ body {
   .music {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 80%;
     margin: auto;
     padding-bottom: 70px;
@@ -1694,7 +1710,6 @@ body {
   .music {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 80%;
     margin: auto;
     padding-bottom: 70px;
