@@ -16,7 +16,7 @@ $transitionTimingFunction: ease-in-out;
 $transform-scale: scale(1.06);
 
 
-// Mixins Desktop
+// Mixins
 @mixin desktop-titulo-pagina {
     font-size: $fontSizeDesktop-titulo-pagina;
     font-weight: $fontWeight-titulo-pagina;
@@ -24,14 +24,28 @@ $transform-scale: scale(1.06);
     letter-spacing: $letterSpacing-titulo-pagina;
     padding: $padding-titulo-pagina;
 }
-
-// Mixins Mobile
 @mixin mobile-titulo-pagina {
     font-size: $fontSizeMobile-titulo-pagina;
     font-weight: $fontWeight-titulo-pagina;
     color: $color-titulo-pagina;
     letter-spacing: $letterSpacing-titulo-pagina;
     padding: $padding-titulo-pagina;
+}
+@mixin background-seccion-5 {
+    background-image: url('../img/fondo-cierre.webp');
+    background-position-y: bottom;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+@mixin contenedorFinal-seccion-5 {
+    height: 100vh; 
 }
 
 // Mapas Desktop

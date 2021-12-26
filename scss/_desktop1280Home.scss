@@ -54,4 +54,12 @@
             }
         }
     }
+    /* Inicio seccion 5 */
+    .contenedorFinal {
+        @include contenedorFinal-seccion-5;
+        
+        .cierre {
+            @include background-seccion-5;
+        }
+    }
 }

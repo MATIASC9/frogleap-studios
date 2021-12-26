@@ -265,24 +265,15 @@ body {
 }
 /* Inicio seccion 5 */
 .contenedorFinal {
-    height: 100vh;
-}
-.cierre {
-    background-image: url('../img/fondo-cierre.webp');
-    background-size: 110%;
-    background-position-x: center;
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    @include contenedorFinal-seccion-5;
 
-    &__logoFrogleapStudios {
-        width: 35%;
-        padding-bottom: 140px;
-        z-index: 2;
+    .cierre {
+        @include background-seccion-5;
+
+        &__logoFrogleapStudios {
+            width: 30%;
+            padding-bottom: 140px;
+            z-index: 2;
+        }
     }
 }

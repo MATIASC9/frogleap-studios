@@ -330,22 +330,21 @@ body {
 .contenedorFinal {
   height: 100vh;
 }
-
-.cierre {
+.contenedorFinal .cierre {
   background-image: url("../img/fondo-cierre.webp");
-  background-size: 110%;
-  background-position-x: center;
   background-position-y: bottom;
+  background-position-x: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
-.cierre__logoFrogleapStudios {
-  width: 35%;
+.contenedorFinal .cierre__logoFrogleapStudios {
+  width: 30%;
   padding-bottom: 140px;
   z-index: 2;
 }
@@ -710,6 +709,24 @@ body {
   .buyAlbums__link--amazon {
     width: 45%;
   }
+
+  /* Inicio seccion 5 */
+  .contenedorFinal {
+    height: 100vh;
+  }
+  .contenedorFinal .cierre {
+    background-image: url("../img/fondo-cierre.webp");
+    background-position-y: bottom;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 1280px) {
   .music {
@@ -812,10 +829,6 @@ body {
 }
 @media screen and (max-width: 1000px) {
   /* Inicio seccion 1 */
-  .colorFondoBienvenida {
-    background-color: #d6631673;
-  }
-
   .bienvenida {
     min-height: 600px;
   }
@@ -825,12 +838,7 @@ body {
     width: 50%;
   }
   .bienvenida__contenedorFotoVideoScroll {
-    width: 100%;
     height: auto;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
   }
   .bienvenida__fotoLeo {
     width: 55%;
@@ -844,26 +852,12 @@ body {
     max-width: 350px;
     padding-bottom: 30px;
   }
-  .bienvenida__contenedorResponsiveVideo {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-  }
-  .bienvenida__video {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-  }
 
   /* Inicio seccion 2 */
   .latestMusic, .socialMedia {
-    background-color: #72727273;
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 50px;
+    padding: 0px 70px 50px 70px;
     justify-content: center;
   }
   .latestMusic__titulo, .socialMedia__titulo, .buyAlbums__titulo {
@@ -873,7 +867,6 @@ body {
     grid-area: latestMusic__titulo;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
-    display: block;
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -882,34 +875,18 @@ body {
     width: 80%;
     max-width: 350px;
   }
-  .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: black;
-    margin: auto;
-    display: inline-block;
-    border: 1px solid #fff;
-    width: 150px;
-    text-align: center;
-  }
 
   /* Inicio seccion 3 */
   .socialMedia {
-    background-color: #72727273;
     display: flex;
     padding: 0px 130px;
+    row-gap: 0px;
+    column-gap: 0px;
   }
   .socialMedia__titulo {
-    font-size: 2.7rem;
-    font-weight: bold;
-    color: #fff;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
-    display: block;
     margin: 0 auto;
-    text-align: center;
   }
   .socialMedia__link {
     width: 55%;
@@ -923,30 +900,20 @@ body {
 
   /* Inicio seccion 4 */
   .buyAlbums {
-    background-image: url("../img/guitarra-concierto.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position-x: -150px;
   }
   .buyAlbums__colorFondo {
-    background-color: rgba(88, 88, 88, 0.37);
     display: flex;
     row-gap: 0px;
     flex-direction: column;
     padding: 10px 10px 50px 10px;
   }
   .buyAlbums__titulo {
-    font-size: 2.7rem;
-    font-weight: bold;
-    color: #fff;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
-    display: block;
     margin: 0 auto;
   }
   .buyAlbums__link {
-    width: 50%;
     max-width: 350px;
     margin: 30px 0px;
   }
@@ -957,20 +924,21 @@ body {
   }
   .contenedorFinal .cierre {
     background-image: url("../img/fondo-cierre.webp");
-    background-position-x: center;
     background-position-y: bottom;
+    background-position-x: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
   }
   .contenedorFinal .cierre__logoFrogleapStudios {
     width: 60%;
     max-width: 330px;
     padding-bottom: 120px;
-    z-index: 1;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1447,8 +1415,6 @@ body {
     display: none;
   }
   .bienvenida__contenedorFotoVideoScroll {
-    width: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -1458,167 +1424,40 @@ body {
     align-self: center;
     justify-self: flex-end;
   }
-  .bienvenida__contenedorScrollFlecha {
-    display: none;
-  }
   .bienvenida__contenedorPosicionamientoVideo {
     width: 80%;
     order: 1;
     margin: 120px 0px 70px 0px;
   }
-  .bienvenida__contenedorResponsiveVideo {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-  }
-  .bienvenida__video {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-  }
 
   /* Inicio seccion 2 */
   .latestMusic, .socialMedia {
-    background-color: #72727273;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 10px 10px 50px 10px;
-  }
-  .latestMusic__titulo, .socialMedia__titulo, .buyAlbums__titulo {
-    font-size: 2.7rem;
-    font-weight: bold;
-    color: #fff;
-    grid-area: latestMusic__titulo;
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-    margin: 0 auto;
-    padding-bottom: 50px;
-    text-align: center;
-    width: 100%;
   }
   .latestMusic__album {
     width: 100%;
     max-width: 250px;
   }
   .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
-    text-decoration: none;
-    color: #fff;
     font-size: 1rem;
-    font-weight: bold;
-    background-color: black;
-    margin: auto;
-    display: inline-block;
-    border: 1px solid #fff;
-    width: 150px;
-    text-align: center;
   }
 
   /* Inicio seccion 3 */
   .socialMedia {
-    background-color: #72727273;
-    display: flex;
     justify-items: center;
     align-items: center;
     padding: 10px 10px 50px 10px;
   }
-  .socialMedia__titulo {
-    font-size: 2.7rem;
-    font-weight: bold;
-    color: #fff;
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-    display: block;
-    margin: 0 auto;
-    grid-area: followMe;
-  }
   .socialMedia__link {
-    font-size: 0px;
-    text-decoration: none;
     width: 70%;
-    max-width: 150px;
-  }
-  .socialMedia__link__logo {
-    width: 100%;
-  }
-  .socialMedia__link--facebook {
-    grid-area: facebook;
-    justify-self: flex-end;
-  }
-  .socialMedia__link--twitter {
-    grid-area: twitter;
-    justify-self: flex-start;
-  }
-  .socialMedia__link--youTube {
-    grid-area: youTube;
-    justify-self: flex-end;
-  }
-  .socialMedia__link--instagram {
-    grid-area: instagram;
-    justify-self: flex-start;
-  }
-  .socialMedia__link--guitarra {
-    grid-area: guitarra;
-  }
-  .socialMedia__guitarra {
-    display: none;
   }
 
   /* Inicio seccion 4 */
-  .buyAlbums {
-    background-image: url("../img/guitarra-concierto.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position-x: -150px;
-  }
-  .buyAlbums__colorFondo {
-    background-color: rgba(88, 88, 88, 0.37);
-    display: flex;
-    row-gap: 0px;
-    flex-direction: column;
-    padding: 10px 10px 50px 10px;
-  }
-  .buyAlbums__titulo {
-    font-size: 2.7rem;
-    font-weight: bold;
-    color: #fff;
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-    margin: 0 auto;
-  }
   .buyAlbums__link {
     width: 90%;
     max-width: 300px;
     min-width: 100px;
     margin: 30px 0px;
-  }
-  .buyAlbums__link__logo {
-    width: 100%;
-  }
-
-  /* Inicio seccion 5 */
-  .contenedorFinal {
-    height: 100vh;
-  }
-  .contenedorFinal .cierre {
-    background-image: url("../img/fondo-cierre.webp");
-    background-position-x: center;
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .contenedorFinal .cierre__logoFrogleapStudios {
-    width: 60%;
-    padding-bottom: 120px;
-    z-index: 1;
   }
 }
 @media screen and (max-width: 600px) {
