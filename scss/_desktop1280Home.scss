@@ -3,6 +3,7 @@
         // Inicio seccion 1
         &__logoFrogleapStudios {
             max-width: 500px;
+            padding-bottom: 70px;
         }
         &__contendorFotoVideoScroll {
             position: relative;
@@ -22,6 +23,8 @@
     }
     // Inicio seccion 2
     .latestMusic {
+        row-gap: 15px;
+        column-gap: 15px;
 
         &__album {
             width: 100%;

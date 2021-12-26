@@ -48,19 +48,10 @@
     /* Inicio seccion 2 */
     .latestMusic {
         background-color: #72727273;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 1fr 1fr 1fr 80px;
-        column-gap: 20px;
-        row-gap: 20px;
-        grid-template-areas:
-        "latestMusic__titulo latestMusic__titulo" 
-        "ultimateBundle childrensMetalSongs"
-        "karaokeAndBackingTracks liveInEurope"
-        "volume24 volume25"
-        "latestMusic__exploreMore latestMusic__exploreMore"
-        ;
-        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 50px;
+        justify-content: center;
 
         &__titulo {
             font-size: $fontSizeMobile-titulo-seccion;
@@ -71,36 +62,12 @@
             transform: rotate(0deg);
             display: block;
             margin: 0 auto;
+            width: 100%;
+            text-align: center;
         }
         &__album {
             width: 80%;
-            max-width: 320px;
-
-            &--ultimateBundle {
-                grid-area: ultimateBundle;
-                justify-self: flex-end;
-
-            }
-            &--childrensMetalSongs {
-                grid-area: childrensMetalSongs;
-                justify-self: flex-start;
-            }
-            &--karaokeAndBackingTracks {
-                grid-area: karaokeAndBackingTracks;
-                justify-self: flex-end;
-            }
-            &--liveInEurope {
-                grid-area: liveInEurope;
-                justify-self: flex-start;
-            }
-            &--volume24 {
-                grid-area: volume24;
-                justify-self: flex-end;
-            }
-            &--volume25 {
-                grid-area: volume25;
-                justify-self: flex-start;
-            }
+            max-width: 350px;
         }
         &__exploreMore {
             text-decoration: none;
@@ -111,27 +78,15 @@
             margin: auto;
             display: inline-block;
             border: 1px solid #fff;
-            grid-area: latestMusic__exploreMore;
             width: 150px;
-            text-align: center; 
+            text-align: center;
         }
     }
     /* Inicio seccion 3 */
     .socialMedia {
         background-color: #72727273;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px auto auto;
-        column-gap: 50px;
-        row-gap: 50px;
-        grid-template-areas:
-        "followMe followMe" 
-        "facebook twitter"
-        "youTube instagram"
-        ;
-        justify-items: center;
-        align-items: center;
-        padding: 10px 10px 50px 10px;
+        display: flex;
+        padding: 0px 130px;
 
         &__titulo {
             font-size: $fontSizeMobile-titulo-seccion;
@@ -141,35 +96,13 @@
             transform: rotate(0deg);
             display: block;
             margin: 0 auto;
-            grid-area: followMe;
+            text-align: center;
         }
         &__link{
             width: 55%;
-            max-width: 170px;
+            max-width: 150px;
             font-size: 0px;
-
-            &__logo {
-                width: 100%;
-            }
-            &--facebook {
-                grid-area: facebook;
-                justify-self: flex-end;
-            }
-            &--twitter {
-                grid-area: twitter;
-                justify-self: flex-start;
-            }
-            &--youTube {
-                grid-area: youTube;
-                justify-self: flex-end;
-            }
-            &--instagram {
-                grid-area: instagram;
-                justify-self: flex-start;
-            }
-            &--guitarra {
-                grid-area: guitarra;
-            }
+            margin: 30px;
         }
         &__guitarra {
             display: none;

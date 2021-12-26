@@ -668,6 +668,7 @@ body {
 @media screen and (max-width: 1280px) {
   .bienvenida__logoFrogleapStudios {
     max-width: 500px;
+    padding-bottom: 70px;
   }
   .bienvenida__contendorFotoVideoScroll {
     position: relative;
@@ -685,6 +686,10 @@ body {
     width: 30%;
   }
 
+  .latestMusic, .socialMedia {
+    row-gap: 15px;
+    column-gap: 15px;
+  }
   .latestMusic__album {
     width: 100%;
   }
@@ -856,13 +861,10 @@ body {
   /* Inicio seccion 2 */
   .latestMusic, .socialMedia {
     background-color: #72727273;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 80px;
-    column-gap: 20px;
-    row-gap: 20px;
-    grid-template-areas: "latestMusic__titulo latestMusic__titulo" "ultimateBundle childrensMetalSongs" "karaokeAndBackingTracks liveInEurope" "volume24 volume25" "latestMusic__exploreMore latestMusic__exploreMore";
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 50px;
+    justify-content: center;
   }
   .latestMusic__titulo, .socialMedia__titulo, .buyAlbums__titulo {
     font-size: 2.7rem;
@@ -873,34 +875,12 @@ body {
     transform: rotate(0deg);
     display: block;
     margin: 0 auto;
+    width: 100%;
+    text-align: center;
   }
   .latestMusic__album {
     width: 80%;
-    max-width: 320px;
-  }
-  .latestMusic__album--ultimateBundle {
-    grid-area: ultimateBundle;
-    justify-self: flex-end;
-  }
-  .latestMusic__album--childrensMetalSongs {
-    grid-area: childrensMetalSongs;
-    justify-self: flex-start;
-  }
-  .latestMusic__album--karaokeAndBackingTracks {
-    grid-area: karaokeAndBackingTracks;
-    justify-self: flex-end;
-  }
-  .latestMusic__album--liveInEurope {
-    grid-area: liveInEurope;
-    justify-self: flex-start;
-  }
-  .latestMusic__album--volume24 {
-    grid-area: volume24;
-    justify-self: flex-end;
-  }
-  .latestMusic__album--volume25 {
-    grid-area: volume25;
-    justify-self: flex-start;
+    max-width: 350px;
   }
   .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
     text-decoration: none;
@@ -911,7 +891,6 @@ body {
     margin: auto;
     display: inline-block;
     border: 1px solid #fff;
-    grid-area: latestMusic__exploreMore;
     width: 150px;
     text-align: center;
   }
@@ -919,15 +898,8 @@ body {
   /* Inicio seccion 3 */
   .socialMedia {
     background-color: #72727273;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px auto auto;
-    column-gap: 50px;
-    row-gap: 50px;
-    grid-template-areas: "followMe followMe" "facebook twitter" "youTube instagram";
-    justify-items: center;
-    align-items: center;
-    padding: 10px 10px 50px 10px;
+    display: flex;
+    padding: 0px 130px;
   }
   .socialMedia__titulo {
     font-size: 2.7rem;
@@ -937,34 +909,13 @@ body {
     transform: rotate(0deg);
     display: block;
     margin: 0 auto;
-    grid-area: followMe;
+    text-align: center;
   }
   .socialMedia__link {
     width: 55%;
-    max-width: 170px;
+    max-width: 150px;
     font-size: 0px;
-  }
-  .socialMedia__link__logo {
-    width: 100%;
-  }
-  .socialMedia__link--facebook {
-    grid-area: facebook;
-    justify-self: flex-end;
-  }
-  .socialMedia__link--twitter {
-    grid-area: twitter;
-    justify-self: flex-start;
-  }
-  .socialMedia__link--youTube {
-    grid-area: youTube;
-    justify-self: flex-end;
-  }
-  .socialMedia__link--instagram {
-    grid-area: instagram;
-    justify-self: flex-start;
-  }
-  .socialMedia__link--guitarra {
-    grid-area: guitarra;
+    margin: 30px;
   }
   .socialMedia__guitarra {
     display: none;
@@ -1486,15 +1437,11 @@ body {
 }
 @media screen and (max-width: 600px) {
   /* Inicio seccion 1 */
-  .colorFondoBienvenida {
-    background-color: #72727273;
-  }
-
   .bienvenida {
     display: flex;
     flex-direction: column;
-    justify-items: flex-end;
-    height: auto;
+    align-items: space-between;
+    min-height: fit-content;
   }
   .bienvenida__logoFrogleapStudios {
     display: none;
@@ -1509,6 +1456,7 @@ body {
     width: 80%;
     order: 2;
     align-self: center;
+    justify-self: flex-end;
   }
   .bienvenida__contenedorScrollFlecha {
     display: none;
@@ -1535,13 +1483,10 @@ body {
   /* Inicio seccion 2 */
   .latestMusic, .socialMedia {
     background-color: #72727273;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 80px;
-    column-gap: 20px;
-    row-gap: 20px;
-    grid-template-areas: "latestMusic__titulo latestMusic__titulo" "ultimateBundle childrensMetalSongs" "karaokeAndBackingTracks liveInEurope" "volume24 volume25" "latestMusic__exploreMore latestMusic__exploreMore";
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 10px 50px 10px;
   }
   .latestMusic__titulo, .socialMedia__titulo, .buyAlbums__titulo {
     font-size: 2.7rem;
@@ -1550,29 +1495,14 @@ body {
     grid-area: latestMusic__titulo;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
-    display: block;
     margin: 0 auto;
+    padding-bottom: 50px;
+    text-align: center;
+    width: 100%;
   }
   .latestMusic__album {
     width: 100%;
-  }
-  .latestMusic__album--ultimateBundle {
-    grid-area: ultimateBundle;
-  }
-  .latestMusic__album--childrensMetalSongs {
-    grid-area: childrensMetalSongs;
-  }
-  .latestMusic__album--karaokeAndBackingTracks {
-    grid-area: karaokeAndBackingTracks;
-  }
-  .latestMusic__album--liveInEurope {
-    grid-area: liveInEurope;
-  }
-  .latestMusic__album--volume24 {
-    grid-area: volume24;
-  }
-  .latestMusic__album--volume25 {
-    grid-area: volume25;
+    max-width: 250px;
   }
   .latestMusic__exploreMore, .music__album__link__btn, .tourDates__tarjeta__btn {
     text-decoration: none;
@@ -1583,7 +1513,6 @@ body {
     margin: auto;
     display: inline-block;
     border: 1px solid #fff;
-    grid-area: latestMusic__exploreMore;
     width: 150px;
     text-align: center;
   }
@@ -1591,12 +1520,7 @@ body {
   /* Inicio seccion 3 */
   .socialMedia {
     background-color: #72727273;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px auto auto;
-    column-gap: 50px;
-    row-gap: 50px;
-    grid-template-areas: "followMe followMe" "facebook twitter" "youTube instagram";
+    display: flex;
     justify-items: center;
     align-items: center;
     padding: 10px 10px 50px 10px;
@@ -1615,6 +1539,7 @@ body {
     font-size: 0px;
     text-decoration: none;
     width: 70%;
+    max-width: 150px;
   }
   .socialMedia__link__logo {
     width: 100%;
@@ -1663,11 +1588,12 @@ body {
     color: #fff;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
-    display: block;
     margin: 0 auto;
   }
   .buyAlbums__link {
-    width: 60%;
+    width: 90%;
+    max-width: 300px;
+    min-width: 100px;
     margin: 30px 0px;
   }
   .buyAlbums__link__logo {

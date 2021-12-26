@@ -1,13 +1,10 @@
 @media screen and (max-width: 600px) {
     /* Inicio seccion 1 */
-    .colorFondoBienvenida {
-        background-color: #72727273;
-    }
     .bienvenida {
         display: flex;
         flex-direction: column;
-        justify-items: flex-end;
-        height: auto;
+        align-items: space-between;
+        min-height: fit-content;
 
         &__logoFrogleapStudios {
             display: none;
@@ -22,6 +19,7 @@
             width: 80%;
             order: 2;
             align-self: center;
+            justify-self: flex-end;
         }
         &__contenedorScrollFlecha {
             display: none;
@@ -48,19 +46,10 @@
     /* Inicio seccion 2 */
     .latestMusic {
         background-color: #72727273;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 1fr 1fr 1fr 80px;
-        column-gap: 20px;
-        row-gap: 20px;
-        grid-template-areas:
-        "latestMusic__titulo latestMusic__titulo" 
-        "ultimateBundle childrensMetalSongs"
-        "karaokeAndBackingTracks liveInEurope"
-        "volume24 volume25"
-        "latestMusic__exploreMore latestMusic__exploreMore"
-        ;
-        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 10px 50px 10px;
 
         &__titulo {
             font-size: $fontSizeMobile-titulo-seccion;
@@ -69,30 +58,14 @@
             grid-area: latestMusic__titulo;
             writing-mode: horizontal-tb;
             transform: rotate(0deg);
-            display: block;
             margin: 0 auto;
+            padding-bottom: 50px;
+            text-align: center;
+            width: 100%;
         }
         &__album {
             width: 100%;
-
-            &--ultimateBundle {
-                grid-area: ultimateBundle;
-            }
-            &--childrensMetalSongs {
-                grid-area: childrensMetalSongs;
-            }
-            &--karaokeAndBackingTracks {
-                grid-area: karaokeAndBackingTracks;
-            }
-            &--liveInEurope {
-                grid-area: liveInEurope;
-            }
-            &--volume24 {
-                grid-area: volume24;
-            }
-            &--volume25 {
-                grid-area: volume25;
-            }
+            max-width: 250px;
         }
         &__exploreMore {
             text-decoration: none;
@@ -103,7 +76,6 @@
             margin: auto;
             display: inline-block;
             border: 1px solid #fff;
-            grid-area: latestMusic__exploreMore;
             width: 150px;
             text-align: center; 
         }
@@ -111,16 +83,16 @@
     /* Inicio seccion 3 */
     .socialMedia {
         background-color: #72727273;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px auto auto;
-        column-gap: 50px;
-        row-gap: 50px;
-        grid-template-areas:
-        "followMe followMe" 
-        "facebook twitter"
-        "youTube instagram"
-        ;
+        display: flex;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 100px auto auto;
+        // column-gap: 50px;
+        // row-gap: 50px;
+        // grid-template-areas:
+        // "followMe followMe" 
+        // "facebook twitter"
+        // "youTube instagram"
+        // ;
         justify-items: center;
         align-items: center;
         padding: 10px 10px 50px 10px;
@@ -139,6 +111,7 @@
             font-size: 0px;
             text-decoration: none;
             width: 70%;
+            max-width: 150px;
 
             &__logo {
                 width: 100%;
@@ -188,11 +161,12 @@
             color: $color-titulo-seccion;
             writing-mode: horizontal-tb;
             transform: rotate(0deg);
-            display: block;
             margin: 0 auto;
         }
         &__link {
-            width: 60%;
+            width: 90%;
+            max-width: 300px;
+            min-width: 100px;
             margin: 30px 0px;
 
             &__logo {
