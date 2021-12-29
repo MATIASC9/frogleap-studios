@@ -47,10 +47,12 @@
             flex-direction: column;
             row-gap: 0px;
             padding: 40px;
+            justify-items: center;
+            align-items: center;
             
             &__producto {
-                @extend .latestMusic__album__link__cover;
                 margin: 20px 0px;
+                min-width: 250px;
 
                 &:hover {
                     transform: scale(1.06);

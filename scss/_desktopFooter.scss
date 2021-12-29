@@ -9,7 +9,7 @@
         position: absolute;
         bottom: 0;
         width: 100vw;
-        height: 500px;
+        height: 50vh;
     }
 }
 
@@ -32,6 +32,7 @@
 
         &__item {
             margin: 15px;
+            text-align: center;
         }
         
     }

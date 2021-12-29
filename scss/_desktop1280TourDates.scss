@@ -10,6 +10,7 @@
 
     &__titulo {
         @include desktop-titulo-pagina;
+        text-align: center;
     }
     &__tarjeta {
         background-color: map-get($map: $tarjeta-tour-dates, $key: background-color);
@@ -46,7 +47,7 @@
             flex-flow: column;
         }
         &__btn {
-            @include boton-1;
+            @extend .latestMusic__exploreMore;
             height: 100%;
             font-size: 1rem;
             display: flex;
@@ -54,7 +55,7 @@
             justify-content: center;
         
             &:active {
-                transform: $escala-active-boton1;
+                transform: scale(0.95);
             }
         }
     }

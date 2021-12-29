@@ -8,23 +8,24 @@
 }
 .videos {
     &__contenedorGeneralVideoPrincipal {
-        padding: map-get($map: $contenedor-general-video-principal, $key: padding);
         animation-name: map-get($map: $contenedor-general-video-principal, $key: animation-name);
         animation-duration: map-get($map: $contenedor-general-video-principal, $key: animation-duration);
         animation-timing-function: map-get($map: $contenedor-general-video-principal, $key: animation-timing-function);
+        width: 70%;
+        margin: auto;
     }
     @keyframes fadeInVideoPrincipal {
         0% {
-            opacity: 0; translateY: (0px);
+            opacity: 0;
         }
         50% {
-            opacity: 0; translateY: (0px);
+            opacity: 0;
         }
         75% {
-            opacity: 0; translateY: (0px);
+            opacity: 0;
         }
         100% {
-            opacity: 1; translateY: (40px);
+            opacity: 1;
         }
     }
     &__contenedorResponsivoVideoPrincipal {
@@ -35,14 +36,9 @@
     }
     &__titulo {
         @include desktop-titulo-pagina;
-        text-align: center;
     }
     &__videoPrincipal {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        @include videoResponsive;
     }
     &__contenedorVideosSecundarios {
         display: flex;
@@ -54,16 +50,16 @@
     }
     @keyframes fadeInVideosSecundarios {
         0% {
-            opacity: 0; translateY: (0px);
+            opacity: 0;
         }
         50% {
-            opacity: 0; translateY: (0px);
+            opacity: 0;
         }
         75% {
-            opacity: 0; translateY: (0px);
+            opacity: 0;
         }
         100% {
-            opacity: 1; translateY: (40px);
+            opacity: 1;
         }
     }
     &__contenedorUbicacionVideoSecundario {
@@ -77,6 +73,6 @@
         position: relative;
     }
     &__videoSecundario {
-        @extend .videos__videoPrincipal;
+        @include videoResponsive;
     }
 }

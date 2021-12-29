@@ -1,0 +1,27 @@
+@media screen and (max-width: 1000px) {
+    .store {
+
+        &__menu {
+
+            &__categoria {
+                @include boton-1;
+
+            }
+        }
+        &__contenedorProductos {
+            display: flex;
+            row-gap: 0px;
+            column-gap: 0;
+            padding: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            &__producto {
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 450px;
+
+            }
+        }
+    } 
+}

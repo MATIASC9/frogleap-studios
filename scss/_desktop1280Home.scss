@@ -1,0 +1,59 @@
+@media screen and (max-width: 1280px) {
+    .bienvenida {
+        height: 100vh;
+        
+        // Inicio seccion 1
+        &__logoFrogleapStudios {
+            max-width: 500px;
+            padding-bottom: 70px;
+        }
+        &__contendorFotoVideoScroll {
+            position: relative;
+        }
+        &__fotoLeo {
+            width: 40%;
+            max-width: 470px;
+        }
+        &__contenedorScrollFlecha {
+            position: absolute;
+            left: 50%;
+            width: 0;
+        }
+        &__contenedorPosicionamientoVideo {
+            width: 30%;
+        }
+    }
+    // Inicio seccion 2
+    .latestMusic {
+        row-gap: 15px;
+        column-gap: 15px;
+
+        &__album {
+            width: 100%;
+
+            &__link {
+                width: 100%;
+
+                &__cover {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    // Inicio seccion 3
+    .socialMedia {
+        &__link {
+            width: 70%;
+        }
+    }
+    // Inicio seccion 4
+    .buyAlbums {
+        &__link {
+            width: 65%;
+
+            &--amazon {
+                width: 45%;
+            }
+        }
+    }
+}

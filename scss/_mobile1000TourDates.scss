@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .imgFondoTourDates {
         background-image: url('../img/fondo-tour-dates.webp');
         background-size: cover;
@@ -25,6 +25,7 @@
             margin: 20px auto;
             display: map-get($map: $tarjeta-tour-dates, $key: display);
             justify-content: map-get($map: $tarjeta-tour-dates, $key: justify-content);
+            max-width: 600px;
 
             &__contenedorInfo {
                 display: flex;
@@ -42,7 +43,8 @@
                 color: rgb(255, 255, 255);
             }
             &__lugar {
-                @extend .tourDates__tarjeta__fecha
+                font-size: 0.9rem;
+                color: rgb(255, 255, 255);
             }
             &__botones {
                 display: flex;

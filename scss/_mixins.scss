@@ -1,0 +1,68 @@
+@mixin desktop-titulo-pagina {
+    font-size: $fontSizeDesktop-titulo-pagina;
+    font-weight: $fontWeight-titulo-pagina;
+    color: $color-titulo-pagina;
+    letter-spacing: $letterSpacing-titulo-pagina;
+    padding: $padding-titulo-pagina;
+    text-align: center;
+}
+@mixin mobile-titulo-pagina {
+    font-size: $fontSizeMobile-titulo-pagina;
+    font-weight: $fontWeight-titulo-pagina;
+    color: $color-titulo-pagina;
+    letter-spacing: $letterSpacing-titulo-pagina;
+    padding: $padding-titulo-pagina;
+}
+@mixin titulo-horizontal-seccion-home {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+@mixin background-seccion-5 {
+    background-image: url('../img/fondo-cierre.webp');
+    background-position-y: bottom;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+@mixin contenedorFinal-seccion-5 {
+    height: 100vh; 
+}
+@mixin videoResponsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+}
+@mixin boton-1 {
+    text-decoration: none;
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-color: black;
+        padding: 10px;
+        margin-left: 30px;
+        display: inline-block;
+        border: 1px solid #fff;
+        grid-area: exploreMore;
+        transition-duration: 100ms;
+        transition-timing-function: $transitionTimingFunction;
+        transition-property: scale(1);
+        justify-self: flex-start;
+        text-align: center;
+}
+@mixin background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

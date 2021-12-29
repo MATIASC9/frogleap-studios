@@ -1,0 +1,31 @@
+@media screen and (max-width: 1000px) {
+    .colorFondoVideos {
+        padding-bottom: 30px;
+    }
+    .videos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__contenedorGeneralVideoPrincipal {
+            width: 100%;
+            max-width: 800px;
+            padding: 0px;
+
+        }
+        &__titulo {
+            @include mobile-titulo-pagina;
+        }
+        &__contenedorVideosSecundarios {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .videos__contenedorUbicacionVideoSecundario {
+                width: 90%;
+                max-width: 600px;
+                margin: 20px 0px;
+            }
+        }
+    }
+}

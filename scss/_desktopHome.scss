@@ -1,25 +1,21 @@
-// Variables transiciones
-$transitionDuration: 300ms;
-$transitionTimingFunction: ease-in-out;
-$transform-scale: scale(1.06);
-
 body {
+    @include background-image;
     background-image: url('../img/studio.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
 }
 /* Inicio seccion 1 */
 .bienvenida {
-    height: 100vh;
     background-color: #d6631673;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     &__logoFrogleapStudios {
         width: 45%;
-        display: block;
+        max-width: 650px;
         margin: 0px auto;
-        padding-top: 150px;
+        padding-top: 120px;
+        padding-bottom: 30px;
         animation-name: FadeLogoFrogleapStudios;
         animation-duration: 4s;
         animation-timing-function: ease-in-out;
@@ -35,16 +31,20 @@ body {
             opacity: 1;
         }
     }
+    &__contenedorFotoVideoScroll {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
     &__fotoLeo {
-        width: 35rem;
-        position: absolute;
-        bottom: 0px;
+        width: 32%;
+        align-self: flex-end;
     }
     &__contenedorPosicionamientoVideo {
-        position: absolute;
-        width: 30%;
-        bottom: 70px;
-        right: 70px;
+        width: 25%;
+        margin: 0px 20px 50px 0px;
     }
     &__contenedorResponsiveVideo {
         position: relative;
@@ -53,22 +53,14 @@ body {
         overflow: hidden;
     }
     &__video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        height: 100%;
+        @include videoResponsive;
     }
     &__contenedorScrollFlecha {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 0px;
-        height: 60px;
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
+        margin-bottom: 20px;
 
         &__scroll {
             color: white;
@@ -81,9 +73,10 @@ body {
 }
 /* Inicio seccion 2 */
 .latestMusic {
+    height: auto;
     background-color: #72727273;
     display: grid;
-    grid-template-columns: 150px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 30px;
     row-gap: 30px;
@@ -91,29 +84,26 @@ body {
     "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
     "latestMusic liveInEurope volume24 volume25 exploreMore"
     ;
-    padding: 80px 20px;
+    padding: $padding-secciones-home;
     place-items: center;
 
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-seccion;
-        font-weight: $fontWeight-titulo-seccion;
+        font-size: 3rem;
+        font-weight: bold;
         color: #fff;
-        writing-mode: map-get($map: $texto-vertical, $key: writing-mode);
-        transform: map-get($map: $texto-vertical, $key: transform);
-        grid-area: latestMusic;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
         justify-self: flex-start;
         padding: 0px;
+        grid-area: latestMusic;
     }
     &__album {
         font-size: 0px;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        min-width: 200px;
 
         &__link {
-            font-size: 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
 
             &__cover {
                 width: 100%;
@@ -146,30 +136,20 @@ body {
         }
     }
     &__exploreMore {
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.3rem;
-        font-weight: bold;
-        background-color: black;
-        padding: 10px;
-        margin-left: 30px;
-        display: inline-block;
-        border: 1px solid #fff;
-        grid-area: exploreMore;
-        transition-duration: 100ms;
-        transition-timing-function: $transitionTimingFunction;
-        transition-property: scale(1);
-        justify-self: flex-start;
+        @include boton-1;
     
         &:active {
-            transform: scale(0.95);
+            transform: $escala-active-boton1;
+        }
+        &:hover {
+            color: $color-hover-boton1;
         }
     }
 }
 /* Inicio seccion 3 */
 .socialMedia {
     @extend .latestMusic;
-    grid-template-columns: 150px 1fr 1fr 500px;
+    grid-template-columns: 150px 1fr 1fr 45%;
     grid-template-rows: 50%;
     column-gap: 20px;
     row-gap: 20px;
@@ -177,13 +157,15 @@ body {
     "followMe facebook twitter guitarra"
     "followMe youTube instagram guitarra"
     ;
+    padding: $padding-secciones-home;
 
     &__titulo {
         @extend .latestMusic__titulo;
         grid-area: followMe;
     }
     &__link {
-        width: 40%;
+        width: 45%;
+        min-width: 140px;
 
         &__logo {
             width: 100%;
@@ -212,17 +194,16 @@ body {
         }
     }
     &__guitarra {
-        width: 90%;
+        width: 80%;
     }
 }
 /* Inicio seccion 4 */
-.buyAlbums {
+.buyAlbums { 
+    @extend body;
     background-image: url('../img/guitarra-concierto.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    
     &__colorFondo {
+        padding: $padding-secciones-home;
         background-color: rgba(88, 88, 88, 0.37);
         display: grid;
         grid-template-areas:
@@ -242,6 +223,7 @@ body {
     }
     &__link {
         width: 50%;
+        min-width: 260px;
 
         &--amazon {
             grid-area: amazon;
@@ -266,24 +248,15 @@ body {
 }
 /* Inicio seccion 5 */
 .contenedorFinal {
-    height: 100vh;
-}
-.cierre {
-    background-image: url('../img/fondo-cierre.webp');
-    background-size: 110%;
-    background-position-x: center;
-    background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    @include contenedorFinal-seccion-5;
 
-    &__logoFrogleapStudios {
-        width: 35%;
-        padding-bottom: 140px;
-        z-index: 2;
+    .cierre {
+        @include background-seccion-5;
+
+        &__logoFrogleapStudios {
+            width: 30%;
+            padding-bottom: 140px;
+            z-index: 2;
+        }
     }
 }
