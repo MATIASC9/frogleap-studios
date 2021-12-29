@@ -1,5 +1,7 @@
 @media screen and (max-width: 1280px) {
     .bienvenida {
+        height: 100vh;
+        
         // Inicio seccion 1
         &__logoFrogleapStudios {
             max-width: 500px;
@@ -52,14 +54,6 @@
             &--amazon {
                 width: 45%;
             }
-        }
-    }
-    /* Inicio seccion 5 */
-    .contenedorFinal {
-        @include contenedorFinal-seccion-5;
-        
-        .cierre {
-            @include background-seccion-5;
         }
     }
 }

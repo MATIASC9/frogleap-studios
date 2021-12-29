@@ -8,7 +8,6 @@
 .store {
     &__titulo {
         @include desktop-titulo-pagina;
-        text-align: center;
     }
     &__menu {
         list-style: map-get($map: $menu-pagina-store, $key: list-style);
@@ -20,19 +19,16 @@
         place-content: map-get($map: $menu-pagina-store, $key: place-content);
 
         &__categoria {
-            display: inline-block;
-            width: auto;
+            @include boton-1;
+            margin: 0;
             padding: 8px;
             font-size: 1rem;
-            color: #fff;
-            background-color: #000;
-            border: 1px solid #fff;
-            transition-duration: 100ms;
-            transition-timing-function: ease-in-out;
-            transition-property: scale(1);
         
             &:active {
                 transform: scale(0.95);
+            }
+            &:hover {
+                color: $color-hover-boton1;
             }
         }
     }
@@ -45,8 +41,9 @@
 
         &__producto {
             @extend .latestMusic__album__link__cover;
+            
             &:hover {
-                transform: scale(1.06);
+                transform: $transform-scale;
             }
         }
     }

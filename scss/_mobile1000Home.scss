@@ -1,11 +1,10 @@
 @media screen and (max-width: 1000px) {
     /* Inicio seccion 1 */
     .bienvenida {
-        min-height: 600px;
+        height: 100vh;
 
         &__logoFrogleapStudios {
             padding-top: 100px;
-            display: block;
             width: 50%;
         }
         &__contenedorFotoVideoScroll {
@@ -13,7 +12,7 @@
         }
         &__fotoLeo {
             width: 55%;
-            max-width: 500px;
+            max-width: 400px;
         }
         &__contenedorScrollFlecha {
             display: none;
@@ -28,50 +27,68 @@
     .latestMusic {
         display: flex;
         flex-wrap: wrap;
-        padding: 0px 70px 50px 70px;
+        padding: 0px 100px 50px 100px;
         justify-content: center;
 
         &__titulo {
-            font-size: $fontSizeMobile-titulo-seccion;
-            font-weight: $fontWeight-titulo-seccion;
-            color: $color-titulo-seccion;
-            grid-area: latestMusic__titulo;
-            writing-mode: horizontal-tb;
-            transform: rotate(0deg);
-            margin: 0 auto;
-            width: 100%;
-            text-align: center;
+            @include titulo-horizontal-seccion-home;
         }
         &__album {
             width: 80%;
             max-width: 350px;
         }
+        &__exploreMore {
+            margin: 0;
+            width: 50%;
+        }
     }
     /* Inicio seccion 3 */
     .socialMedia {
-        display: flex;
-        padding: 0px 130px;
-        row-gap: 0px;
-        column-gap: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 50px;
+        row-gap: 50px;
+        grid-template-areas: 
+        "followMe followMe"
+        "facebook twitter"
+        "youTube instagram"
+        ;
+        padding: $padding-secciones-home;
 
         &__titulo {
-            writing-mode: horizontal-tb;
-            transform: rotate(0deg);
-            margin: 0 auto;
+            @include titulo-horizontal-seccion-home;
+            grid-area: followMe;
         }
         &__link{
             width: 55%;
             max-width: 150px;
             font-size: 0px;
-            margin: 30px;
+
+            &--facebook {
+                grid-area: facebook;
+                justify-self: flex-end;
+            }
+            &--twitter {
+                grid-area: twitter;
+                justify-self: flex-start;
+            }
+            &--youTube {
+                grid-area: youTube;
+                justify-self: flex-end;
+            }
+            &--instagram {
+                grid-area: instagram;
+                justify-self: flex-start;
+            }
         }
-        &__guitarra {
-            display: none;
-        }
+            &__guitarra {
+                display: none;
+            }
     }
     /* Inicio seccion 4 */
     .buyAlbums {
-        background-position-x: map-get($map: $clase-buyAlbums, $key: background-position-x);
+        background-position-x: -150px;
 
         &__colorFondo {
             display: flex;
@@ -80,9 +97,7 @@
             padding: 10px 10px 50px 10px;
         }
         &__titulo {
-            writing-mode: horizontal-tb;
-            transform: rotate(0deg);
-            margin: 0 auto;
+            @include titulo-horizontal-seccion-home;
         }
         &__link {
             max-width: 350px;
@@ -90,18 +105,13 @@
         }
     }
     /* Inicio seccion 5 */
-    .contenedorFinal {
-        @include contenedorFinal-seccion-5;
-        
-        .cierre {
-            @include background-seccion-5;
+    .cierre {
 
-            &__logoFrogleapStudios {
-                width: 60%;
-                max-width: 330px;
-                padding-bottom: 120px;
-            }
+        &__logoFrogleapStudios {
+            width: 60%;
+            max-width: 330px;
+            padding-bottom: 120px;
+            min-width: 160px;
         }
-        
     }
 }

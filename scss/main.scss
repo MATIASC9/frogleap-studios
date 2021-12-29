@@ -1,106 +1,6 @@
-// Variables
-$fontSizeDesktop-titulo-pagina: 4rem;
-$fontSizeMobile-titulo-pagina: 3.3rem;
-$fontSizeDesktop-titulo-seccion: 3rem;
-$fontSizeMobile-titulo-seccion: 2.7rem;
-$fontWeight-titulo-seccion: bold;
-$padding-titulo-pagina: 100px 0px 50px 0px;
-$letterSpacing-titulo-pagina: 20px;
-$fontWeight-titulo-pagina: bold;
-$color-titulo-pagina: #000;
-$color-titulo-seccion: #fff;
-$letterSpacing-titulo-pagina: 15px;
-// Variables transiciones
-$transitionDuration: 300ms;
-$transitionTimingFunction: ease-in-out;
-$transform-scale: scale(1.06);
-
-
-// Mixins
-@mixin desktop-titulo-pagina {
-    font-size: $fontSizeDesktop-titulo-pagina;
-    font-weight: $fontWeight-titulo-pagina;
-    color: $color-titulo-pagina;
-    letter-spacing: $letterSpacing-titulo-pagina;
-    padding: $padding-titulo-pagina;
-}
-@mixin mobile-titulo-pagina {
-    font-size: $fontSizeMobile-titulo-pagina;
-    font-weight: $fontWeight-titulo-pagina;
-    color: $color-titulo-pagina;
-    letter-spacing: $letterSpacing-titulo-pagina;
-    padding: $padding-titulo-pagina;
-}
-@mixin background-seccion-5 {
-    background-image: url('../img/fondo-cierre.webp');
-    background-position-y: bottom;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-@mixin contenedorFinal-seccion-5 {
-    height: 100vh; 
-}
-
-// Mapas Desktop
-$transiciones: (
-    transform: scale(1),
-    transition-duration: 200ms,
-    transition-timing-function: ease-in-out,
-);
-$texto-vertical: (
-    writing-mode: vertical-lr,
-    transform: rotate(180deg),
-);
-$config-clase-music: (
-    display: flex,
-    flex-direction: column,
-    width: 80%,
-    margin: auto,
-    padding-bottom: 70px,
-);
-$menu-pagina-store: (
-    list-style: none,
-    display: flex,
-    position: relative,
-    margin: 0px,
-    padding: 0px,
-    width: 100%,
-    place-content: center,
-);
-$contenedor-general-video-principal: (
-    animation-name: fadeInVideoPrincipal,
-    animation-duration: 4s,
-    animation-timing-function: ease-in-out,
-);
-$tarjeta-tour-dates: (
-    background-color: rgba(66, 66, 66, 0.486),
-    color: #fff,
-    width: 45%,
-    border: 2px solid black,
-    padding: 15px,
-    height: auto,
-    margin: 30px auto,
-    display: flex,
-    justify-content: space-between,
-);
-
-// Mapas Mobile
-$clase-buyAlbums: (
-    background-image: url('../img/guitarra-concierto.webp'),
-    background-size: cover,
-    background-repeat: no-repeat,
-    background-attachment: fixed,
-    background-position-x: -150px,
-);
-
-
+@import "variables";
+@import "mixins";
+@import "mapas";
 @import "resetYFuente";
 // Imports desktop
 @import "desktopHeader";
@@ -110,7 +10,7 @@ $clase-buyAlbums: (
 @import "desktopVideos";
 @import "desktopTourDates";
 @import "desktopFooter";
-//  Imports desktop 1280px
+// Imports desktop 1280px
 @import "desktop1280Home";
 @import "desktop1280Music";
 @import "desktop1280Videos";
@@ -123,10 +23,8 @@ $clase-buyAlbums: (
 @import "mobile1000TourDates";
 @import "mobile1000Footer";
 // Imports mobile 600px
-@import "mobile600Header";
 @import "mobile600Home";
 @import "mobile600Music";
 @import "mobile600Store";
 @import "mobile600Videos";
 @import "mobile600TourDates";
-@import "mobile600Footer";

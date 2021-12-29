@@ -1,9 +1,6 @@
 body {
+    @include background-image;
     background-image: url('../img/studio.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
 }
 /* Inicio seccion 1 */
 .bienvenida {
@@ -56,11 +53,7 @@ body {
         overflow: hidden;
     }
     &__video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        height: 100%;
+        @include videoResponsive;
     }
     &__contenedorScrollFlecha {
         display: flex;
@@ -91,18 +84,18 @@ body {
     "latestMusic ultimateBundle childrensMetalSongs karaokeAndBackingTracks exploreMore"
     "latestMusic liveInEurope volume24 volume25 exploreMore"
     ;
-    padding: 100px 20px 40px 20px;
+    padding: $padding-secciones-home;
     place-items: center;
 
     &__titulo {
-        font-size: $fontSizeDesktop-titulo-seccion;
-        font-weight: $fontWeight-titulo-seccion;
+        font-size: 3rem;
+        font-weight: bold;
         color: #fff;
-        writing-mode: map-get($map: $texto-vertical, $key: writing-mode);
-        transform: map-get($map: $texto-vertical, $key: transform);
-        grid-area: latestMusic;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
         justify-self: flex-start;
         padding: 0px;
+        grid-area: latestMusic;
     }
     &__album {
         font-size: 0px;
@@ -111,6 +104,7 @@ body {
 
         &__link {
             width: 100%;
+
             &__cover {
                 width: 100%;
                 transition-duration: $transitionDuration;
@@ -142,24 +136,13 @@ body {
         }
     }
     &__exploreMore {
-        text-decoration: none;
-        color: #fff;
-        font-size: 1.3rem;
-        font-weight: bold;
-        background-color: black;
-        padding: 10px;
-        margin-left: 30px;
-        display: inline-block;
-        border: 1px solid #fff;
-        grid-area: exploreMore;
-        transition-duration: 100ms;
-        transition-timing-function: $transitionTimingFunction;
-        transition-property: scale(1);
-        justify-self: flex-start;
-        text-align: center;
+        @include boton-1;
     
         &:active {
-            transform: scale(0.95);
+            transform: $escala-active-boton1;
+        }
+        &:hover {
+            color: $color-hover-boton1;
         }
     }
 }
@@ -174,13 +157,14 @@ body {
     "followMe facebook twitter guitarra"
     "followMe youTube instagram guitarra"
     ;
+    padding: $padding-secciones-home;
 
     &__titulo {
         @extend .latestMusic__titulo;
         grid-area: followMe;
     }
     &__link {
-        width: 40%;
+        width: 45%;
         min-width: 140px;
 
         &__logo {
@@ -210,17 +194,16 @@ body {
         }
     }
     &__guitarra {
-        width: 90%;
+        width: 80%;
     }
 }
 /* Inicio seccion 4 */
-.buyAlbums {
+.buyAlbums { 
+    @extend body;
     background-image: url('../img/guitarra-concierto.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    
     &__colorFondo {
+        padding: $padding-secciones-home;
         background-color: rgba(88, 88, 88, 0.37);
         display: grid;
         grid-template-areas:

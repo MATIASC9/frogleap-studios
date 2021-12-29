@@ -15,7 +15,6 @@
 
     &__titulo {
         @include desktop-titulo-pagina;
-        text-align: center;
     }
     &__album {
         display: flex;
@@ -53,21 +52,18 @@
             order: 3;
         }
         &__link {
-            text-decoration: none;
-            width: fit-content;
-            height: fit-content;
             order: 4;
 
             &__btn {
-                @extend .latestMusic__exploreMore;
+                @include boton-1;
                 margin-left: 50px;
                 justify-self: auto;
             
                 &:active {
-                    transform: scale(0.95);
+                    transform: $escala-active-boton1;
                 }
                 &:hover {
-                    color: red;
+                    color: $color-hover-boton1;
                 }
             }
         }
