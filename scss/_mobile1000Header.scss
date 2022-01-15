@@ -48,10 +48,8 @@
                 transition-timing-function: ease-in-out;
                 transition-property: margin-left;
                 z-index: 20;
+                gap: 40px;
 
-                &__item {
-                    margin: 30px 0px;
-                }
             }
             &__patreonLink {
                 width: 45px;
